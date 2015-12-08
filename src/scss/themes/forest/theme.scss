@@ -1,0 +1,63 @@
+// default theme variables
+// brand colors
+
+$brand-text: rgb(23,21,10);
+$brand-default: rgb(225, 234, 234);
+
+$brand-primary: rgb(94,106,67);
+$brand-go: rgb(122, 111, 55);
+$brand-stop: rgb(149,57,76);
+$brand-yield: rgb(140, 141, 62); 
+$brand-attention: rgb(191,79,61);
+$brand-background: rgb(225, 234, 234);
+// spacing
+$spacing: 5px;
+$line-height: 1.2em;
+$border-radius: 2px;
+
+// font styles
+$font-body: 'Open Sans', sans-serif;
+$font-heading: 'PT Sans', sans-serif;
+
+// navigation
+$nav-height: 65px;
+$nav-text-height: 1.2em;
+$nav-padding-top: 15px;
+$nav-padding-bottom: $nav-padding-top;
+$nav-padding-left: 6px;
+$nav-menu-button-pad: 20px;
+$offcanvas-link-pad: 15px;
+
+$menu-offcanvas-width: 13.755em;
+$menu-offcanvas-left: -13.755em;
+
+// footer
+$footer-height: $nav-height;
+
+// cards
+$card-height-unit: 150px;
+$card-heading-height: 50px;
+$card-footer-height: 50px;
+
+$card-sm-height: $card-height-unit;
+$card-md-height: $card-height-unit*2;
+$card-lg-height: $card-height-unit*3;
+
+// animations
+$transition-time: 0.4s;
+
+@mixin fadeout($time) {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s $time, opacity $time linear;
+}
+
+$offscreen-transition: $transition-time ease;
+$nav-link-transition: margin $transition-time ease;
+
+$highlight-transition: all 0.2s ease-in-out;
+$card-transition: all 200ms cubic-bezier(0.075, 0.820, 0.165, 1.000);
+
+// shadows
+$shadow-card: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+$shadow-hover: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);

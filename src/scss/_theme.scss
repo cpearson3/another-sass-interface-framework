@@ -1,4 +1,16 @@
 // default theme variables
+// brand colors
+
+$brand-text: #2C2A29;
+$brand-body: #fff;
+
+$brand-default: #FFF;
+$brand-primary: #002855;
+$brand-go: #708573;
+$brand-stop: #BE3A34;
+$brand-yield: #FDDA24;
+$brand-attention: #EAAA00;
+
 
 // spacing
 $spacing: 5px;
@@ -8,16 +20,6 @@ $border-radius: 2px;
 // font styles
 $font-body: 'Open Sans', sans-serif;
 $font-heading: 'PT Sans', sans-serif;
-
-// brand colors
-
-$brand-text: rgb(23,21,10);
-$brand-default: rgb(225, 234, 234);
-$brand-primary: rgb(94,106,67);
-$brand-go: rgb(122, 111, 55);
-$brand-stop: rgb(149,57,76);
-$brand-yield: rgb(140, 141, 62); 
-$brand-attention: rgb(191,79,61);
 
 // navigation
 $nav-height: 65px;
