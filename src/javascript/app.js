@@ -1,0 +1,1 @@
+// bootsmooth javascript support

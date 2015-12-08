@@ -1,0 +1,297 @@
+// bootsmooth styles 
+
+// TYPOGRAPHY
+html {
+    overflow-x: hidden;
+}
+// set body
+body {
+    font-family: $font-body;
+    background-color: $brand-default;
+    color: $brand-text;
+    line-height: $line-height;
+}
+
+// breaks and horizontals
+br {
+    line-height: 150%;
+}
+
+// set headings
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-heading;
+    padding-top: $spacing*2;
+}
+
+// matching classes
+@for $i from 1 through 6 {
+    .h#{$i} {
+        @extend h#{$i};
+    }
+}
+
+// center text
+.txt-center {
+    text-align: center;
+}
+
+// ELEMENT COLORS & PLACEMENT
+
+// center elements 
+.center {
+    display: table;
+    margin: 0 auto;
+}
+
+// define background classes
+.bg-primary {
+    background-color: $brand-primary;
+}
+
+.bg-default {
+    background-color: $brand-primary;
+}
+
+.bg-go {
+    background-color: $brand-go;
+}
+
+.bg-stop {
+    background-color: $brand-stop;
+}
+
+.bg-yield {
+    background-color: $brand-yield;
+}
+
+.bg-attention {
+    background-color: $brand-attention;
+}
+
+// color classes
+.txt-primary {
+    color: $brand-primary;
+}
+
+.txt-default {
+    color: $brand-default;
+}
+
+.txt-go {
+    color: $brand-go;
+}
+
+.txt-stop {
+    color: $brand-stop;
+}
+
+.txt-yield {
+    color: $brand-yield;
+}
+
+.txt-attention {
+    color: $brand-attention;
+}
+
+// GENERAL HTML ELEMENTS and CLASSES
+
+// image 
+.img {
+    max-width: 100%;
+    height: auto;
+}
+
+// video 
+.video {
+    max-width: 100%;
+    height: auto;
+}
+
+// NAVIGATION
+
+// body class if navigation is used
+.nav-pad {
+    padding-top: $nav-height;
+}
+
+
+// header
+.nav {
+    color: $brand-default;
+    background-color: $brand-primary;
+    padding: $nav-padding-top $nav-padding-left $nav-padding-top $nav-padding-left;
+    width: 100%;
+    left: 0;
+    z-index: 999;
+    
+    .nav-button {
+        float: left;
+        padding-left: $nav-menu-button-pad;
+        padding-right: $nav-menu-button-pad;
+        color: $brand-default;
+        font-size: $nav-text-height;
+    }
+    
+    .nav-heading { 
+        font-size: 1em;
+        font-weight: normal;
+        text-align: center;
+    }
+}
+
+.shadow {
+    box-shadow: $shadow-card;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.page-nav-fixed {
+    padding-top: $nav-height;
+}
+
+// off canvas menu
+.menu-offcanvas {
+    position: fixed;
+    top: $nav-height;
+    width: $menu-offcanvas-width;
+    left: $menu-offcanvas-left;
+    transition: $offscreen-transition;
+    
+    height: 100%;
+    background: $brand-go;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: $shadow-card;
+    
+    &:target {
+       transform: translateX($menu-offcanvas-width);
+    }    
+
+    &:target ~ .page {
+       // @include fadeout($transition-time);
+       //width: 50%;
+       //transform: translateX($menu-offcanvas-width);
+    }
+    
+    &:target ~ .nav {
+        .menu-open {
+            display: none; 
+        }
+        .menu-close {
+            display: block;
+        }
+    }
+    
+   a {
+        display: block;
+        color: $brand-default;
+        text-align: center;
+        white-space:nopage;
+        margin-left: -3.5em;
+        padding: $offcanvas-link-pad;
+        text-decoration: none;
+        transition: $nav-link-transition;
+        
+        &:hover, &:focus {
+            background: $brand-attention;
+        }
+    }
+}
+
+// close button hidden
+.menu-close {
+  display: none;
+}
+
+
+// CARDS
+
+.card {
+    background-color: $brand-default;
+    border-radius: $border-radius;
+    display: block;
+    float: left;
+    height: $card-md-height;
+    margin: 0 auto;
+    width: 95%;
+    box-shadow: $shadow-card;
+    transition: $highlight-transition;
+    
+    .card-heading {
+        position: relative;
+        min-height: $card-md-height*0.8;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        color: $brand-default;
+        
+        p {
+            font-size: 1.1em;
+            font-weight: bold;
+            position: absolute;
+            bottom: $spacing*2;
+            left: $spacing*2;
+        }
+    }
+    
+    .card-body {
+        padding: $spacing*2;
+    }
+}
+
+.card-hover:hover {
+    box-shadow: $shadow-hover;
+}
+
+.card-sm {
+    max-height: $card-sm-height;
+}
+
+.card-lg {
+    min-height: $card-lg-height;
+}
+
+// FORM COMPONENTS
+
+// BUTTONS
+.btn {
+    border-radius: $border-radius;
+    box-shadow: $shadow-card;
+    padding: $spacing*2;
+    text-align: center;
+    font-size: 1em;
+    border: 0 none;
+    margin: 0 10px;
+    cursor: pointer;
+    display: inline-block;
+    text-transform: none;
+
+    &:hover {
+        opacity: .7;
+    }
+}
+
+// button colors
+.btn-primary {
+    @extend .txt-default;
+    @extend .bg-primary;
+}
+.btn-go {
+    @extend .txt-default;
+    @extend .bg-go;
+}
+.btn-yield {
+    @extend .txt-default;
+    @extend .bg-yield;
+}
+.btn-stop {
+    @extend .txt-default;
+    @extend .bg-stop;
+}
+.btn-attention {
+    @extend .txt-default;
+    @extend .bg-attention;
+}
