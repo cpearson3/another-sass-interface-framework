@@ -14,6 +14,7 @@
 <!-- Off Canvas Menu -->
 <div class="menu-offcanvas"id="menu">
     <a href="#page"><i class="fa fa-home"></i> Home</a>
+    <a href="#typography"><i class="fa fa-font"></i> Typography</a>
     <a href="#grid"><i class="fa fa-hashtag"></i> Grid</a>
     <a href="#navigation"><i class="fa fa-paper-plane"></i> Navigation</a>
     <a href="#cards"><i class="fa fa-square-o"></i> Cards</a>
@@ -31,14 +32,40 @@
 
 <!-- page -->
 <div class="page page-nav-fixed" id="page">
-    
-    <h1>Bootsmooth</h1>
-    <h2>Another Responsive CSS Framework</h2>
-    <br>
-    <p><b>Bootsmooth</b> is designed to be minimal. Build mobile-first layouts with little overhead.</p>
+    <div class="panel bg-yield txt-primary txt-center shadow">
+        <br>
+        <h1>Bootsmooth</h1>
+        <h2>Another Responsive CSS Framework</h2>
+        <br>
+        <p><b>Bootsmooth</b> is designed to be minimal. Build mobile-first layouts with little overhead.</p>
+        <br>
+        <br>
+        <a class="btn btn-stop" href="http://www.github.com/cpearson3/bootsmooth" target="_blank"><i class="fa fa-github"></i> Github Project</a>
+        <br>
+        <br>
+    </div>
     <br>
     <h3>Included Components:</h3>
+    <!-- Typography -->
+    <br>
+    <h4 id="typography">Typography</h4>
+    <br>
+    <div class="panel bordered">
+        <p>This is a paragraph with some <a>links</a> to <a>places</a>.</p>
+    
+        <ol>
+            <li><h1>Heading</h1></li>
+            <li><h2>Heading</h2></li>
+            <li><h3>Heading</h3></li>
+            <li><h4>Heading</h4></li>
+            <li><h5>Heading</h5></li>
+            <li><h6>Heading</h6></li>
+        </ol>
+    </div>
+    <!-- Grid -->
+    <br>
     <h4 id="grid">12 Column Responsive Grid</h4>
+    <br>
     <div class="row">
         <div class="col-1 bg-primary txt-default txt-center">
             col-1
@@ -98,6 +125,7 @@
             col-12
         </div>
     </div>
+    
     <br>
     <h4 id="navigation">Navigation bar</h4>
     <br>
@@ -107,8 +135,10 @@
         <!-- nav heading -->
         <div class="nav-heading">This is a sample Navigation Bar</div>
     </div>
+    
     <br>
     <h4 id="cards">Cards</h4>
+    <br>
     <div class="row">
         <div class="col-6">
             <div class="card">
@@ -121,7 +151,7 @@
             </div>
         </div>
         <div class="col-6">
-            <div class="card card-hover">
+            <div class="card shadow-hover">
                 <div class="card-heading">
                     <p class="txt-primary">This is a default card</p>
                 </div>
@@ -183,6 +213,7 @@
     </div>
     
     <!-- Buttons -->
+    <br>
     <h4 id="buttons">Buttons</h4>
     <br>
     <div class="btn-group">
@@ -193,6 +224,56 @@
         <button class="btn btn-stop">Stop</button>
         <button class="btn btn-attention">Attention</button>
     </div>
+    
+    <!-- Tables -->
+    <br>
+    <h4>Tables</h4>
+    <br>
+    
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr><td>Column 1</td><td>Column 2</td><td>Column 3</td><td>Column 4</td><td>Column 5</td></tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>2</td><td>3</td><td><i class="fa fa-folder-open-o"></i></td><td><i class="fa fa-close"></i></td></tr>
+                <tr><td>1</td><td>2</td><td>3</td><td><i class="fa fa-folder-open-o"></i></td><td><i class="fa fa-close"></i></td></tr>
+                <tr><td>1</td><td>2</td><td>3</td><td><i class="fa fa-folder-open-o"></i></td><td><i class="fa fa-close"></i></td></tr>
+                <tr><td>1</td><td>2</td><td>3</td><td><i class="fa fa-folder-open-o"></i></td><td><i class="fa fa-close"></i></td></tr>
+            </tbody>
+            <tfoot>
+                
+            </tfoot>
+        </table>
+    </div>
+    
+    <!-- Forms -->
+    <br>
+    <h4>Forms</h4>
+    <br>
+    <form class="form">
+        <div>
+            <h4>Contact Form :</h4>
+            <label>
+            <span>Your name</span><input id="name" type="text" name="name" />
+            </label>
+            
+            <label>
+            <span>Email Address</span><input id="email" type="text" name="email" />
+            </label>
+            
+            <label>
+            <span>Subject</span><input id="subject" type="text" name="subject" />
+            </label>
+            
+            <label>
+            <span>Message</span><textarea name="feedback"></textarea>
+            <button class="btn btn-go">Submit</button>
+            <button class="btn btn-stop">Cancel</button>
+            </label>
+            
+        </div>
+    </form>
 </div>
 </div>
 </body>

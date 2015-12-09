@@ -15,7 +15,8 @@ $brand-attention: #EAAA00;
 // spacing
 $spacing: 5px;
 $line-height: 1.2em;
-$border-radius: 2px;
+$border-radius: 4px;
+$border-style: 1px solid $brand-primary;
 
 // font styles
 $font-body: 'Open Sans', sans-serif;
@@ -32,6 +33,10 @@ $offcanvas-link-pad: 15px;
 
 $menu-offcanvas-width: 13.755em;
 $menu-offcanvas-left: -13.755em;
+
+// lists
+$list-padding-left: 15px;
+
 
 // footer
 $footer-height: $nav-height;
@@ -61,5 +66,5 @@ $highlight-transition: all 0.2s ease-in-out;
 $card-transition: all 200ms cubic-bezier(0.075, 0.820, 0.165, 1.000);
 
 // shadows
-$shadow-card: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+$shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 $shadow-hover: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
