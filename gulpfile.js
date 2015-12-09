@@ -1,16 +1,9 @@
 /* File: gulpfile.js */
 
 // choose theme
-var theme = 'mountaineer';
-
-// source and destination helper functions
-function projectSource(p) {
-  return 'src/'+p;
-};
-
-function projectDest(p) {
-  return 'build/'+p;
-}
+var theme = 'mountaineer',
+    buildPath = 'build/',
+    srcPath = 'src/';
 
 // sass include paths
 var normalizePaths = require('node-normalize-scss').includePaths;
@@ -33,7 +26,7 @@ gulp.task('default', ['watch']);
 
 // configure the jshint task
 gulp.task('jshint', function() {
-  return gulp.src(projectSource('javascript/**/*.js'))
+  return gulp.src(srcPath+'javascript/**/*.js')
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'));
 });
@@ -41,15 +34,15 @@ gulp.task('jshint', function() {
 
 // build _theme.scss
 gulp.task('build-theme', function() {
-  return gulp.src(projectSource('scss/themes/'+theme+'/*.scss'))
+  return gulp.src(srcPath+'scss/themes/'+theme+'/*.scss')
   .pipe(concat('_theme.scss'))
-  .pipe(gulp.dest(projectSource('scss')));
+  .pipe(gulp.dest(buildPath+'scss'));
   
 });
 
 // sass task
 gulp.task('build-css', function() {
-  return gulp.src(projectSource('scss/*.scss'))
+  return gulp.src(srcPath+'scss/*.scss')
     .pipe(sass({
       // include normalize
       includePaths: sassPaths
@@ -57,24 +50,24 @@ gulp.task('build-css', function() {
     .pipe(sourcemaps.init())
     .pipe(minifyCss({compatibility: 'ie8'}))
     .pipe(rename('bootsmooth.min.css'))
-    .pipe(gulp.dest(projectDest('stylesheets')));
+    .pipe(gulp.dest(buildPath+'stylesheets'));
 });
 
 // build javascript
 gulp.task('build-js', function() {
-  return gulp.src(projectSource('javascript/**/*.js'))
+  return gulp.src(srcPath+'javascript/**/*.js')
     .pipe(sourcemaps.init())
     .pipe(concat('bootsmooth.js'))
     //only uglify if gulp is ran with '--type production'
     .pipe(gutil.env.type === 'production' ? uglify() : gutil.noop()) 
     //.pipe(sourcemaps.write())
-    .pipe(gulp.dest(projectDest('javascript')));
+    .pipe(gulp.dest(buildPath+'javascript'));
 });
 
 // move index.html
 gulp.task('html', function() {
-  return gulp.src(projectSource('*.html'))
-    .pipe(gulp.dest(projectDest('')));
+  return gulp.src(srcPath+'*.html')
+    .pipe(gulp.dest(buildPath));
 });
 
 // build task
