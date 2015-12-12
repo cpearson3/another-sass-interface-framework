@@ -1,8 +1,7 @@
 /* File: gulpfile.js */
 
 // choose theme
-var theme = 'mountaineer',
-    buildPath = 'build/',
+var buildPath = 'build/',
     srcPath = 'src/';
 
 // sass include paths
@@ -32,17 +31,9 @@ gulp.task('jshint', function() {
 });
 
 
-// build _theme.scss
-gulp.task('build-theme', function() {
-  return gulp.src(srcPath+'scss/themes/'+theme+'/*.scss')
-  .pipe(concat('_theme.scss'))
-  .pipe(gulp.dest(buildPath+'scss'));
-  
-});
-
 // sass task
 gulp.task('build-css', function() {
-  return gulp.src(srcPath+'scss/*.scss')
+  return gulp.src(srcPath+'scss/**/*.scss')
     .pipe(sass({
       // include normalize
       includePaths: sassPaths
@@ -71,12 +62,11 @@ gulp.task('html', function() {
 });
 
 // build task
-gulp.task('build', ['jshint', 'build-js', 'build-theme', 'build-css', 'html']);
+gulp.task('build', ['jshint', 'build-js', 'build-css', 'html']);
 
 // configure which files to watch and what tasks to use on file changes
 gulp.task('watch', ['build'], function() {
   gulp.watch('src/javascript/**/*.js', ['jshint', 'build-js']);
   gulp.watch('src/scss/*.scss', ['build-css']);
   gulp.watch('src/*.html', ['html']);
-  gulp.watch('src/scss/themes/'+theme+'/*.scss', ['build-theme']);
 });
