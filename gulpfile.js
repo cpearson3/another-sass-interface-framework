@@ -5,9 +5,10 @@ var buildPath = 'build/',
     srcPath = 'src/';
 
 // sass include paths
+/*
 var normalizePaths = require('node-normalize-scss').includePaths;
-
 var sassPaths = [].concat(normalizePaths);
+*/
 
 // grab our packages
 var gulp   = require('gulp'),
@@ -34,10 +35,7 @@ gulp.task('jshint', function() {
 // sass task
 gulp.task('build-css', function() {
   return gulp.src(srcPath+'scss/**/*.scss')
-    .pipe(sass({
-      // include normalize
-      includePaths: sassPaths
-    }))
+    .pipe(sass())   // {includePaths: sassPaths}
     .pipe(sourcemaps.init())
     .pipe(minifyCss({compatibility: 'ie8'}))
     .pipe(rename('bootsmooth.min.css'))

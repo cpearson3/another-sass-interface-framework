@@ -3,10 +3,10 @@ html {
   font-size: $font-size;
   font-weight: $font-weight;
   line-height: $line-height;
-  @media (max-width: 900px) {
+  @media (max-width: 960px) {
     font-size: $font-size-medium;
   }
-  @media (max-width: 500px) {
+  @media (max-width: 568px) {
     font-size: $font-size-small;
   }
 }
@@ -205,9 +205,9 @@ ul, ol {
 }
 
 
-@media only screen and (max-width : 480px) {
+// anything smaller than iphone 5 resolution
+@media only screen and (max-width : 568px) {
     .nav {
-        border-bottom: 0;
         padding: 0;
         
         .nav-title {
