@@ -36,8 +36,8 @@ $breakpoint-medium: "only screen and (min-width: 40em)";
     }
 }
 
-/* Page and Rows */
-.page {
+/* container and Rows */
+.container {
     width: 100%;
     margin: 0 auto;
     max-width: $grid-max-width;
@@ -45,7 +45,7 @@ $breakpoint-medium: "only screen and (min-width: 40em)";
     padding-bottom: $footer-height;
 }
 
-.page,
+.container,
 .row {
     @extend %clearfix;
 }
@@ -71,7 +71,7 @@ $breakpoint-medium: "only screen and (min-width: 40em)";
 /* Media Queries */
 @media #{$breakpoint-medium} {
  
-    .page {
+    .container {
         width: 95%;
     }
     

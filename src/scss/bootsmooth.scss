@@ -4,10 +4,9 @@
     
 */
 
-@import "normalize";
+// @import "normalize";
 
-// import theme
-@import "theme";
-
+@import "reset";
+@import "variables";
 @import "grid";
 @import "styles";
