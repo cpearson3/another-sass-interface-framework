@@ -1,23 +1,32 @@
 // default theme variables
-// brand colors
+// color colors
 
-$brand-text: rgb(23,21,10);
-$brand-default: #FFF;
+$color-text: #2C2A29;
+$color-body: #FFF;
 
-$brand-primary: #CC550D;
-$brand-go: #3CD423;
-$brand-stop: #CC550D;
-$brand-yield: #7F3D15; 
-$brand-attention: #221999;
-$brand-body: #FFF;
+$color-primary: #002855;
+$color-secondary: #EAAA00;
+$color-accent: #E35205;
+
+$color-gray: #968C83;
+$color-light-gray: #BFB8AF;
+$color-dark-gray: #6E6259;
 
 // spacing
-$spacing: 5px;
-$line-height: 1.2em;
-$border-radius: 2px;
-// lists
-$list-padding-left: 15px;
+$spacing: 8px;
 
+// font
+$font-size: 18px;
+$font-size-medium: 16px;
+$font-size-small: 16px;
+$font-weight: 100;
+$heading-line-height: 1.1;
+$heading-margin: 1em;
+$line-height: 1.5;
+
+// border vars
+$border-radius: 0px;
+$border: 1px solid $color-light-gray;
 
 // font styles
 $font-body: 'Open Sans', sans-serif;
@@ -25,24 +34,20 @@ $font-heading: 'PT Sans', sans-serif;
 
 // navigation
 $nav-height: 65px;
-$nav-text-height: 1.2em;
-$nav-padding-top: 15px;
-$nav-padding-bottom: $nav-padding-top;
-$nav-padding-left: 6px;
-$nav-menu-button-pad: 20px;
-$offcanvas-link-pad: 15px;
+$nav-font-size: 1em;
+$nav-padding: 15px 0px 15px 8px;
 
-$menu-offcanvas-width: 13.755em;
-$menu-offcanvas-left: -13.755em;
+// lists
+// $list-padding-left: 15px;
 
 // footer
 $footer-height: $nav-height;
+$footer-padding: $nav-height;
 
 // cards
 $card-height-unit: 150px;
 $card-heading-height: 50px;
 $card-footer-height: 50px;
-
 $card-sm-height: $card-height-unit;
 $card-md-height: $card-height-unit*2;
 $card-lg-height: $card-height-unit*3;
@@ -63,5 +68,5 @@ $highlight-transition: all 0.2s ease-in-out;
 $card-transition: all 200ms cubic-bezier(0.075, 0.820, 0.165, 1.000);
 
 // shadows
-$shadow-card: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+$shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 $shadow-hover: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
