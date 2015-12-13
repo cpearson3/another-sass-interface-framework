@@ -1,16 +1,16 @@
 // default theme variables
 // color colors
 
-$color-text: #2C2A29;
+$color-text: #000;
 $color-body: #FFF;
 
-$color-primary: #002855;
-$color-secondary: #EAAA00;
-$color-accent: #E35205;
+$color-primary: #000099;
+$color-secondary: #990000;
+$color-accent: #009900;
 
-$color-gray: #968C83;
-$color-light-gray: #BFB8AF;
-$color-dark-gray: #6E6259;
+$color-gray: #999;
+$color-light-gray: #CCC;
+$color-dark-gray: #333;
 
 // spacing
 $spacing: 8px;
@@ -18,7 +18,7 @@ $spacing: 8px;
 // font
 $font-size: 20px;
 $font-size-medium: 14px;
-$font-size-small: 12x;
+$font-size-small: 12px;
 $font-weight: 100;
 $heading-line-height: 1.1;
 $heading-margin: 1em;
@@ -34,9 +34,9 @@ $font-heading: 'PT Sans', sans-serif;
 
 // navigation
 $nav-color: $color-body;
-$nav-height: 50px;
-$nav-font-size: 1em;
-$nav-padding: 15px 0px 15px 8px;
+$nav-font-size: $font-size-small;
+$nav-height: $nav-font-size+$spacing*4;
+$nav-padding: $spacing*2 $spacing $spacing*2 $spacing;
 
 // lists
 // $list-padding-left: 15px;
