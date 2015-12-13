@@ -152,29 +152,34 @@ ul, ol {
 
 // header
 .nav {
+    @extend %clearfix;
     @extend .bg-body;
+    
+    background-color: $nav-color;
     width: 100%;
     left: 0;
     z-index: 999;
     padding: $spacing*2 $spacing $spacing*2 $spacing;
     height: $nav-height;
+    font-size: $font-size-small;
     
     .nav-title {
         float: left;
-        font-weight: normal;
-        padding-right: $spacing*2;
         display: block;
     }
     
     ul {
+        @extend %clearfix;
         list-style-type: none;
         margin: 0;
         padding: 0;
+        background-color: $nav-color;
         
         li {
             display: inline;
-            
+            float: left;
             a {
+                dispay: inline-block;
                 padding-left: $spacing;
                 padding-right: $spacing;
                 text-decoration: none;    
@@ -185,10 +190,56 @@ ul, ol {
                 }
             }
         }
+    }
+    
+    // menu button
+    a.show-menu {
+        display: none;
+        color: $color-text;
         
+        &:hover {
+            color: $color-accent;
+        }
     }
 }
 
+
+@media only screen and (max-width : 480px) {
+    .nav {
+        border-bottom: 0;
+        padding: 0;
+        
+        .nav-title {
+            display: none;
+        }
+        
+        ul {
+            display: none;
+            height: auto;
+        }
+        
+        li {
+            display: block;
+            float: none;
+            width: 100%;
+            padding-top: $spacing;
+            padding-bottom: $spacing;
+        }
+        
+        a.show-menu {
+    		display: block;
+    		width: 100%;
+    		position: relative;
+    		background-color: $nav-color;
+    		padding: $spacing*2 $spacing $spacing*2 $spacing;
+    	}
+    	a.show-menu:after {
+    		content:"";
+    		display: inline-block;
+    		position: absolute;
+    	}
+    }
+}
 
 // fixed position
 .nav-fixed {
