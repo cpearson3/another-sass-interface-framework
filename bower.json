@@ -1,0 +1,25 @@
+{
+  "name": "bootsmooth",
+  "version": "1.0.0",
+  "homepage": "bootsmooth.com",
+  "authors": [
+    "Clarence Pearson <clarence.pearson3@gmail.com>"
+  ],
+  "description": "Another responsive SCSS framework",
+  "keywords": [
+    "scss",
+    "responsive",
+    "framework"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "color-me-sass": "*"
+  }
+}
