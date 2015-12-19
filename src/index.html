@@ -3,13 +3,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bootsmooth example page</title>
-
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans' rel='stylesheet' type='text/css'>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="stylesheets/bootsmooth.min.css">
-
+<title>Bootsmooth - Another Resposive SCSs Framework</title>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="stylesheets/bootsmooth.min.css">
 </head>
 
 <body>
@@ -32,25 +29,30 @@
     </nav>
 
     <!-- page header -->
-    <header id="home" class="header bg-primary txt-center txt-body nav-pad" style="min-height: 360px; padding-top: 120px">
+    <header id="home" class="header txt-center nav-pad" style="min-height: 360px; padding-top: 120px; padding-bottom: 120px">
         
         <h1>Bootsmooth</h1>
         <h2>Another Responsive CSS Framework</h2>
         <br>
         <p>Designed to be <b>Minimal</b> and <b>Mobile</b>-friendly.</p>
         <br>
-        <br>
-        <a class="btn bg-secondary txt-body" href="http://www.github.com/cpearson3/bootsmooth" target="_blank"><i class="fa fa-github"></i> Github Project</a>
-        <br>
-        <br>
+        <a class="btn" href="http://www.github.com/cpearson3/bootsmooth" target="_blank"><i class="fa fa-github"></i> Github Project</a>
     </header>
     
     <!-- page container -->
     <div class="container">
+        <p><b>Bootsmooth</b>  is a minimal and responsinve SCSS framework. It is built with Gulp. Get started today:</p>
+<div class="scrollableX">
+<pre>
+git clone https://github.com/cpearson3/bootsmooth.git
+bower install
+npm install
+gulp watch
+</pre>
+</div>
         <br>
         <h3>Included Components:</h3>
         <!-- Typography -->
-        <br>
         <h4 id="typography">Typography</h4>
         <br>
         <div class="panel bordered">
@@ -152,76 +154,16 @@
             <a class="show-menu" href="#">Responsive Nav Bar Menu</a>
         </div>
 
-        <br>
-        <h4 id="cards">Cards</h4>
-        <br>
-        <div class="row">
-            <div class="col-6">
-                <div class="card">
-                    <div class="card-heading txt-body" style="background-image: url(https://scontent-iad3-1.xx.fbcdn.net/hphotos-xaf1/t31.0-8/458839_10101441182231309_1441935465_o.jpg)">
-                        <p>Card Heading with cover image</p>
-                    </div>
-                    <div class="card-body">
-                        <p>This is the card body</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card shadow-hover">
-                    <div class="card-heading">
-                        <p>This is a default card</p>
-                    </div>
-                    <div class="card-body">
-                        <p>
-                            With a card-hover class
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <div class="card-heading txt-body bg-primary">
-                        <p>Primary Card</p>
-                    </div>
-                    <div class="card-body">
-                        <button class="btn"><i class="fa fa-share"></i> Share</button>
-                        <button class="btn"><i class="fa fa-comment"></i> Comment</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6">
-                <div class="card">
-                    <div class="card-heading txt-body bg-secondary">
-                        <p>Secondary Card</p>
-                    </div>
-                    <div class="card-body">
-                        <button class="btn"><i class="fa fa-share"></i> Share</button>
-                        <button class="btn"><i class="fa fa-comment"></i> Comment</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <div class="card-heading txt-body bg-accent">
-                        <p>Accent Card</p>
-                    </div>
-                    <div class="card-body">
-                        <button class="btn"><i class="fa fa-share"></i> Share</button>
-                        <button class="btn"><i class="fa fa-comment"></i> Comment</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         <!-- Buttons -->
         <br>
         <h4 id="buttons">Buttons</h4>
         <br>
         <div class="btn-group">
-            <button class="btn">Default</button>
-            <button class="btn bg-primary txt-body">Primary</button>
-            <button class="btn bg-secondary txt-body">Secondary</button>
-            <button class="btn bg-accent txt-body">Accent</button>
+            <a class="btn">Anchor button</a>
+            <button class="btn bg-primary txt-body">Regular Button</button>
+            <input type="button" class="btn bg-secondary txt-body" value="Input Button">
+            <input type="submit" class="btn bg-accent txt-body" value="Submit Button">
         </div>
 
         <!-- Tables -->

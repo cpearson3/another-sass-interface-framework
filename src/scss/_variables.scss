@@ -1,16 +1,8 @@
-// default theme variables
-// color colors
-
-$color-text: #000;
-$color-body: #FFF;
-
-$color-primary: #000099;
-$color-secondary: #990000;
-$color-accent: #009900;
-
-$color-gray: #999;
-$color-light-gray: #CCC;
-$color-dark-gray: #333;
+// general color defines
+// Bootsmooth only uses 3 colors: bg, fg, accent (links, buttons)
+$background-color: $whiteSmoke;
+$foreground-color: $grayCharcoal;
+$accent-color: $blueAzure;
 
 // spacing
 $spacing: 8px;
@@ -26,48 +18,26 @@ $line-height: 1.5;
 
 // border vars
 $border-radius: 0px;
-$border: 1px solid $color-light-gray;
+$border: 1px solid $foreground-color;
 
 // font styles
 $font-body: 'Open Sans', sans-serif;
 $font-heading: 'PT Sans', sans-serif;
 
 // navigation
-$nav-color: $color-body;
-$nav-font-size: $font-size-small;
+$nav-font-size: $font-size-medium;
 $nav-height: $nav-font-size+$spacing*4;
 $nav-padding: $spacing*2 $spacing $spacing*2 $spacing;
 
-// lists
-// $list-padding-left: 15px;
+// buttons
+$btn-height: 38px;
 
 // footer
 $footer-height: $nav-height;
 $footer-padding: $nav-height;
 
-// cards
-$card-height-unit: 150px;
-$card-heading-height: 50px;
-$card-footer-height: 50px;
-$card-sm-height: $card-height-unit;
-$card-md-height: $card-height-unit*2;
-$card-lg-height: $card-height-unit*3;
-
 // animations
 $transition-time: 0.4s;
 
-@mixin fadeout($time) {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s $time, opacity $time linear;
-}
-
-$offscreen-transition: $transition-time ease;
-$nav-link-transition: margin $transition-time ease;
-
-$highlight-transition: all 0.2s ease-in-out;
-$card-transition: all 200ms cubic-bezier(0.075, 0.820, 0.165, 1.000);
-
 // shadows
 $shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-$shadow-hover: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);

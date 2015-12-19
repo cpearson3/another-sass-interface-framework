@@ -3,12 +3,12 @@ html {
   font-size: $font-size;
   font-weight: $font-weight;
   line-height: $line-height;
-  @media (max-width: 960px) {
+  /*@media (max-width: 960px) {
     font-size: $font-size-medium;
   }
   @media (max-width: 568px) {
     font-size: $font-size-small;
-  }
+  }*/
 }
  
 h1, h2, h3, h4, h5, h6, p, ul, ol {
@@ -24,17 +24,24 @@ h1, h2, h3, h4, h5, h6 {
 // set body
 body {
     font-family: $font-body;
-    background-color: $color-body;
-    color: $color-text;
+    background-color: $background-color;
+    color: $foreground-color;
 }
 
 // links
 a {
-    color: $color-secondary;
+    font-style: bold;
     cursor: pointer;
+    color: $accent-color;
     
     &:visited {
-        text-decoration: underline;
+        font-style: bold;
+        text-decoration: underline;   
+    }
+    
+    &:hover {
+        font-style: bold;
+        text-decoration: underline; 
     }
 }
 
@@ -59,11 +66,6 @@ ul, ol {
     padding-left: $spacing*3;
 }
 
-// shadow
-.shadow {
-    box-shadow: $shadow;
-}
-
 // center text
 .txt-center {
     text-align: center;
@@ -74,7 +76,6 @@ ul, ol {
 .txt-right {
     text-align: right;
 }
-// ELEMENT COLORS & PLACEMENT
 
 // center elements 
 .center {
@@ -97,42 +98,9 @@ ul, ol {
     border-radius: $border-radius;
 }
 
-// define background classes
-.bg-primary {
-    background-color: $color-primary;
-}
-
-.bg-secondary {
-    background-color: $color-secondary;
-}
-
-.bg-accent {
-    background-color: $color-accent;
-}
-
-.bg-text {
-    background-color: $color-text;
-}
-
-.bg-body {
-    background-color: $color-body;
-}
-
-// text classes
-.txt-primary {
-    color: $color-primary;
-}
-
-.txt-secondary {
-    color: $color-secondary;
-}
-
-.txt-accent {
-    color: $color-accent;
-}
-
-.txt-body {
-    color: $color-body;
+// shadow support class
+.shadowed {
+    box-shadow: $shadow;
 }
 
 // image 
@@ -154,19 +122,18 @@ ul, ol {
     padding-top: $nav-height;
 }
 
-
 // header
 .nav {
     @extend %clearfix;
-    @extend .bg-body;
-    
-    background-color: $nav-color;
+
     width: 100%;
     left: 0;
     z-index: 999;
     padding: $nav-padding;
     height: $nav-height;
     font-size: $nav-font-size;
+    background-color: $background-color;
+    border-bottom: $border;
     
     .nav-title {
         float: left;
@@ -178,22 +145,17 @@ ul, ol {
         list-style-type: none;
         margin: 0;
         padding: 0;
-        background-color: $nav-color;
         display: table;
         
         li {
             display: inline;
             float: left;
             a {
+                color: $foreground-color;
                 dispay: inline-block;
                 padding-left: $spacing;
                 padding-right: $spacing;
                 text-decoration: none;    
-                color: $color-text;
-
-                &:hover {
-                    color: $color-accent;
-                }
             }
         }
     }
@@ -201,14 +163,8 @@ ul, ol {
     // menu button
     a.show-menu {
         display: none;
-        color: $color-text;
-        
-        &:hover {
-            color: $color-accent;
-        }
     }
 }
-
 
 // anything smaller than iphone 5 resolution
 @media only screen and (max-width : 568px) {
@@ -222,6 +178,7 @@ ul, ol {
         ul {
             display: none;
             height: auto;
+            background-color: $background-color;
         }
         
         li {
@@ -236,8 +193,10 @@ ul, ol {
     		display: block;
     		width: 100%;
     		position: relative;
-    		background-color: $nav-color;
+    		background-color: $background-color;
     		padding: $spacing*2 $spacing $spacing*2 $spacing;
+    		color: $foreground-color;
+    		border-bottom: $border;
     	}
     	a.show-menu:after {
     		content:"";
@@ -258,65 +217,26 @@ ul, ol {
     border-radius: $border-radius;
 }
 
-// CARDS
-
-.card {
-    border-radius: $border-radius;
-    display: block;
-    float: left;
-    height: $card-md-height;
-    margin: 0 auto;
-    width: 95%;
-    box-shadow: $shadow;
-    transition: $highlight-transition;
-    
-    .card-heading {
-        position: relative;
-        min-height: $card-md-height*0.8;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        
-        p {
-            font-weight: bold;
-            position: absolute;
-            bottom: $spacing;
-            left: $spacing;
-        }
-    }
-    
-    .card-body {
-        padding: $spacing;
-    }
-}
-
-.shadow-hover:hover {
-    box-shadow: $shadow-hover;
-}
-
-.card-sm {
-    max-height: $card-sm-height;
-}
-
-.card-lg {
-    min-height: $card-lg-height;
-}
-
-// FORM COMPONENTS
-
 // BUTTONS
 .btn {
-    border-radius: $border-radius;
-    box-shadow: $shadow;
-    padding: $spacing;
-    text-align: center;
-    border: 0 none;
-    margin: 0 $spacing;
-    cursor: pointer;
     display: inline-block;
-    text-transform: none;
+    height: $btn-height;
+    padding: 0 $spacing*2;
+    text-align: center;
+    font-size: $font-size-small;
+    font-weight: 600;
+    line-height: $btn-height;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
     text-decoration: none;
+    white-space: nowrap;
+    background-color: $accent-color;
+    color: $background-color;
+    border-radius: $border-radius;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-bottom: $spacing;
 }
 
 // TABLES
@@ -346,7 +266,6 @@ ul, ol {
     fieldset {
         border: none;
         border-radius: $border-radius;
-        padding: $spacing;
     }
     
     label {
@@ -357,10 +276,10 @@ ul, ol {
         display: block;
         width: 100%;
         padding: $spacing $spacing*2;
-        font-size: $font-size-small;
+        //font-size: $font-size-medium;
         line-height: $line-height;
-        color: $color-text;
-        background-color: $color-body;
+        color: $grayGunmetal;
+        background-color: $whiteAntiflash;
         background-image: none;
         border: $border;
         border-radius: $border-radius;
