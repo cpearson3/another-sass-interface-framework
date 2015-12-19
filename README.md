@@ -1,16 +1,21 @@
-# bootsmooth
-## Minimal Responsive CSS Framework
+# Bootsmooth
+## Another Responsive SCSS Framework
 
-An exercise in building a customizable responsive framework.
+Bootsmooth is a minimal and responsinve SCSS framework. It is built with Gulp.
 
-### Components and Features (proposed)
+Components:
 
 - Responsive Grid
-- Navigation
-- Cards
+- Nav bar
+- Buttons
 - Forms
 - Tables
-- Normalize
-- Animations
--- UX
--- Smooth Scroll
+
+### Building
+
+    git clone https://github.com/cpearson3/bootsmooth.git
+    bower install
+    npm install
+    gulp watch
+
+More documentation is coming soon.
