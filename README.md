@@ -7,8 +7,15 @@ Components:
 
 - Responsive Grid
 - Nav bar
-- Cards
+- Buttons
 - Forms
 - Tables
+
+### Building
+
+    git clone https://github.com/cpearson3/bootsmooth.git
+    bower install
+    npm install
+    gulp watch
 
 More documentation is coming soon.
