@@ -30,12 +30,6 @@ var gulp   = require('gulp'),
 // define the default task and add the watch task to it
 gulp.task('default', ['watch']);
 
-// bower task
-gulp.task('bower', function() { 
-    return bower()
-      .pipe(gulp.dest(config.bowerDir)) 
-});
-
 // configure the jshint task
 gulp.task('jshint', function() {
   return gulp.src(config.srcPath+'javascript/**/*.js')

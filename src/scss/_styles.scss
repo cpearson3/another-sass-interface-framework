@@ -179,6 +179,8 @@ ul, ol {
             display: none;
             height: auto;
             background-color: $background-color;
+            position: absolute;
+            border-bottom: $border;
         }
         
         li {
