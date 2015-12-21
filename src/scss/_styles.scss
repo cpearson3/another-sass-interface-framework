@@ -152,7 +152,7 @@ ul, ol {
             float: left;
             a {
                 color: $foreground-color;
-                dispay: inline-block;
+                display: inline-block;
                 padding-left: $spacing;
                 padding-right: $spacing;
                 text-decoration: none;    
@@ -161,7 +161,7 @@ ul, ol {
     }
     
     // menu button
-    a.show-menu {
+    a.menu-toggle {
         display: none;
     }
 }
@@ -192,7 +192,7 @@ ul, ol {
             padding-bottom: $spacing;
         }
         
-        a.show-menu {
+        a.menu-toggle {
     		display: block;
     		width: 100%;
     		position: relative;
@@ -201,7 +201,7 @@ ul, ol {
     		color: $foreground-color;
     		border-bottom: $border;
     	}
-    	a.show-menu:after {
+    	a.menu-toggle:after {
     		content:"";
     		display: inline-block;
     		position: absolute;
