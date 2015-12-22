@@ -249,6 +249,12 @@ ul, ol {
     -webkit-appearance:none;
 }
 
+.btn-flat {
+    @extend .btn;
+    background-color: $background-color;
+    color: $foreground-color;
+}
+
 // TABLES
 .table {
     @extend .center;
