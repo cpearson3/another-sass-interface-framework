@@ -228,6 +228,8 @@ ul, ol {
 
 // BUTTONS
 .btn {
+    @extend .bordered;
+    
     display: inline-block;
     height: $btn-height;
     padding: 0 $spacing*2;
@@ -241,8 +243,6 @@ ul, ol {
     white-space: nowrap;
     background-color: $accent-color;
     color: $background-color;
-    border-radius: $border-radius;
-    border: none;
     cursor: pointer;
     box-sizing: border-box;
     margin-bottom: $spacing;
@@ -252,7 +252,6 @@ ul, ol {
 
 .btn-flat {
     @extend .btn;
-    @extend .bordered;
     background-color: $background-color;
     color: $foreground-color;
 }
