@@ -252,6 +252,7 @@ ul, ol {
 
 .btn-flat {
     @extend .btn;
+    @extend .bordered;
     background-color: $background-color;
     color: $foreground-color;
 }
