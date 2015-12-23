@@ -216,9 +216,35 @@ ul, ol {
 }
 
 // fixed position
-.nav-fixed {
+.fixed {
     position: fixed;
 }
+
+// fixed elements
+.fixed-bottom-left {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.fixed-bottom-right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.fixed-top-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.fixed-top-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
 
 // PANELS
 .panel {
