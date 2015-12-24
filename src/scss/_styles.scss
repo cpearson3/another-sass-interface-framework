@@ -258,13 +258,13 @@ ul, ol {
     
     display: inline-block;
     height: $btn-height;
-    padding: 0 $spacing*2;
+    padding: 0 $spacing;
     text-align: center;
     font-size: $font-size-small;
     font-weight: 600;
     line-height: $btn-height;
     letter-spacing: .1rem;
-    text-transform: uppercase;
+    //text-transform: uppercase;
     text-decoration: none;
     white-space: nowrap;
     background-color: $accent-color;
@@ -305,29 +305,65 @@ ul, ol {
     margin: 0 auto;
     position:relative;
     width: 100%;
-    
-    fieldset {
-        border: none;
-        border-radius: $border-radius;
-    }
-    
-    label {
-        font-weight: bold;
-    }
-    
-    .form-control {
-        display: block;
-        width: 100%;
-        padding: $spacing $spacing*2;
-        //font-size: $font-size-medium;
-        line-height: $line-height;
-        color: $grayGunmetal;
-        background-color: $whiteAntiflash;
-        background-image: none;
-        border: $border;
-        border-radius: $border-radius;
-    }
 }
+
+fieldset {
+    border: none;
+    border-radius: $border-radius;
+}
+
+label {
+    font-weight: bold;
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    padding: $spacing $spacing*2;
+    //font-size: $font-size-medium;
+    line-height: $line-height;
+    color: $grayGunmetal;
+    background-color: $whiteAntiflash;
+    background-image: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: $border;
+    border-radius: $border-radius;
+}
+
+// CHECK BOXES
+
+// hide default
+input[type="checkbox"] {
+    display:none;
+}
+
+.checkbox {
+    
+    label:before {
+        content: "";
+        display: inline-block;
+     
+        width: $font-size-medium;
+        height: $font-size-medium;
+        border-radius: $border-radius;
+        line-height: $line-height;
+        margin-right: $spacing;
+        border: $border;
+        background-color: $background-color;
+    }
+    
+    input[type=checkbox]:checked + label:before {
+        content: "X";
+        font-size: $spacing;
+        color: $background-color;
+        background-color: $accent-color;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+} 
 
 // HEADERS
 .header {
