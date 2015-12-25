@@ -323,7 +323,7 @@ label {
     //font-size: $font-size-medium;
     line-height: $line-height;
     color: $grayGunmetal;
-    background-color: $whiteAntiflash;
+    background-color: $background-color;
     background-image: none;
     border-left: none;
     border-right: none;
@@ -335,7 +335,8 @@ label {
 // CHECK BOXES
 
 // hide default
-input[type="checkbox"] {
+input[type="checkbox"],
+input[type="radio"] {
     display:none;
 }
 
@@ -362,8 +363,32 @@ input[type="checkbox"] {
         text-align: center;
         vertical-align: middle;
     }
+}
 
-} 
+.radio {
+    
+    label:before {
+        content: "";
+        display: inline-block;
+     
+        width: $font-size-medium;
+        height: $font-size-medium;
+        border-radius: 100%;
+        line-height: $line-height;
+        margin-right: $spacing;
+        border: $border;
+        background-color: $background-color;
+    }
+    
+    input[type=radio]:checked + label:before {
+        content: "X";
+        font-size: $spacing;
+        color: $background-color;
+        background-color: $accent-color;
+        text-align: center;
+        vertical-align: middle;
+    }
+}
 
 // HEADERS
 .header {
