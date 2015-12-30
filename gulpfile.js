@@ -3,18 +3,10 @@
 // choose theme
 
 var config = {
-    buildPath: 'build/',
-    srcPath: 'src/',
     sassPaths: [
       './bower_components/color-me-sass/'
     ]
 }
-
-// sass include paths
-/*
-var normalizePaths = require('node-normalize-scss').includePaths;
-var sassPaths = [].concat(normalizePaths);
-*/
 
 // grab our packages
 var gulp   = require('gulp'),
@@ -22,25 +14,38 @@ var gulp   = require('gulp'),
     sass   = require('gulp-sass'),
     gutil  = require('gulp-util'),
     uglify = require('gulp-uglify'),
+    browserify = require('gulp-browserify'),
     concat = require('gulp-concat'),
     sourcemaps = require('gulp-sourcemaps'),
     rename = require('gulp-rename'),
+    clean = require('gulp-clean'),
     minifyCss = require('gulp-minify-css');
 
-// define the default task and add the watch task to it
-gulp.task('default', ['watch']);
-
 // configure the jshint task
-gulp.task('jshint', function() {
-  return gulp.src(config.srcPath+'javascript/**/*.js')
+gulp.task('lint', function() {
+  return gulp.src('./src/javascript/**/*.js')
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'));
 });
 
+// Browserify task
+gulp.task('browserify', function() {
+  // Single point of entry (make sure not to src ALL your files, browserify will figure it out for you)
+  gulp.src(['src/javascript/app.module.js'])
+  .pipe(browserify({
+    insertGlobals: true,
+    debug: true
+  }))
+  // Bundle to a single file
+  .pipe(concat('bundle.js'))
+  //.pipe(uglify())
+  // Output it to our build folder
+  .pipe(gulp.dest('build/javascript'));
+});
 
 // sass task
-gulp.task('build-css', function() {
-  return gulp.src(config.srcPath+'scss/**/*.scss')
+gulp.task('stylesheets', function() {
+  return gulp.src('./src/scss/**/*.scss')
     //.pipe(sass())   // {includePaths: sassPaths}
     .pipe(sass({
       includePaths: config.sassPaths
@@ -48,32 +53,43 @@ gulp.task('build-css', function() {
     .pipe(sourcemaps.init())
     .pipe(minifyCss({compatibility: 'ie8'}))
     .pipe(rename('bootsmooth.min.css'))
-    .pipe(gulp.dest(config.buildPath+'stylesheets'));
+    .pipe(gulp.dest('./build/stylesheets'));
 });
 
-// build javascript
-gulp.task('build-js', function() {
-  return gulp.src(config.srcPath+'javascript/**/*.js')
-    .pipe(sourcemaps.init())
-    .pipe(concat('bootsmooth.js'))
-    //only uglify if gulp is ran with '--type production'
-    .pipe(gutil.env.type === 'production' ? uglify() : gutil.noop()) 
-    //.pipe(sourcemaps.write())
-    .pipe(gulp.dest(config.buildPath+'javascript'));
-});
+// Views task
+gulp.task('views', function() {
+  // Get our index.html
+  gulp.src('./src/*.html')
+  // And put it in the build folder
+  .pipe(gulp.dest('build/'));
 
-// move index.html
-gulp.task('html', function() {
-  return gulp.src(config.srcPath+'*.html')
-    .pipe(gulp.dest(config.buildPath));
+  // Any other view files from app/views
+  gulp.src('./src/views/**/*')
+  // Will be put in the build/views folder
+  .pipe(gulp.dest('build/views/'));
 });
 
 // build task
-gulp.task('build', ['jshint', 'build-js', 'build-css', 'html']);
+gulp.task('build', ['lint', 'browserify', 'stylesheets', 'views']);
 
-// configure which files to watch and what tasks to use on file changes
-gulp.task('watch', ['build'], function() {
-  gulp.watch('src/javascript/**/*.js', ['jshint', 'build-js']);
-  gulp.watch('src/scss/*.scss', ['build-css']);
-  gulp.watch('src/*.html', ['html']);
+// Watch tasks
+gulp.task('watch', ['lint', 'build'], function() {
+    // Watch our scripts
+    gulp.watch(['./src/javascript/*.js', './src/javascript/**/*.js'],[
+        'lint',
+        'browserify'
+    ]);
+    
+    // Views
+    gulp.watch(['./src/*.html', './src/views/**/*.html'], [
+        'views'
+    ]);
+    
+    // Sass
+    gulp.watch(['./src/stylesheets/*.scss'], [
+        'stylesheets'
+    ]);
 });
+
+// define the default task and add the watch task to it
+gulp.task('default', ['watch']);

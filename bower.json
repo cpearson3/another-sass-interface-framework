@@ -1,11 +1,11 @@
 {
   "name": "bootsmooth",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "bootsmooth.com",
   "authors": [
     "Clarence Pearson <clarence.pearson3@gmail.com>"
   ],
-  "description": "Another responsive SCSS framework",
+  "description": "Responsive Web App Framework",
   "keywords": [
     "scss",
     "responsive",

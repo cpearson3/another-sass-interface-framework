@@ -1,22 +1,21 @@
 {
   "name": "bootsmooth",
-  "version": "1.0.0",
-  "description": "Another Responsive SCSS Framework",
+  "version": "1.0.1",
+  "description": "Responsive Web App Framework",
   "main": "gulpfile.js",
   "dependencies": {
+    "angular": "^1.4.8",
+    "browserify": "^12.0.1",
     "gulp": "^3.9.0",
-    "gulp-jshint": "^2.0.0",
-    "gulp-sass": "^2.1.0",
-    "gulp-util": "^3.0.7",
-    "jshint": "^2.9.1-rc1",
-    "jshint-stylish": "^2.1.0"
-  },
-  "devDependencies": {
-    "gulp-bower": "0.0.11",
+    "gulp-browserify": "^0.5.1",
+    "gulp-clean": "^0.3.1",
     "gulp-concat": "^2.6.0",
-    "gulp-minify-css": "^1.2.2",
-    "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^1.6.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-sass": "^2.1.1",
+    "gulp-util": "^3.0.7",
+    "jquery": "^2.1.4",
+    "jshint": "^2.9.1-rc1",
+    "angular-route": "^1.4.8",
     "gulp-uglify": "^1.5.1"
   },
   "scripts": {
@@ -30,7 +29,8 @@
     "css",
     "scss",
     "responsive",
-    "framework"
+    "framework",
+    "angular"
   ],
   "author": "cpearson3",
   "license": "MIT",

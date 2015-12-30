@@ -1,0 +1,254 @@
+<!--
+<nav class="nav fixed shadow">
+    <div class="nav-title">Bootsmooth CSS</div>
+    <a class="menu-toggle txt-center" href="#top-links"><i class="fa fa-bars pull-left"></i>Bootsmooth CSS</a>
+    <ul id="top-links">
+        <li><a href="#typography"><i class="fa fa-font"></i> Typography</a></li>
+        <li><a href="#grid"><i class="fa fa-columns"></i> Grid</a></li>
+        <li><a href="#navigation"><i class="fa fa-paper-plane"></i> Navigation</a></li>
+        <li><a href="#buttons"><i class="fa fa-square"></i> Buttons</a></li>
+        <li><a href="#tables"><i class="fa fa-table"></i> Tables</a></li>
+        <li><a href="#forms"><i class="fa fa-file-text-o"></i> Forms</a></li>
+    </ul>
+</nav>
+-->
+
+<p>The <b>Bootsmooth</b> CSS framework is built to be minimal, responsive, and extendable with Sass / SCSS.</p> 
+<br>
+<!-- Typography -->
+<h4 id="typography">Typography</h4>
+<br>
+<div class="panel bordered">
+    <p>This is a paragraph with some <a>links</a> to <a>places</a>.</p>
+
+    <ol>
+        <li>
+            <h1>Heading</h1></li>
+        <li>
+            <h2>Heading</h2></li>
+        <li>
+            <h3>Heading</h3></li>
+        <li>
+            <h4>Heading</h4></li>
+        <li>
+            <h5>Heading</h5></li>
+        <li>
+            <h6>Heading</h6></li>
+    </ol>
+</div>
+<!-- Grid -->
+<br>
+<h4 id="grid">12 Column Responsive Grid</h4>
+<br>
+<div class="row">
+    <div class="col-1 bordered txt-center">
+        1
+    </div>
+    <div class="col-11 bordered txt-center">
+        11
+    </div>
+</div>
+<div class="row">
+    <div class="col-2 bordered txt-center">
+        2
+    </div>
+    <div class="col-10 bordered txt-center">
+        10
+    </div>
+</div>
+<div class="row">
+    <div class="col-3 bordered txt-center">
+        3
+    </div>
+    <div class="col-9 bordered txt-center">
+        9
+    </div>
+</div>
+<div class="row">
+    <div class="col-4 bordered txt-center">
+        4
+    </div>
+    <div class="col-8 bordered txt-center">
+        8
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 bordered txt-center">
+        5
+    </div>
+    <div class="col-7 bordered txt-center">
+        7
+    </div>
+</div>
+<div class="row">
+    <div class="col-6 bordered txt-center">
+        6
+    </div>
+    <div class="col-6 bordered txt-center">
+        6
+    </div>
+</div>
+
+<br>
+<h4 id="navigation">Navigation bar</h4>
+<br>
+<div class="nav bordered">
+    <!-- nav heading -->
+    <div class="nav-title">Nav Bar Title</div>
+    <ul>
+        <li><a href="#"><i class="fa fa-home"></i> Link 1</a></li>
+        <li><a href="#"><i class="fa fa-font"></i> Link 2</a></li>
+        <li><a href="#"><i class="fa fa-hashtag"></i> Link 3</a></li>
+    </ul>
+    
+    <!-- nav menu -->
+    <a class="menu-toggle" href="#">Responsive Nav Bar Menu</a>
+</div>
+
+
+<!-- Buttons -->
+<br>
+<h4 id="buttons">Buttons</h4>
+<br>
+<div class="btn-group">
+    <a class="btn">Anchor button</a>
+    <button class="btn bg-primary txt-body">Regular Button</button>
+    <input type="button" class="btn bg-secondary txt-body" value="Input Button">
+    <input type="submit" class="btn bg-accent txt-body" value="Submit Button">
+</div>
+
+<!-- Tables -->
+<br>
+<h4 id="tables">Tables</h4>
+<br>
+
+<div class="scrollableX">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>Column 1</td>
+                <td>Column 2</td>
+                <td>Column 3</td>
+                <td>Column 4</td>
+                <td>Column 5</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td><i class="fa fa-folder-open-o"></i></td>
+                <td><i class="fa fa-close"></i></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td><i class="fa fa-folder-open-o"></i></td>
+                <td><i class="fa fa-close"></i></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td><i class="fa fa-folder-open-o"></i></td>
+                <td><i class="fa fa-close"></i></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td><i class="fa fa-folder-open-o"></i></td>
+                <td><i class="fa fa-close"></i></td>
+            </tr>
+        </tbody>
+        <tfoot>
+
+        </tfoot>
+    </table>
+</div>
+
+<!-- Forms -->
+<br>
+<h4 id="forms">Forms</h4>
+<br>
+<form class="form" action="">
+    <fieldset>
+        <legend>Contact Form :</legend>
+        <div class="row">
+            <div class="col-2">
+                <label>Name</label>
+            </div>
+            <div class="col-10">
+                <input class="form-input" type="text" name="name" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <label>Email Address</label>
+            </div>
+            <div class="col-10">
+                <input class="form-input" type="text" name="email" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <label>Subject</label>
+            </div>
+            <div class="col-10">
+                <input class="form-input" type="text" name="subject" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <label>Message</label>
+            </div>
+            <div class="col-10">
+                <textarea class="form-input" name="feedback" rows="6"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+            </div>
+            <div class="col-10">
+                <button class="btn btn-go">Submit</button>
+                <button class="btn btn-stop">Cancel</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+
+<br>
+<h4>Checkbox and Radio Buttons</h4>
+<p>Custom checkbox and radio button input widgets</p>
+<div class="checkbox">
+    <input id="check1" type="checkbox" name="check" value="check1">
+    <label for="check1">Checkbox No. 1</label>
+    <br>
+    <input id="check2" type="checkbox" name="check" value="check2">
+    <label for="check2">Checkbox No. 2</label>
+</div>
+<br>
+<div class="radio">
+    <input id="radio1" type="radio" name="check" value="radio1">
+    <label for="radio1">Radio No. 1</label>
+    <br>
+    <input id="radio2" type="radio" name="check" value="radio2">
+    <label for="radio2">Radio No. 2</label>
+</div>
+
+
+<br>
+<h4>List Groups and Badges</h4>
+<ul class="list-group">
+    <li class="list-item"><span class="badge">Badge!</span>One</li>
+    <li class="list-item">Two</li>
+    <li class="list-item">Three</li>
+</ul>
+
+<br>
+<h4>Fixed Elements</h4>
+<p>Any element can be fixed to the corners with classes.</p>
+<a style="opacity: .7" href="#home" class="btn shadow fixed-bottom-right"><small>Fixed!</small></a>
+
