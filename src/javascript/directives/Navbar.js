@@ -1,8 +1,5 @@
 'use strict';
 
-// jQuery
-var $ = require('jquery');
-
 var Navbar = function () {
   return {
       restrict: 'EA',

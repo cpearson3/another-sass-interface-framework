@@ -3,9 +3,7 @@
 // choose theme
 
 var config = {
-    sassPaths: [
-      './bower_components/color-me-sass/'
-    ]
+    sassPaths: []
 }
 
 // grab our packages
@@ -31,13 +29,13 @@ gulp.task('lint', function() {
 // Browserify task
 gulp.task('browserify', function() {
   // Single point of entry (make sure not to src ALL your files, browserify will figure it out for you)
-  gulp.src(['src/javascript/app.module.js'])
+  gulp.src(['src/javascript/bootsmooth.js'])
   .pipe(browserify({
     insertGlobals: true,
     debug: true
   }))
   // Bundle to a single file
-  .pipe(concat('bundle.js'))
+  .pipe(concat('bootsmooth.js'))
   //.pipe(uglify())
   // Output it to our build folder
   .pipe(gulp.dest('build/javascript'));
@@ -46,10 +44,7 @@ gulp.task('browserify', function() {
 // sass task
 gulp.task('stylesheets', function() {
   return gulp.src('./src/scss/**/*.scss')
-    //.pipe(sass())   // {includePaths: sassPaths}
-    .pipe(sass({
-      includePaths: config.sassPaths
-    }))
+    .pipe(sass())   // {includePaths: config.sassPaths}
     .pipe(sourcemaps.init())
     .pipe(minifyCss({compatibility: 'ie8'}))
     .pipe(rename('bootsmooth.min.css'))
@@ -62,11 +57,6 @@ gulp.task('views', function() {
   gulp.src('./src/*.html')
   // And put it in the build folder
   .pipe(gulp.dest('build/'));
-
-  // Any other view files from app/views
-  gulp.src('./src/views/**/*')
-  // Will be put in the build/views folder
-  .pipe(gulp.dest('build/views/'));
 });
 
 // build task
@@ -81,7 +71,7 @@ gulp.task('watch', ['lint', 'build'], function() {
     ]);
     
     // Views
-    gulp.watch(['./src/*.html', './src/views/**/*.html'], [
+    gulp.watch(['./src/*.html'], [
         'views'
     ]);
     
