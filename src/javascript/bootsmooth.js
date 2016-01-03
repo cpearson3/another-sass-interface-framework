@@ -3,20 +3,24 @@
 
 // Directives
 var Navbar = require('./directives/Navbar'),
-    NavbarLink = require('./directives/NavbarLink'),
+    ListLink = require('./directives/ListLink'),
+    NavbarDropdown = require('./directives/NavbarDropdown'),
     Modal = require('./directives/Modal'),
     DateTime = require('./directives/DateTime'),
     ImageBox = require('./directives/ImageBox'),
-    Button = require('./directives/Button');
+    Button = require('./directives/Button'),
+    DropdownButton = require('./directives/DropdownButton');
 
 // App module
 var bootsmooth = angular.module('bootsmooth', []);
 
 bootsmooth.directive('navbar', Navbar)
-.directive('navbarLink',NavbarLink)
+.directive('listLink',ListLink)
+.directive('navbarDropdown', NavbarDropdown)
 .directive('modalDialog', Modal)
 .directive('dateTime', ['$interval', DateTime])
 .directive('imageBox', ImageBox)
-.directive('btn',Button);
+.directive('btn',Button)
+.directive('btnDropdown', DropdownButton);
 
 module.exports = bootsmooth;

@@ -502,11 +502,13 @@ input[type="radio"] {
     }
     
     input[type=checkbox]:checked + label:before {
-        content: "\2713";
+        //content: "\2713";
+        content: "\2705";
         font-size: $spacing;
-        background-color: $active-color;
+        //background-color: $active-color;
         text-align: center;
         vertical-align: middle;
+        box-shadow: $shadow;
     }
 }
 
@@ -526,11 +528,12 @@ input[type="radio"] {
     }
     
     input[type=radio]:checked + label:before {
-        content: "\2718";
+        content: "\272A";
         font-size: $spacing;
-        background-color: $active-color;
+        //background-color: $active-color;
         text-align: center;
         vertical-align: middle;
+        box-shadow: $shadow;
     }
 }
 
