@@ -8,13 +8,7 @@ var Button = function() {
         },
         transclude: true,
         link: function (scope, element, attrs) {
-            
-            if (scope.type == 'flat' ) {
-                scope.class = "btn-flat";
-            }  else {
-                scope.class = 'btn';
-            }
-            
+            scope.class = scope.type ? 'btn-'+scope.type : 'btn';
         },
         replace: true,
         template: '<a class="{{class}}"><ng-transclude></ng-transclude></a>'

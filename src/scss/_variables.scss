@@ -1,9 +1,30 @@
 // general color defines
 $background-color: #FFF;
 $foreground-color: #333;
-$accent-color: #009;
-$info-color: #990;
-$block-color: #999;
+$primary-color: #483743;
+$info-color: #ce9933;
+$success-color: #756a48;
+$warning-color: #9A3334;
+$attention-color: #ce4e34;
+$active-color: #cbc5c1;
+
+$background-color-dark: darken($background-color, 10%);
+$foreground-color-dark: darken($foreground-color, 10%);
+$primary-color-dark: darken($primary-color, 10%);
+$info-color-dark: darken($info-color, 10%);
+$success-color-dark: darken($success-color, 10%);
+$warning-color-dark: darken($warning-color, 10%);
+$attention-color-dark: darken($attention-color, 10%);
+$active-color-dark: darken($active-color, 10%);
+
+$background-color-light: lighten($background-color, 10%);
+$foreground-color-light: lighten($foreground-color, 10%);
+$primary-color-light: lighten($primary-color, 10%);
+$info-color-light: lighten($info-color, 10%);
+$success-color-light: lighten($success-color, 10%);
+$warning-color-light: lighten($warning-color, 10%);
+$attention-color-light: lighten($attention-color, 10%);
+$active-color-light: lighten($active-color, 10%);
 
 // spacing
 $spacing: 8px;
@@ -22,7 +43,7 @@ $border-radius: 0px;
 $border: 1px solid $foreground-color;
 
 // font styles
-$font-body: 'Open Sans', sans-serif;
+$font-body: 'Raleway', sans-serif;
 $font-heading: 'PT Sans', sans-serif;
 
 // navigation

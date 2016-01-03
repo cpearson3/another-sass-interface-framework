@@ -76,7 +76,7 @@ gulp.task('watch', ['lint', 'build'], function() {
     ]);
     
     // Sass
-    gulp.watch(['./src/stylesheets/*.scss'], [
+    gulp.watch(['./src/scss/*.scss'], [
         'stylesheets'
     ]);
 });

@@ -19,6 +19,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol {
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
   line-height: $heading-line-height;
+  font-family: $font-heading;
 }
   
 // set body
@@ -32,7 +33,7 @@ body {
 a {
     font-style: bold;
     cursor: pointer;
-    color: $accent-color;
+    color: $attention-color;
     
     &:visited {
         font-style: bold;
@@ -48,11 +49,6 @@ a {
 // breaks and horizontals
 br {
     line-height: 150%;
-}
-
-// set headings
-h1, h2, h3, h4, h5, h6 {
-    font-family: $font-heading;
 }
 
 // matching classes
@@ -146,6 +142,7 @@ ul, ol {
     .nav-title {
         float: left;
         display: block;
+        padding-right: $spacing;
     }
     
     ul {
@@ -159,11 +156,16 @@ ul, ol {
             display: inline;
             float: left;
             a {
+                transition: background-color $transition-time ease;
                 color: $foreground-color;
                 display: inline-block;
                 padding-left: $spacing;
                 padding-right: $spacing;
-                text-decoration: none;    
+                text-decoration: none;
+                
+                &:hover {
+                    background-color: $active-color;
+                }
             }
         }
     }
@@ -259,9 +261,32 @@ ul, ol {
     border-radius: $border-radius;
 }
 
+// color classes
+.bg-inverse {
+    background-color: $foreground-color;
+    color: $background-color;
+}
+.bg-primary { background-color: $primary-color; }
+.bg-attention { background-color: $attention-color; }
+.bg-warning { background-color: $warning-color; }
+.bg-success { background-color: $success-color; }
+.bg-info { background-color: $info-color; }
+.bg-active { background-color: $active-color; }
+
+.txt-background { color: $background-color; }
+.txt-primary { color: $primary-color; }
+.txt-attention { color: $attention-color; }
+.txt-warning { color: $warning-color; }
+.txt-success { color: $success-color; }
+.txt-info { color: $info-color; }
+.txt-active { color: $active-color; }
+
+
 // BUTTONS
 .btn {
     @extend .bordered;
+    
+    transition: background-color $transition-time ease;
     
     display: inline-block;
     height: $btn-height;
@@ -271,24 +296,60 @@ ul, ol {
     font-weight: 600;
     line-height: $btn-height;
     letter-spacing: .1rem;
-    //text-transform: uppercase;
     text-decoration: none;
     white-space: nowrap;
-    background-color: $accent-color;
-    color: $background-color;
     cursor: pointer;
     box-sizing: border-box;
     margin-bottom: $spacing;
-    
     -webkit-appearance:none;
-}
-
-.btn-flat {
-    @extend .btn;
     background-color: $background-color;
     color: $foreground-color;
+    
+    &:hover {
+        background-color: $background-color-dark;
+    }
 }
 
+.btn-primary {
+    @extend .btn;
+    background-color: $primary-color;
+    color: $background-color;
+    &:hover {
+        background-color: $primary-color-dark;
+    }
+}
+.btn-success {
+    @extend .btn;
+    background-color: $success-color;
+    color: $background-color;
+    &:hover {
+        background-color: $success-color-dark;
+    }
+}
+.btn-warning {
+    @extend .btn;
+    background-color: $warning-color;
+    color: $background-color;
+    &:hover {
+        background-color: $warning-color-dark;
+    }
+}
+.btn-info {
+    @extend .btn;
+    background-color: $info-color;
+    color: $background-color;
+    &:hover {
+        background-color: $info-color-dark;
+    }
+}
+.btn-attention {
+    @extend .btn;
+    background-color: $attention-color;
+    color: $background-color;
+    &:hover {
+        background-color: $attention-color-dark;
+    }
+}
 // TABLES
 .table {
     @extend .center;
@@ -327,8 +388,7 @@ label {
     display: block;
     width: 100%;
     padding: $spacing $spacing*2;
-    //font-size: $font-size-medium;
-    line-height: $line-height;
+    font-size: $font-size;
     color: $foreground-color;
     background-color: $background-color;
     background-image: none;
@@ -347,9 +407,17 @@ input[type="radio"] {
     display:none;
 }
 
+.checkbox .radio {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 .checkbox {
     
     label:before {
+        transition: background-color $transition-time ease;
+        
         content: "";
         display: inline-block;
      
@@ -363,18 +431,17 @@ input[type="radio"] {
     }
     
     input[type=checkbox]:checked + label:before {
-        content: "X";
+        content: "\2713";
         font-size: $spacing;
-        color: $background-color;
-        background-color: $block-color;
+        background-color: $active-color;
         text-align: center;
         vertical-align: middle;
     }
 }
 
 .radio {
-    
     label:before {
+        transition: background-color $transition-time ease;
         content: "";
         display: inline-block;
      
@@ -388,10 +455,9 @@ input[type="radio"] {
     }
     
     input[type=radio]:checked + label:before {
-        content: "X";
+        content: "\2718";
         font-size: $spacing;
-        color: $background-color;
-        background-color: $block-color;
+        background-color: $active-color;
         text-align: center;
         vertical-align: middle;
     }
