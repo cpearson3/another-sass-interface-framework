@@ -121,12 +121,12 @@ ul, ol {
 
 // NAVIGATION
 
-// body class if navigation is used
+// add padding class if navigation is used
 .nav-pad {
     padding-top: $nav-height;
 }
 
-// header
+// navigation bar
 .nav {
     @extend %clearfix;
 
@@ -171,12 +171,64 @@ ul, ol {
     }
     
     // menu button
-    a.menu-toggle {
+    a.toggle-nav {
         display: none;
+    }
+    
+    .menu-dropdown {
+        
+        li {
+            padding: $spacing 0px;
+            display: block;
+            float: none;
+            a {
+                padding: 0 $spacing;
+            }
+        }
     }
 }
 
-// anything smaller than iphone 5 resolution
+
+// Drop Down Menu & Toggle
+.toggle-dropdown {
+    &:hover .menu-dropdown {
+        z-index:1;
+        opacity:1;
+    }
+    
+    // Drop Down Menu
+    .menu-dropdown {
+        padding: $spacing 0;
+        position: relative;
+        top: 100%;
+        left: 0px;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity linear $transition-time;
+        box-shadow: $shadow;
+        border: $border;
+        background-color: $background-color;
+        
+        li {
+            display: block;
+            padding-top: $spacing;
+            //font-size: $font-size-medium;
+            
+            a {
+                display: block;
+                color: $foreground-color;
+                
+                &:hover {
+                    background-color: $active-color;
+                    color: $background-color;
+                }
+            }
+        }
+    }
+}
+
+// Nav Menu Media Query
+// - Anything smaller than iphone 5 resolution
 @media only screen and (max-width : 568px) {
     .nav {
         padding: 0;
@@ -207,7 +259,7 @@ ul, ol {
             }
         }
         
-        a.menu-toggle {
+        a.toggle-nav {
     		display: block;
     		width: 100%;
     		position: relative;
@@ -216,10 +268,29 @@ ul, ol {
     		color: $foreground-color;
     		border-bottom: $border;
     	}
-    	a.menu-toggle:after {
+    	a.toggle-nav:after {
     		content:"";
     		display: inline-block;
     		position: absolute;
+    	}
+    	
+    	.toggle-dropdown {
+    	    a {
+    	        text-decoration: underline;
+    	    }
+    	    .menu-dropdown {
+    	        display: block;
+    	        position: relative;
+    	        opacity: 1;
+    	        left: auto;
+    	        z-index: 2;
+    	        top: auto;
+    	        box-shadow: none;
+                border: none;
+                a {
+                    text-decoration: none;
+                }
+    	    }
     	}
     }
 }
@@ -263,23 +334,23 @@ ul, ol {
 
 // color classes
 .bg-inverse {
-    background-color: $foreground-color;
-    color: $background-color;
+    background-color: $foreground-color !important;
+    color: $background-color !important;
 }
-.bg-primary { background-color: $primary-color; }
-.bg-attention { background-color: $attention-color; }
-.bg-warning { background-color: $warning-color; }
-.bg-success { background-color: $success-color; }
-.bg-info { background-color: $info-color; }
-.bg-active { background-color: $active-color; }
+.bg-primary { background-color: $primary-color !important; }
+.bg-attention { background-color: $attention-color !important; }
+.bg-warning { background-color: $warning-color !important;}
+.bg-success { background-color: $success-color !important; }
+.bg-info { background-color: $info-color !important; }
+.bg-active { background-color: $active-color !important; }
 
-.txt-background { color: $background-color; }
-.txt-primary { color: $primary-color; }
-.txt-attention { color: $attention-color; }
-.txt-warning { color: $warning-color; }
-.txt-success { color: $success-color; }
-.txt-info { color: $info-color; }
-.txt-active { color: $active-color; }
+.txt-background { color: $background-color !important; }
+.txt-primary { color: $primary-color !important; }
+.txt-attention { color: $attention-color !important; }
+.txt-warning { color: $warning-color !important; }
+.txt-success { color: $success-color !important; }
+.txt-info { color: $info-color !important; }
+.txt-active { color: $active-color !important; }
 
 
 // BUTTONS
@@ -516,4 +587,12 @@ input[type="radio"] {
     height: $footer-height;
     padding-top: $footer-padding;
     padding-bottom: $footer-padding;
+}
+// CODE AND PRE
+pre, code {
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }

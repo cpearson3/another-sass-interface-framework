@@ -17,7 +17,7 @@ var Navbar = function () {
       },
       template: '<nav class="nav">' +
                   '<div class="nav-title">{{title}}</div>'+
-                  '<a class="menu-toggle txt-center" ng-click="toggle()">'+
+                  '<a class="toggle-nav txt-center" ng-click="toggle()">'+
                     '<i class="fa fa-bars pull-left"></i> {{title}}'+
                   '</a>'+
                   '<ul id="{{name}}">'+

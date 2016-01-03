@@ -1,12 +1,20 @@
 // general color defines
 $background-color: #FFF;
 $foreground-color: #333;
+$primary-color: #75a3d1;
+$info-color: #bcc747;
+$success-color: #5bb12f;
+$warning-color: #d9411e;
+$attention-color: #e05151;
+$active-color: #cbc5c1;
+/*
 $primary-color: #483743;
 $info-color: #ce9933;
 $success-color: #756a48;
 $warning-color: #9A3334;
 $attention-color: #ce4e34;
 $active-color: #cbc5c1;
+*/
 
 $background-color-dark: darken($background-color, 10%);
 $foreground-color-dark: darken($foreground-color, 10%);
@@ -59,7 +67,7 @@ $footer-height: $nav-height;
 $footer-padding: $nav-height;
 
 // animations
-$transition-time: 0.4s;
+$transition-time: 0.3s;
 
 // shadows
 $shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
