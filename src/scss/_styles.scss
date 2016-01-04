@@ -191,9 +191,11 @@ ul, ol {
 
 // Drop Down Menu & Toggle
 .toggle-dropdown {
+    
     &:hover .menu-dropdown {
-        z-index:1;
+        //z-index:1;
         opacity:1;
+        display: block;
     }
     
     // Drop Down Menu
@@ -202,9 +204,10 @@ ul, ol {
         position: relative;
         top: 100%;
         left: 0px;
-        z-index: -1;
+        //z-index: -1;
         opacity: 0;
-        transition: opacity linear $transition-time;
+        display: none;
+        transition: opacity $transition-time ease;
         box-shadow: $shadow;
         border: $border;
         background-color: $background-color;

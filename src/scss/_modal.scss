@@ -6,9 +6,10 @@
   left:0;
   width:100%;
   height:100%;
-  background-color:#000000;
+  background-color: $primary-color;
   opacity: 0.8;
 }
+
 .ng-modal-dialog {
   z-index:10000;
   position: fixed;
@@ -20,6 +21,7 @@
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
 
+  border: $border;
   background-color: $background-color;
   box-shadow: $shadow;
 }
@@ -37,4 +39,15 @@
   font-size: 120%;
   display: inline-block;
   font-weight: bold;
+  transition: text-shadow $transition-time ease;
+  
+  &:before {
+    content: '\2716';
+    color: $warning-color;
+  }
+  
+  &:hover {
+    //box-shadow: $shadow;
+    text-shadow: 3px 3px 2px rgba(0,0,0,.65);
+  }
 }
