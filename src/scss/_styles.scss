@@ -471,9 +471,33 @@ label {
     border-top: none;
     border-bottom: $border;
     border-radius: $border-radius;
+    verticle-align: middle;
+    
+    &:required {
+        content: '*';
+        color: $warning-color;
+    }
 }
 
-// CHECK BOXES
+.form-input-inline {
+    @extend .form-input;
+    display: inline;
+    width: auto;
+    margin-left: $spacing;
+    margin-right: $spacing;
+    
+    font-weight: bold;
+    
+    &:required {
+        content: '*';
+        color: $warning-color;
+    }
+}
+
+// inline forms
+
+
+// CHECK & RADIO BOXES
 
 // hide default
 input[type="checkbox"],
