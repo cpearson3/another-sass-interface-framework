@@ -474,8 +474,7 @@ label {
     verticle-align: middle;
     
     &:required {
-        content: '*';
-        color: $warning-color;
+        border-color: $warning-color;
     }
 }
 
@@ -485,13 +484,13 @@ label {
     width: auto;
     margin-left: $spacing;
     margin-right: $spacing;
-    
+    text-align: center;
     font-weight: bold;
-    
-    &:required {
-        content: '*';
-        color: $warning-color;
-    }
+}
+
+.nav-input {
+    @extend .form-input;
+    border: $border;
 }
 
 // inline forms
@@ -581,14 +580,13 @@ input[type="radio"] {
     padding: 0;
     display: block;
     list-style: none;
-}
-
-.list-item {
-    border-bottom: $border;
-    padding: $spacing;
-    
-    &:last-child {
-        border-bottom: none;
+    li {
+        border-bottom: $border;
+        padding: $spacing;
+        
+        &:last-child {
+            border-bottom: none;
+        }
     }
 }
 
