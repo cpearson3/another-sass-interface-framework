@@ -9,6 +9,7 @@ var Navbar = require('./directives/Navbar'),
     DateTime = require('./directives/DateTime'),
     ImageBox = require('./directives/ImageBox'),
     Button = require('./directives/Button'),
+    Slideout = require('./directives/Slideout'),
     DropdownButton = require('./directives/DropdownButton');
 
 // App module
@@ -21,6 +22,7 @@ bootsmooth.directive('navbar', Navbar)
 .directive('dateTime', ['$interval', DateTime])
 .directive('imageBox', ImageBox)
 .directive('btn',Button)
+.directive('slideout', Slideout)
 .directive('btnDropdown', DropdownButton);
 
 module.exports = bootsmooth;

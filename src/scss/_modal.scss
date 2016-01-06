@@ -31,6 +31,7 @@
   padding: $spacing;
   text-align: left;
 }
+
 .modal-close {
   position: absolute;
   top: $spacing;
@@ -67,7 +68,7 @@
   border: $border;
   box-shadow: $shadow;
   z-index:9999;
-  display: none;
+//  display: none;
 }
 
 .slideout-left {
