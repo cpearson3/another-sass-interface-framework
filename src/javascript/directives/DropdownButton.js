@@ -1,3 +1,4 @@
+/*jshint strict:false */
 'use strict';
 
 var DropdownButton = function() {

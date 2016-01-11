@@ -23,7 +23,7 @@ $breakpoint-medium: "only screen and (min-width: 40em)";
     @include border-box;
 }
 
-// extandable clearfix rule
+// extendable clearfix rule
 %clearfix {
     *zoom: 1;
     &:before, 
@@ -35,6 +35,7 @@ $breakpoint-medium: "only screen and (min-width: 40em)";
         clear: both;
     }
 }
+
 
 /* container and Rows */
 .container {

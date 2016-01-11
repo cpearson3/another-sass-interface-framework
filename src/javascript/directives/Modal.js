@@ -1,5 +1,4 @@
-// Due to some weirdness, all templates are inline
-// - ng-show does not work with templates loaded externally
+/*jshint strict:false */
 
 'use strict';
 
@@ -22,6 +21,7 @@ var Modal = function() {
             scope.hideModal = function() {
                 scope.show = false;
             };
+
         },
         template:   '<div class="modal" ng-show="show">'+
                         '<div class="modal-overlay" ng-click="hideModal()"></div>'+
