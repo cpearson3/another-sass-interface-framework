@@ -1,0 +1,177 @@
+// NAVIGATION
+
+// add padding class if navigation is used
+.nav-pad {
+    padding-top: $spacing*4;
+}
+
+// navigation bar
+.nav {
+    @extend %clearfix;
+    width: 100%;
+    height: $nav-height;
+    font-size: $nav-font-size;
+    left: 0;
+    z-index: 999;
+    padding: $nav-padding;
+    background-color: $background-color;
+    border-bottom: $border;
+    
+    .nav-title {
+        float: left;
+        display: block;
+        padding-right: $spacing;
+    }
+    
+    ul {
+        @extend %clearfix;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: table;
+        
+        li {
+            display: inline;
+            float: left;
+            a {
+                transition: background-color $transition-time ease;
+                color: $foreground-color;
+                display: inline-block;
+                padding-left: $spacing;
+                padding-right: $spacing;
+                text-decoration: none;
+                
+                &:hover {
+                    background-color: $active-color;
+                }
+            }
+        }
+    }
+    
+    // menu button
+    a.toggle-nav {
+        display: none;
+    }
+    
+    .menu-dropdown {
+        
+        li {
+            padding: $spacing 0px;
+            display: block;
+            float: none;
+            a {
+                padding: 0 $spacing;
+            }
+        }
+    }
+}
+
+
+// Drop Down Menu & Toggle
+.toggle-dropdown {
+    
+    &:hover .menu-dropdown {
+        z-index: 999;
+        opacity:1;
+        display: block;
+    }
+    
+    // Drop Down Menu
+    .menu-dropdown {
+        padding: $spacing 0;
+        position: relative;
+        top: 100%;
+        left: 0px;
+        //z-index: -1;
+        opacity: 0;
+        display: none;
+        transition: opacity $transition-time ease;
+        box-shadow: $shadow;
+        border: $border;
+        background-color: $background-color;
+        
+        li {
+            display: block;
+            padding-top: $spacing;
+            //font-size: $font-size-medium;
+            
+            a {
+                display: block;
+                color: $foreground-color;
+                
+                &:hover {
+                    background-color: $active-color;
+                    color: $background-color;
+                }
+            }
+        }
+    }
+}
+
+// Nav Menu Media Query
+// - Anything smaller than iphone 5 resolution
+@media only screen and (max-width : 568px) {
+    .nav {
+        padding: 0;
+        
+        .nav-title {
+            display: none;
+        }
+        
+        ul {
+            display: none;
+            height: auto;
+            background-color: $background-color;
+            position: absolute;
+            width: 100%;
+            border-bottom: $border;
+        }
+        
+        li {
+            display: block;
+            float: none;
+            width: 100%;
+            padding-top: $spacing;
+            padding-bottom: $spacing;
+            
+            a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        
+        a.toggle-nav {
+    		display: block;
+    		width: 100%;
+    		position: relative;
+    		background-color: $background-color;
+    		padding: $spacing*2 $spacing $spacing*2 $spacing;
+    		color: $foreground-color;
+    		border-bottom: $border;
+    	}
+    	a.toggle-nav:after {
+    		content:"";
+    		display: inline-block;
+    		position: absolute;
+    	}
+    	
+    	.toggle-dropdown {
+    	    a {
+    	        text-decoration: underline;
+    	    }
+    	    .menu-dropdown {
+    	        display: block;
+    	        position: relative;
+    	        opacity: 1;
+    	        left: auto;
+    	        z-index: 2;
+    	        top: auto;
+    	        box-shadow: none;
+                border: none;
+                a {
+                    text-decoration: none;
+                }
+    	    }
+    	}
+    }
+}

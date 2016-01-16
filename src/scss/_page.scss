@@ -1,0 +1,17 @@
+// page components
+
+// HEADERS
+.header {
+    // cover images
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover; 
+}
+
+// FOOTER
+.footer {
+    height: $footer-height;
+    padding-top: $footer-padding;
+    padding-bottom: $footer-padding;
+}

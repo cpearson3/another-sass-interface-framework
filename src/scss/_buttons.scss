@@ -1,0 +1,67 @@
+// BUTTONS
+.btn {
+    @extend .bordered;
+    
+    transition: background-color $transition-time ease;
+    
+    display: inline-block;
+    height: $btn-height;
+    padding: 0 $spacing;
+    text-align: center;
+    font-weight: 600;
+    line-height: $btn-height;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-bottom: $spacing;
+    -webkit-appearance:none;
+    background-color: $background-color;
+    color: $foreground-color;
+    
+    &:hover {
+        background-color: $background-color-dark;
+    }
+}
+
+.btn-primary {
+    @extend .btn;
+    background-color: $primary-color;
+    color: $background-color;
+    &:hover {
+        background-color: $primary-color-dark;
+    }
+}
+.btn-success {
+    @extend .btn;
+    background-color: $success-color;
+    color: $background-color;
+    &:hover {
+        background-color: $success-color-dark;
+    }
+}
+.btn-warning {
+    @extend .btn;
+    background-color: $warning-color;
+    color: $background-color;
+    &:hover {
+        background-color: $warning-color-dark;
+    }
+}
+.btn-info {
+    @extend .btn;
+    background-color: $info-color;
+    color: $background-color;
+    &:hover {
+        background-color: $info-color-dark;
+    }
+}
+.btn-attention {
+    @extend .btn;
+    background-color: $attention-color;
+    color: $background-color;
+    &:hover {
+        background-color: $attention-color-dark;
+    }
+}

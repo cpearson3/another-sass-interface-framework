@@ -1,0 +1,127 @@
+// typography
+
+html {
+  font-size: 62.5%;
+}
+
+// set body
+body {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    font-family: $font-body;
+    letter-spacing: $letter-spacing;
+    
+    background-color: $background-color;
+    color: $foreground-color;
+}
+
+// links
+a {
+    font-style: bold;
+    cursor: pointer;
+    color: $attention-color;
+    
+    &:visited {
+        font-style: bold;
+        text-decoration: underline;   
+    }
+    
+    &:hover {
+        font-style: bold;
+        text-decoration: underline; 
+    }
+}
+
+
+// headings
+h1 {
+    font-size: 5.0rem;
+}
+h2 {
+    font-size: 4.2rem;
+}
+h3 {
+    font-size: 3.6rem;
+}
+h4 {
+    font-size: 3.0rem;
+}
+h5 {
+    font-size: 2.4rem;
+}
+h6 {
+    font-size: 1.5rem;
+}
+
+// spacing
+pre, blockquote, dl, figure, table, p, ul, ol, form {
+    margin-bottom: 1.0rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 1.0rem;
+    word-wrap: break-word;
+}
+
+// matching classes
+@for $i from 1 through 6 {
+    .h#{$i} {
+        @extend h#{$i};
+    }
+}
+
+// color classes
+.bg-inverse {
+    background-color: $foreground-color !important;
+    color: $background-color !important;
+}
+.bg-primary { background-color: $primary-color !important; }
+.bg-attention { background-color: $attention-color !important; }
+.bg-warning { background-color: $warning-color !important;}
+.bg-success { background-color: $success-color !important; }
+.bg-info { background-color: $info-color !important; }
+.bg-active { background-color: $active-color !important; }
+
+.txt-background { color: $background-color !important; }
+.txt-primary { color: $primary-color !important; }
+.txt-attention { color: $attention-color !important; }
+.txt-warning { color: $warning-color !important; }
+.txt-success { color: $success-color !important; }
+.txt-info { color: $info-color !important; }
+.txt-active { color: $active-color !important; }
+
+// text alignment
+.txt-center {
+    text-align: center;
+}
+.txt-left {
+    text-align: left;
+}
+.txt-right {
+    text-align: right;
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+// lists
+
+ul, ol {
+    padding-left: $spacing*3;
+}
+
+// CODE AND PRE
+pre, code {
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}

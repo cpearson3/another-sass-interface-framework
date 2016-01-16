@@ -1,0 +1,17 @@
+// TABLES
+.table {
+    @extend .center;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    
+    td, th {
+      padding: $spacing;
+    }
+}
+
+.table-bordered {
+    td, th {
+        @extend .bordered;
+    }
+}

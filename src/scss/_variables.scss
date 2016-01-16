@@ -38,33 +38,33 @@ $active-color-light: lighten($active-color, 10%);
 $spacing: 8px;
 
 // font
-$font-size: 18px;
-$font-size-medium: 14px;
-$font-size-small: 12px;
-$font-weight: 100;
-$heading-line-height: 1.1;
-$heading-margin: 1em;
-$line-height: 1.5;
+$font-size: 1.6em;
+$font-size-medium: 0.9rem;
+$font-size-small: 0.8rem;
+$font-size-large: 1.2rem;
+$font-weight: 300;
 
+$line-height: 1.6;
+$letter-spacing: 0.01em;
 // border vars
 $border-radius: 0px;
-$border: 1px solid $foreground-color;
+$border-height: 1px;
+$border: $border-height solid $foreground-color;
 
 // font styles
-$font-body: 'Raleway', sans-serif;
-$font-heading: 'PT Sans', sans-serif;
+$font-body: 'Roboto', sans-serif;
 
 // navigation
-$nav-font-size: $font-size-medium;
-$nav-height: $nav-font-size+$spacing*4;
-$nav-padding: $spacing*2 $spacing $spacing*2 $spacing;
+$nav-font-size: 16px;
+$nav-height: 42px;
+$nav-padding: 8px;
 
 // buttons
 $btn-height: 38px;
 
 // footer
-$footer-height: $nav-height;
-$footer-padding: $nav-height;
+$footer-height: 75px;
+$footer-padding: $spacing*4;
 
 // animations
 $transition-time: 0.3s;
@@ -74,4 +74,4 @@ $shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
 // slideouts
 $slideout-width: 240px;
-$slideout-height: $nav-height;
+$slideout-height: 75px;

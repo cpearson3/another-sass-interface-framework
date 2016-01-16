@@ -3,7 +3,9 @@
 // choose theme
 
 var config = {
-    sassPaths: []
+    sassPaths: [
+      'bower_components/normalize-scss/'
+    ]
 }
 
 // grab our packages
@@ -44,7 +46,7 @@ gulp.task('browserify', function() {
 // sass task
 gulp.task('stylesheets', function() {
   return gulp.src('./src/scss/**/*.scss')
-    .pipe(sass())   // {includePaths: config.sassPaths}
+    .pipe(sass({includePaths: config.sassPaths}))   // {includePaths: config.sassPaths}
     .pipe(sourcemaps.init())
     .pipe(minifyCss({compatibility: 'ie8'}))
     .pipe(rename('bootsmooth.min.css'))
