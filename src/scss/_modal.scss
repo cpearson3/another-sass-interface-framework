@@ -34,30 +34,26 @@
 }
 
 .modal-close {
+  @extend .btn-warning;
   position: absolute;
   top: $spacing;
   right: $spacing;
   cursor: pointer;
-  font-size: 120%;
   display: inline-block;
   font-weight: bold;
-  transition: box-shadow $transition-time ease;
-  
+  transition: background-color $transition-time ease;
   color: $background-color;
   background-color: $warning-color;
-  font-size: $font-size;
-  width: $font-size;
-  height: $font-size;
-  line-height: 1;
   text-align: center;
   verticle-align: middle;
+  box-shadow: $shadow;
   
   &:before {
     content: 'X';
   }
   
   &:hover {
-    box-shadow: $shadow;
+    background-color: $warning-color-dark;
   }
 }
 
