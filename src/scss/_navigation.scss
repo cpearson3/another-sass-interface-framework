@@ -29,7 +29,7 @@
         margin: 0;
         padding: 0;
         display: table;
-        
+        z-index: 999;
         li {
             display: inline;
             float: left;
@@ -51,10 +51,11 @@
     // menu button
     a.toggle-nav {
         display: none;
+        z-index: 999;
     }
     
     .menu-dropdown {
-        
+        z-index: 999;
         li {
             padding: $spacing 0px;
             display: block;
