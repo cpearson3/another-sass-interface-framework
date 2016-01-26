@@ -19,10 +19,10 @@ var Slideout = function() {
                 scope.show = false;
             };
         },
-        template:   '<div class="slideout-{{type}}" ng-show="show">'+
-                        '<div class="modal-close" ng-click="hideModal()"></div>'+
-                        '<div ng-transclude></div>'+
-                    '</div>'
+        template:   '<div class="slideout-{{type}}" ng-show="show">\
+                        <div class="modal-close" ng-click="hideModal()"></div>\
+                        <div ng-transclude></div>\
+                    </div>'
     };
 };
 

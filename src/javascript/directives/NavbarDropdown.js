@@ -8,12 +8,13 @@ var NavbarDropdown = function () {
        scope: {
           title: "@"
       },
-      template: '<li class="toggle-dropdown">' +
-                  '<a>{{title}} &#9660;</a>' +
-                  '<ul class="menu-dropdown">' +
-                    '<ng-transclude></ng-transclude>' +
-                  '</ul>' +
-                '</li>'
+      template:
+      '<li class="toggle-dropdown">\
+        <a>{{title}} &#9660;</a>\
+        <ul class="menu-dropdown">\
+          <ng-transclude></ng-transclude>\
+        </ul>\
+      </li>'
   };
 };
 

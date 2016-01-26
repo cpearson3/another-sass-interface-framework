@@ -17,12 +17,12 @@ var ImageBox = function() {
             };
         },
         template:
-            '<div style="cursor: pointer">'+
-                '<img src={{url}} class="img bordered" ng-click="showMe()">'+
-                '<modal-dialog show="modalShown">' +
-                    '<img src="{{url}}" class="img center bordered">'+
-                '</modal-dialog>'+
-            '</div>'
+            '<div style="cursor: pointer">\
+                <img src={{url}} class="img bordered" ng-click="showMe()">\
+                <modal-dialog show="modalShown">\
+                    <img src="{{url}}" class="img center bordered">\
+                </modal-dialog>\
+            </div>'
     };
 };
 

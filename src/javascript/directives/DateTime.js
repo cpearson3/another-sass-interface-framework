@@ -16,9 +16,10 @@ var DateTime = function($interval) {
             
         },
         template:
-            '<div>{{ today | date:"hh:mm:ss a" }}<br>'+
-            '{{ today | date:"EEEE, MMMM d, y" }}</div>'
-
+            '<div>\
+                {{ today | date:"hh:mm:ss a" }}<br>\
+                {{ today | date:"EEEE, MMMM d, y" }}\
+            </div>'
     };
 };
 

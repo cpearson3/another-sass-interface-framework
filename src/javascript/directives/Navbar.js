@@ -16,15 +16,15 @@ var Navbar = function () {
           el.slideToggle("fast");
         };
       },
-      template: '<nav class="nav">' +
-                  '<div class="nav-title">{{title}}</div>'+
-                  '<a class="toggle-nav txt-center" ng-click="toggle()">'+
-                    '<i class="ico ico-bars pull-left"></i> {{title}}'+
-                  '</a>'+
-                  '<ul id="{{name}}">'+
-                    '<ng-transclude></ng-transclude>'+
-                  '</ul>'+
-                '</nav>'
+      template: '<nav class="nav">\
+                  <div class="nav-title">{{title}}</div>\
+                  <a class="toggle-nav txt-center" ng-click="toggle()">\
+                    <i class="ico ico-bars pull-left"></i> {{title}}\
+                  </a>\
+                  <ul id="{{name}}">\
+                    <ng-transclude></ng-transclude>\
+                  </ul>\
+                </nav>'
   };
 };
 

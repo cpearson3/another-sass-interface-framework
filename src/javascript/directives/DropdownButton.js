@@ -14,12 +14,12 @@ var DropdownButton = function() {
         },
         replace: true,
         template:   
-            '<button class="{{class}} toggle-dropdown">'+
-                '{{title}} &#9660;' +
-                '<ul class="menu-dropdown">' +
-                    '<ng-transclude></ng-transclude>' +
-                 '</ul>'+
-            '</button>'
+            '<button class="{{class}} toggle-dropdown">\
+                {{title}} &#9660;\
+                <ul class="menu-dropdown">\
+                    <ng-transclude></ng-transclude>\
+                </ul>\
+            </button>'
     };
 };
 
