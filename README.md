@@ -1,5 +1,5 @@
 # Bootsmooth
-## A smooth CSS frameowkr
+## A smooth CSS framework
 
 Bootsmooth is a CSS framework for quickly building web apps. Built with Sass
 
