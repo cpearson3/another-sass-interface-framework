@@ -1,9 +1,7 @@
 # Bootsmooth
-## A Responsive App Framework Built with Angular, Sass, Gulp & Stuff
+## A smooth CSS frameowkr
 
-Bootsmooth is a framework for quickly building web apps. It includes two main things:
-1. A minimal and responsive CSS framework built with Sass
-2. A set of reusable components built with [Angular](http://anguarjs.org)
+Bootsmooth is a CSS framework for quickly building web apps. Built with Sass
 
 ### Building
 
@@ -15,5 +13,7 @@ To get started:
     npm install
     gulp build
     
-Include bootsmooth.min.css for the stylesheet and bootsmooth.js for the components.
+Include bootsmooth.min.css in your HTML.Include
+
+Visit the [web page](http://www.bootsmooth.com) for more documentation and examples.
 
