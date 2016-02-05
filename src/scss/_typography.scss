@@ -104,3 +104,10 @@ pre, code {
     white-space: -o-pre-wrap;    /* Opera 7 */
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
+
+blockquote {
+    border-left: $spacing solid $active-color;
+    margin-left: 0;
+    margin-right: 0;
+    padding: $spacing $spacing*2;
+}

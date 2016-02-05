@@ -152,6 +152,7 @@
     		padding: $spacing*2 $spacing $spacing*2 $spacing;
     		text-align: center;
             color: $foreground-color;
+            border-bottom: $border;
     	}
     	
     	a.toggle-nav:after {
