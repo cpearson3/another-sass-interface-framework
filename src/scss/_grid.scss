@@ -3,9 +3,9 @@
 $grid-columns: 12;
 $grid-max-width: 65em;
 
-// breakpoints
-$breakpoint-small: "screen and (max-width: 40em)";
-$breakpoint-medium: "only screen and (min-width: 40em)";
+// screens
+$screen-small: "screen and (max-width: 568px)";
+$screen-medium: "only screen and (min-width: 568px)";
 
 // define mixins
 @mixin border-box {
@@ -69,7 +69,7 @@ $breakpoint-medium: "only screen and (min-width: 40em)";
 }*/
 
 /* Media Queries */
-@media #{$breakpoint-medium} {
+@media #{$screen-medium} {
  
     .container {
         width: 95%;

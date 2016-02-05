@@ -50,6 +50,7 @@ $letter-spacing: 0.01em;
 $border-radius: 0px;
 $border-height: 1px;
 $border: $border-height solid $foreground-color;
+$border-inverse: $border-height solid $background-color;
 
 // font styles
 $font-body: 'Roboto', sans-serif;

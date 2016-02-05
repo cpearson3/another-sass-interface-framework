@@ -18,17 +18,16 @@ body {
 
 // links
 a {
-    font-style: bold;
     cursor: pointer;
     color: $attention-color;
     
     &:visited {
-        font-style: bold;
+        font-weight: bold;
         text-decoration: underline;   
     }
     
     &:hover {
-        font-style: bold;
+        font-weight: bold;
         text-decoration: underline; 
     }
 }
@@ -71,26 +70,6 @@ h1, h2, h3, h4, h5, h6 {
         @extend h#{$i};
     }
 }
-
-// color classes
-.bg-inverse {
-    background-color: $foreground-color !important;
-    color: $background-color !important;
-}
-.bg-primary { background-color: $primary-color !important; }
-.bg-attention { background-color: $attention-color !important; }
-.bg-warning { background-color: $warning-color !important;}
-.bg-success { background-color: $success-color !important; }
-.bg-info { background-color: $info-color !important; }
-.bg-active { background-color: $active-color !important; }
-
-.txt-background { color: $background-color !important; }
-.txt-primary { color: $primary-color !important; }
-.txt-attention { color: $attention-color !important; }
-.txt-warning { color: $warning-color !important; }
-.txt-success { color: $success-color !important; }
-.txt-info { color: $info-color !important; }
-.txt-active { color: $active-color !important; }
 
 // text alignment
 .txt-center {

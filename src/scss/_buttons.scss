@@ -65,3 +65,31 @@
         background-color: $attention-color-dark;
     }
 }
+
+.btn-flat, a.btn-flat {
+    @extend .btn;
+    background: transparent;
+    color: $foreground-color;
+    
+    &:hover {
+        background: transparent;
+    }
+}
+
+.btn-flat-inverse, a.btn-flat-inverse {
+    @extend .btn-flat;
+    border: $border-inverse;
+    color: $background-color;
+
+}
+
+.btn-inverse, a.btn-inverse {
+    @extend .btn;
+    border: $border-inverse;
+    color: $background-color;
+    background-color: $foreground-color;
+    
+    &:hover {
+        background-color: $foreground-color;
+    }
+}

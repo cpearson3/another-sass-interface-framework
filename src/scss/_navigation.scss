@@ -15,8 +15,16 @@
     z-index: 999;
     padding: $nav-padding;
     background-color: $background-color;
-    border-bottom: $border;
     
+    a {
+        color: $foreground-color;
+        transition: font-weight $transition-time ease;
+        &:hover {
+            font-weight: bold;
+        }
+        
+    }
+
     .nav-title {
         float: left;
         display: block;
@@ -34,16 +42,10 @@
             display: inline;
             float: left;
             a {
-                transition: background-color $transition-time ease;
-                color: $foreground-color;
                 display: inline-block;
                 padding-left: $spacing;
                 padding-right: $spacing;
                 text-decoration: none;
-                
-                &:hover {
-                    background-color: $active-color;
-                }
             }
         }
     }
@@ -112,7 +114,7 @@
 
 // Nav Menu Media Query
 // - Anything smaller than iphone 5 resolution
-@media only screen and (max-width : 568px) {
+@media #{$screen-small} {
     .nav {
         padding: 0;
         
@@ -148,9 +150,10 @@
     		position: relative;
     		background-color: $background-color;
     		padding: $spacing*2 $spacing $spacing*2 $spacing;
-    		color: $foreground-color;
-    		border-bottom: $border;
+    		text-align: center;
+            color: $foreground-color;
     	}
+    	
     	a.toggle-nav:after {
     		content:"";
     		display: inline-block;
