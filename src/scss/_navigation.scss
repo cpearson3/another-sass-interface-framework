@@ -67,6 +67,49 @@
             }
         }
     }
+    
+    // form input and button
+    // 1.0.3+ TODO - these classes are based on classes in _buttons.scss and _forms.scss
+    // Make code more reusable in future 
+    .form-input {
+        display: block;
+        width: 100%;
+        padding: $spacing/2 $spacing;
+        color: $foreground-color;
+        background-color: $background-color;
+        background-image: none;
+        border: $border;
+        border-radius: $border-radius;
+        vertical-align: middle;
+        height: $nav-height - $spacing*2;
+        line-height: $nav-height - $spacing*2;
+    }
+    
+    .btn {
+        display: inline-block;
+        padding: 0 $spacing;
+        text-align: center;
+        font-weight: 600;
+        line-height: $nav-height - $spacing*2;
+        letter-spacing: .1rem;
+        text-decoration: none;
+        white-space: nowrap;
+        cursor: pointer;
+        box-sizing: border-box;
+        margin-bottom: $spacing;
+        -webkit-appearance:none;
+        background-color: $background-color;
+        color: $foreground-color;
+        height: $nav-height - $spacing*2;
+        border: $border;
+        border-radius: $border-radius;
+        margin-left: $spacing;
+        margin-right: $spacing;
+        
+        &:hover {
+            background-color: $background-color-dark;
+        }
+    }
 }
 
 
@@ -178,6 +221,16 @@
                     text-decoration: none;
                 }
     	    }
+    	}
+    	
+    	.form-input {
+    	    margin: 0 auto;
+    	    width: 95%;
+    	}
+    	
+    	.btn-nav {
+    	    display: table;
+    	    margin: 0 auto;
     	}
     }
 }
