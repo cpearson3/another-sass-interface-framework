@@ -1,5 +1,7 @@
 // modal dialog and slideouts
-
+.modal {
+  display: none;
+}
 .modal-overlay {
   position:fixed;
   z-index:9999;
