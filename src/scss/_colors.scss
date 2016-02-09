@@ -11,6 +11,7 @@
 .bg-success { background-color: $success-color !important; }
 .bg-info { background-color: $info-color !important; }
 .bg-active { background-color: $active-color !important; }
+.bg-default { background-color: $background-color !important; }
 
 .txt-background { color: $background-color !important; }
 .txt-primary { color: $primary-color !important; }
@@ -19,3 +20,4 @@
 .txt-success { color: $success-color !important; }
 .txt-info { color: $info-color !important; }
 .txt-active { color: $active-color !important; }
+.txt-default { color: $foreground-color !important; }

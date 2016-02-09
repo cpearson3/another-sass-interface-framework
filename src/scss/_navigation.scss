@@ -2,7 +2,7 @@
 
 // add padding class if navigation is used
 .nav-pad {
-    padding-top: $spacing*4;
+    padding-top: $nav-height + $spacing;
 }
 
 // navigation bar

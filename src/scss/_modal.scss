@@ -36,27 +36,10 @@
 }
 
 .modal-close {
-  @extend .btn-warning;
   position: absolute;
   top: $spacing;
   right: $spacing;
   cursor: pointer;
-  display: inline-block;
-  font-weight: bold;
-  transition: background-color $transition-time ease;
-  color: $background-color;
-  background-color: $warning-color;
-  text-align: center;
-  verticle-align: middle;
-  box-shadow: $shadow;
-  
-  &:before {
-    content: 'X';
-  }
-  
-  &:hover {
-    background-color: $warning-color-dark;
-  }
 }
 
 // slideout
