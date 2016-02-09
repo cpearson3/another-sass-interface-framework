@@ -1,0 +1,20 @@
+/* 
+Animations
+Bootsmooth 1.0.5
+
+Popup Layer
+Replacement for the not-yet-implemented modal dialog
+*/
+
+
+@mixin animation-delay($delay) {
+  -webkit-animation-delay: $delay;
+  -moz-animation-delay: $delay;
+  animation-delay: $delay;
+}
+
+@for $i from 1 through 6 {
+  .delay-#{$i} {
+    @include animation-delay(#{$i}s);
+  }
+}
