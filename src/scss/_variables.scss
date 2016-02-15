@@ -30,20 +30,22 @@ $active-color-light: lighten($active-color, 10%);
 $spacing: 8px;
 
 // font
-$font-size: 1.8em;
+$font-size: 137.5%;
 $font-size-small: 1.6rem;
 $font-size-large: 2.2rem;
 $font-weight: 300;
 
-$h1-size: 4.6rem;
-$h2-size: 4.2rem;
-$h3-size: 3.6rem;
-$h4-size: 3.2rem;
-$h5-size: 2.6rem;
-$h6-size: 2.2rem;
+$h1-size: 3.242rem;
+$h1-line-height: 3.5rem;
+$h2-size: 2.828rem;
+$h2-line-height: 3rem;
+$h3-size: 1.414rem;
+$h4-size: 0.707rem;
+$h5-size: 0.4713333333333333rem;
+$h6-size: 0.3535rem;
 
-$line-height: 1.4;
-$letter-spacing: 0.01em;
+$line-height: 1.5rem;
+// $letter-spacing: 0.01em;
 
 // border vars
 $border-radius: 0px;
@@ -55,12 +57,10 @@ $border-inverse: $border-height solid $background-color;
 $font-body: 'Roboto', sans-serif;
 
 // navigation
-$nav-font-size: 16px;
-$nav-height: 42px;
-$nav-padding: 8px;
+$nav-pad: $spacing;
 
 // buttons
-$btn-height: 38px;
+// $btn-height: 38px;
 
 // footer
 $footer-height: 75px;

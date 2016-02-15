@@ -1,16 +1,16 @@
 // BUTTONS
 .btn, a.btn {
     @extend .bordered;
-    
+
     transition: background-color $transition-time ease;
-    
+
     display: inline-block;
-    height: $btn-height;
+    //height: $btn-height;
     padding: 0 $spacing;
     text-align: center;
     font-weight: 600;
-    line-height: $btn-height;
-    letter-spacing: .1rem;
+    //line-height: $btn-height;
+    //letter-spacing: .1rem;
     text-decoration: none;
     white-space: nowrap;
     cursor: pointer;
@@ -19,7 +19,7 @@
     -webkit-appearance:none;
     background-color: $background-color;
     color: $foreground-color;
-    
+
     &:hover {
         background-color: $background-color-dark;
     }
@@ -28,7 +28,7 @@
 .btn-primary, a.btn-primary {
     @extend .btn;
     background-color: $primary-color;
-    
+
     &:hover {
         background-color: $primary-color-dark;
     }
@@ -70,7 +70,7 @@
     @extend .btn;
     background: transparent;
     color: $foreground-color;
-    
+
     &:hover {
         background: transparent;
     }
@@ -88,7 +88,7 @@
     border: $border-inverse;
     color: $background-color;
     background-color: $foreground-color;
-    
+
     &:hover {
         background-color: $foreground-color;
     }

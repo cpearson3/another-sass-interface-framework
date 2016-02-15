@@ -1,4 +1,4 @@
-# Bootsmooth (version 1.0.5)
+# Bootsmooth (version 1.0.6)
 ## A smooth CSS framework
 
 Bootsmooth is a CSS framework for quickly building web apps. Built with Sass
@@ -12,8 +12,7 @@ To get started:
     git clone https://github.com/cpearson3/bootsmooth.git
     npm install
     gulp build
-    
+
 Include bootsmooth.min.css in your HTML.Include
 
 Visit the [web page](http://www.bootsmooth.com) for more documentation and examples.
-

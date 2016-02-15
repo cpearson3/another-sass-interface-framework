@@ -8,7 +8,6 @@ var config = {
     ]
 }
 
-// grab our packages
 var gulp   = require('gulp'),
     jshint = require('gulp-jshint'),
     sass   = require('gulp-sass'),
@@ -25,7 +24,7 @@ gulp.task('stylesheets', function() {
     .pipe(sourcemaps.init())
     .pipe(minifyCss({compatibility: 'ie8'}))
     .pipe(rename('bootsmooth.min.css'))
-    .pipe(gulp.dest('./build/stylesheets'));
+    .pipe(gulp.dest('./build/'));
 });
 
 // build task

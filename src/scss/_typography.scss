@@ -1,17 +1,18 @@
 // typography
+// Inspired by Typebase v0.1.0
 
 html {
-  font-size: 62.5%;
+	font-size: 137.5%;
+  -webkit-font-smoothing: antialiased;
 }
 
 // set body
 body {
-    font-size: $font-size;
     font-weight: $font-weight;
     line-height: $line-height;
     font-family: $font-body;
-    letter-spacing: $letter-spacing;
-    
+    //letter-spacing: $letter-spacing;
+
     background-color: $background-color;
     color: $foreground-color;
 }
@@ -20,48 +21,51 @@ body {
 a {
     cursor: pointer;
     color: $attention-color;
-    
+
     &:visited {
         font-weight: bold;
-        text-decoration: underline;   
+        text-decoration: underline;
     }
-    
+
     &:hover {
         font-weight: bold;
-        text-decoration: underline; 
+        text-decoration: underline;
     }
-}
-
-
-// headings
-h1 {
-    font-size: $h1-size;
-}
-h2 {
-    font-size: $h2-size;
-}
-h3 {
-    font-size: $h3-size;
-}
-h4 {
-    font-size: $h4-size;
-}
-h5 {
-    font-size: $h5-size;
-}
-h6 {
-    font-size: $h6-size;
 }
 
 // spacing
 pre, blockquote, dl, figure, table, p, ul, ol, form {
-    margin-bottom: 1.0rem;
+    margin-bottom: 1.5rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin-top: 0;
-    margin-bottom: 1.0rem;
+    margin-top: 1.5rem;
+		line-height: 1.5rem;
     word-wrap: break-word;
+}
+
+// headings
+h1 {
+  font-size: $h1-size;
+  line-height: $h1-line-height;
+  margin-top: 3rem;
+}
+h2 {
+  font-size: $h2-size;
+  line-height: $h2-line-height;
+  margin-top: 3rem;
+}
+h3 {
+	font-size: $h3-size;
+}
+h4 {
+	font-size: $h4-size;
+}
+h5 {
+	font-size: $h5-size;
+}
+h6 {
+	font-size: $h6-size;
 }
 
 // matching classes
@@ -92,8 +96,22 @@ h1, h2, h3, h4, h5, h6 {
 
 // lists
 
-ul, ol {
-    padding-left: $spacing*3;
+ul,
+ol {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+	list-style-position: inside;
+}
+ul li,
+ol li {
+  line-height: 1.5rem;
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 // CODE AND PRE
@@ -105,9 +123,23 @@ pre, code {
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
+code {
+	vertical-align: bottom;
+}
+
+// Blockquotes
+
 blockquote {
-    border-left: $spacing solid $active-color;
+    border-left: $spacing solid $foreground-color;
     margin-left: 0;
     margin-right: 0;
     padding: $spacing $spacing*2;
+		line-height: 1.5rem;
+	  margin-top: 1.5rem;
+	  margin-bottom: 1.5rem;
+}
+
+// Lead class
+.lead {
+	@extend .h3;
 }

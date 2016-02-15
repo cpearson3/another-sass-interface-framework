@@ -11,7 +11,7 @@ $screen-medium: "only screen and (min-width: 568px)";
 @mixin border-box {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 *,
@@ -19,14 +19,14 @@ $screen-medium: "only screen and (min-width: 568px)";
 *:before {
     margin: 0;
     padding: 0;
-    
+
     @include border-box;
 }
 
 // extendable clearfix rule
 %clearfix {
     *zoom: 1;
-    &:before, 
+    &:before,
     &:after {
         content: " ";
         display: table;
@@ -59,10 +59,10 @@ $screen-medium: "only screen and (min-width: 568px)";
     padding: $spacing;
     width: 100%;
     margin-bottom: $spacing;
-    min-height: 1px; 
+    min-height: 1px;
 }
 
-/* Floats last ".col-" to the right 
+/* Floats last ".col-" to the right
 [class*='col-']:last-of-type {
   padding-right: 1em;
   float: right;
@@ -70,18 +70,18 @@ $screen-medium: "only screen and (min-width: 568px)";
 
 /* Media Queries */
 @media #{$screen-medium} {
- 
+
     .container {
         width: 95%;
     }
-    
+
     // use for loop to set col widths
     @for $i from 1 through $grid-columns {
-        .col-#{$i} { 
+        .col-#{$i} {
             width: 100% / $grid-columns * $i;
         }
     }
- 
+
 }
 
 /* Column by Percentage */
