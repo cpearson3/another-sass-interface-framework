@@ -35,12 +35,12 @@ a {
 
 // spacing
 pre, blockquote, dl, figure, table, p, ul, ol, form {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.4rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin-top: 1.5rem;
-		line-height: 1.5rem;
+    margin-top: 1.4rem;
+		line-height: 1.4rem;
     word-wrap: break-word;
 }
 
@@ -98,13 +98,13 @@ h6 {
 
 ul,
 ol {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
 	list-style-position: inside;
 }
 ul li,
 ol li {
-  line-height: 1.5rem;
+  line-height: 1.4rem;
 }
 ul ul,
 ol ul,
@@ -134,9 +134,9 @@ blockquote {
     margin-left: 0;
     margin-right: 0;
     padding: $spacing $spacing*2;
-		line-height: 1.5rem;
-	  margin-top: 1.5rem;
-	  margin-bottom: 1.5rem;
+		line-height: 1.4rem;
+	  margin-top: 1.4rem;
+	  margin-bottom: 1.4rem;
 }
 
 // Lead class
