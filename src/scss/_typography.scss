@@ -2,8 +2,14 @@
 // Inspired by Typebase v0.1.0
 
 html {
-	font-size: 137.5%;
+	font-size: 125%;
   -webkit-font-smoothing: antialiased;
+}
+
+@media #{$screen-small} {
+	html {
+		font-size: 100%;
+	}
 }
 
 // set body
@@ -141,5 +147,5 @@ blockquote {
 
 // Lead class
 .lead {
-	@extend .h3;
+	font-size: $h3-size;
 }

@@ -1,11 +1,4 @@
 /* bootsmooth grid */
-// grid variables
-$grid-columns: 12;
-$grid-max-width: 60em;
-
-// screens
-$screen-small: "screen and (max-width: 568px)";
-$screen-medium: "only screen and (min-width: 568px)";
 
 // define mixins
 @mixin border-box {

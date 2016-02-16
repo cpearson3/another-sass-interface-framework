@@ -1,3 +1,11 @@
+// grid variables
+$grid-columns: 12;
+$grid-max-width: 60em;
+
+// screens
+$screen-small: "screen and (max-width: 568px)";
+$screen-medium: "only screen and (min-width: 568px)";
+
 // general color defines
 $background-color: #FFF;
 $foreground-color: #333;
