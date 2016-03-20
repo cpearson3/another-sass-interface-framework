@@ -1,0 +1,13 @@
+// colors defined in _variables
+
+// color classes
+.bs-color-inverse {
+    background-color: $foreground-color !important;
+    color: $background-color !important;
+}
+.bs-bg-primary { background-color: $primary-color !important; }
+.bs-bg-foreground { background-color: $foreground-color !important; }
+.bs-bg-default { background-color: $background-color !important; }
+
+.bs-fg-primary { color: $primary-color !important; }
+.bs-fg-background { color: $background-color !important; }

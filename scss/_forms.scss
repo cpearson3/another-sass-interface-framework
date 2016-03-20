@@ -1,6 +1,6 @@
 
 // FORMS
-.form {
+.bs-form {
     margin: 0 auto;
     position:relative;
     width: 100%;
@@ -11,7 +11,7 @@ fieldset {
     border-radius: $border-radius;
 }
 
-.form-input {
+.bs-form-input {
     display: block;
     width: 100%;
     padding: $spacing/2 $spacing;
@@ -22,35 +22,12 @@ fieldset {
     border-radius: $border-radius;
     vertical-align: middle;
     line-height: $line-height;
-    
+
     // remove webkit default outline
     &:focus {
         outline: none;
     }
-    
-    &:required {
-        border-color: $warning-color;
-    }
 }
-
-.form-input-inline {
-    @extend .form-input;
-    display: inline;
-    width: auto;
-    margin-left: $spacing;
-    margin-right: $spacing;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-}
-
-.nav-input {
-    @extend .form-input;
-    border: $border;
-}
-
-// inline forms
-
 
 // CHECK & RADIO BOXES
 
@@ -75,11 +52,11 @@ input[type="radio"] + span {
 
 input[type="radio"]:checked + span {
     @extend .shadowed;
-    color: $active-color;
-    background: $active-color;
+    color: $primary-color;
+    background: $primary-color;
 }
 input[type="radio"]:checked + span:after {
-    background: $active-color;
+    background: $primary-color;
     height: 100%;
     width: 100%;
 }
@@ -102,11 +79,11 @@ input[type="checkbox"] + span {
 
 input[type="checkbox"]:checked + span {
     @extend .shadowed;
-    background-color: $active-color;
+    background-color: $primary-color;
 }
 
 input[type="checkbox"]:checked + span:after {
-    background: $active-color;
+    background: $primary-color;
     height: 100%;
     width: 100%;
 }

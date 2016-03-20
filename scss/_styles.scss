@@ -1,71 +1,70 @@
-// bootsmooth supporting styles 
+// bootsmooth supporting styles
 
-// center elements 
-.center {
+// center elements
+.bs-center {
     display: table;
     margin: 0 auto;
 }
 
 // scrollable elements
-.scrollableX {
+.bs-scrollableX {
     overflow-x:auto;
 }
 
-.scrollableY {
+.bs-scrollableY {
     overflow-y:auto;
 }
 
 // bordered support class
-.bordered {
+.bs-bordered {
     border: $border;
     border-radius: $border-radius;
 }
 
 // shadow support class
-.shadowed {
+.bs-shadowed {
     box-shadow: $shadow;
 }
 
-// image 
-.img {
+// image
+.bs-img {
     max-width: 100%;
     max-height: 100%;
     height: auto;
 }
 
-// video 
-.video {
+// video
+.bs-video {
     max-width: 100%;
     height: auto;
 }
 
 // fixed position
-.fixed {
+.bs-fixed {
     position: fixed;
 }
 
 // fixed elements
-.fixed-bottom-left {
+.bs-fixed-bottom-left {
     position: fixed;
     bottom: 0;
     left: 0;
 }
 
-.fixed-bottom-right {
+.bs-fixed-bottom-right {
     position: fixed;
     bottom: 0;
     right: 0;
 }
 
-.fixed-top-right {
+.bs-fixed-top-right {
     position: fixed;
     top: 0;
     right: 0;
 }
 
-.fixed-top-left {
+.bs-fixed-top-left {
     position: fixed;
     top: 0;
     left: 0;
 }
-

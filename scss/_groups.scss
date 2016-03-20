@@ -2,14 +2,14 @@
 // list groups, panels, etc
 
 // PANELS
-.panel {
+.bs-panel {
     padding: $spacing;
     border-radius: $border-radius;
 }
 
 // LIST GROUPS
-.list-group {
-    @extend .bordered;
+.bs-list-group {
+    @extend .bs-bordered;
     border-radius: $border-radius;
     margin: 0;
     padding: 0;
@@ -26,9 +26,9 @@
 }
 
 // BADGE
-.badge {
-    @extend .pull-right;
-    @extend .bordered;
+.bs-badge {
+    @extend .bs-pull-right;
+    @extend .bs-bordered;
 
     display: inline-block;
     white-space: no-wrap;

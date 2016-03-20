@@ -1,6 +1,6 @@
 {
   "name": "bootsmooth",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "Responsive Web App Framework",
   "main": "gulpfile.js",
   "dependencies": {

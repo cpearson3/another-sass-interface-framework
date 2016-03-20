@@ -1,16 +1,16 @@
 // page components
 
 // HEADERS
-.header {
+.bs-header {
     // cover images
    -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
-   background-size: cover; 
+   background-size: cover;
 }
 
 // FOOTER
-.footer {
+.bs-footer {
     padding-top: $footer-padding;
     padding-bottom: $footer-padding;
 }

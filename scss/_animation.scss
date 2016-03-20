@@ -1,4 +1,4 @@
-/* 
+/*
 Animations
 Bootsmooth 1.0.5
 
@@ -14,7 +14,7 @@ Replacement for the not-yet-implemented modal dialog
 }
 
 @for $i from 1 through 6 {
-  .delay-#{$i} {
+  .bs-delay-#{$i} {
     @include animation-delay(#{$i}s);
   }
 }

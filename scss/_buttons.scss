@@ -1,0 +1,39 @@
+// BUTTONS
+.bs-btn, a.bs-btn {
+
+    transition: background-color $transition-time ease;
+
+    display: inline-block;
+    text-align: center;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-bottom: $spacing;
+    -webkit-appearance:none;
+		border: $button-border;
+
+		padding: $button-padding;
+    background-color: $button-background-color;
+    color: $button-foreground-color;
+
+    &:hover {
+				box-shadow: $shadow;
+        background-color: $button-hover-background-color;
+				color: $button-hover-foreground-color;
+    }
+}
+
+.bs-btn-flat {
+	@extend .bs-btn;
+
+	background-color: $background-color;
+	color: $primary-color;
+	border: 1px solid $primary-color;
+
+	&:hover {
+		background-color: $background-color;
+		color: $primary-color;
+	}
+}

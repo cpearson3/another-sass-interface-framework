@@ -31,23 +31,23 @@
 
 
 /* container and Rows */
-.container {
+.bs-container {
     width: 100%;
     margin: 0 auto;
     max-width: $grid-max-width;
 }
 
-.container,
-.row {
+.bs-container,
+.bs-row {
     @extend %clearfix;
 }
 
-.row {
+.bs-row {
     margin-top: 0;
 }
 
 /* Column selector */
-[class*='col-'] {
+[class*='bs-col-'] {
     float: left;
     padding: $spacing;
     width: 100%;
@@ -64,13 +64,13 @@
 /* Media Queries */
 @media #{$screen-medium} {
 
-    .container {
+    .bs-container {
         width: 95%;
     }
 
     // use for loop to set col widths
     @for $i from 1 through $grid-columns {
-        .col-#{$i} {
+        .bs-col-#{$i} {
             width: 100% / $grid-columns * $i;
         }
     }
@@ -78,14 +78,14 @@
 }
 
 /* Column by Percentage */
-.col-25 {
+.bs-col-25 {
     width: 25%;
 }
 
-.col-50 {
+.bs-col-50 {
     width: 50%;
 }
 
-.col-75 {
+.bs-col-75 {
     width: 75%;
 }

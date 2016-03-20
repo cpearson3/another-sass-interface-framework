@@ -19,12 +19,12 @@ var gulp   = require('gulp'),
 
 // sass task
 gulp.task('stylesheets', function() {
-  return gulp.src('./src/scss/**/*.scss')
+  return gulp.src('./scss/**/*.scss')
     .pipe(sass({includePaths: config.sassPaths}))   // {includePaths: config.sassPaths}
     .pipe(sourcemaps.init())
     .pipe(minifyCss({compatibility: 'ie8'}))
     .pipe(rename('bootsmooth.min.css'))
-    .pipe(gulp.dest('./build/'));
+    .pipe(gulp.dest('./dist/'));
 });
 
 // build task
@@ -33,7 +33,7 @@ gulp.task('build', ['stylesheets']);
 // Watch tasks
 gulp.task('watch', ['build'], function() {
     // Sass
-    gulp.watch(['./src/scss/*.scss'], [
+    gulp.watch(['./scss/*.scss'], [
         'stylesheets'
     ]);
 });

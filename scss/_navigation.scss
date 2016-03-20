@@ -1,0 +1,133 @@
+// include variable first
+
+.bs-nav {
+   z-index: 999;
+	 background-color: $nav-background-color;
+	 color: $nav-foreground-color;
+  // nav title
+  .bs-nav-title {
+    z-index: 999;
+    float: left;
+    padding: $nav-element-padding;
+		color: $nav-title-color;
+		background-color: $nav-title-background-color;
+  }
+
+  // nav menu
+  ul {
+    z-index: 999;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+  }
+
+  // menu element
+  li {
+
+    float: left;
+
+    // menu links
+    a {
+      display: block;
+      text-align: center;
+      padding: $nav-element-padding;
+      text-decoration: none;
+      cursor: pointer;
+			color: $nav-foreground-color;
+			transition: $transition-time;
+
+      &:hover {
+				color: $nav-hover-foreground-color;
+        background-color: $nav-hover-background-color;
+      }
+    }
+
+    // inputs, buttons
+    input  {
+			color: $foreground-color;
+      padding: $nav-element-padding !important;
+    }
+
+		.bs-btn {
+			padding: $nav-element-padding !important;
+			color: $nav-foreground-color;
+			background-color: $nav-background-color;
+			margin-bottom: 0;
+
+      &:hover {
+				box-shadow: none;
+				color: $nav-hover-foreground-color;
+        background-color: $nav-hover-background-color;
+      }
+		}
+
+    // submenu
+    ul {
+      position: absolute;
+      width: inherit;
+      display: none;
+			color: $nav-foreground-color;
+			background-color: $nav-background-color;
+      // submenu element
+      li {
+        display: block;
+        float: none;
+      }
+    }
+
+    // show sub on hover
+    &:hover ul {
+      display: block;
+    }
+  }
+}
+
+// small screen
+@media #{$screen-small} {
+  .bs-nav {
+    width: 100%;
+    padding: 0;
+
+    .bs-nav-title {
+      display: block;
+      padding: $nav-element-padding;
+      float: none;
+      text-align: center;
+      cursor: pointer;
+      background-color: $nav-background-color;
+      color: $nav-foreground-color;
+      position: relative;
+    }
+
+    // hide menu
+    ul {
+      width: 100%;
+      display: none;
+      position: absolute;
+			background-color: $nav-background-color;
+	 	 color: $nav-foreground-color;
+    }
+
+    // nav element
+    li {
+      float: none;
+      clear: both;
+      display: table;
+      margin: 0 auto;
+      width: 100%;
+
+      input, button {
+        width: 100%;
+      }
+
+      // submenu
+      ul {
+        display: block;
+        position: relative;
+      }
+    }
+
+  }
+}

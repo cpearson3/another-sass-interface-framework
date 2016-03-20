@@ -26,27 +26,27 @@ body {
 // links
 a {
     cursor: pointer;
-    color: $attention-color;
+    color: $link-color;
+		text-decoration: $link-decoration;
 
     &:visited {
-        font-weight: bold;
-        text-decoration: underline;
+			color: $link-visited-color;
     }
 
     &:hover {
-        font-weight: bold;
-        text-decoration: underline;
+			color: $link-hover-color;
     }
 }
 
 // spacing
 pre, blockquote, dl, figure, table, p, ul, ol, form {
-    margin-bottom: 1.4rem;
+    margin-bottom: $block-margin;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin-top: 1.4rem;
-		line-height: 1.4rem;
+    margin-top: $h-margin;
+		margin-bottom: $h-margin;
+		line-height: $line-height;
     word-wrap: break-word;
 }
 
@@ -54,15 +54,15 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: $h1-size;
   line-height: $h1-line-height;
-  margin-top: 3rem;
 }
 h2 {
   font-size: $h2-size;
   line-height: $h2-line-height;
-  margin-top: 3rem;
 }
+
 h3 {
 	font-size: $h3-size;
+	line-height: $h3-line-height;
 }
 h4 {
 	font-size: $h4-size;
@@ -76,27 +76,27 @@ h6 {
 
 // matching classes
 @for $i from 1 through 6 {
-    .h#{$i} {
+    .bs-h#{$i} {
         @extend h#{$i};
     }
 }
 
 // text alignment
-.txt-center {
+.bs-txt-center {
     text-align: center;
 }
-.txt-left {
+.bs-txt-left {
     text-align: left;
 }
-.txt-right {
+.bs-txt-right {
     text-align: right;
 }
 
-.pull-right {
+.bs-pull-right {
     float: right;
 }
 
-.pull-left {
+.bs-pull-left {
     float: left;
 }
 
@@ -104,13 +104,13 @@ h6 {
 
 ul,
 ol {
-  margin-top: 1.4rem;
-  margin-bottom: 1.4rem;
+  margin-top: $block-margin;
+  margin-bottom: $block-margin;
 	list-style-position: inside;
 }
 ul li,
 ol li {
-  line-height: 1.4rem;
+  line-height: $line-height;
 }
 ul ul,
 ol ul,
@@ -140,12 +140,12 @@ blockquote {
     margin-left: 0;
     margin-right: 0;
     padding: $spacing $spacing*2;
-		line-height: 1.4rem;
-	  margin-top: 1.4rem;
-	  margin-bottom: 1.4rem;
+		line-height: $line-height;
+	  margin-top: $block-margin;
+	  margin-bottom: $block-margin;
 }
 
 // Lead class
-.lead {
+.bs-lead {
 	font-size: $h3-size;
 }

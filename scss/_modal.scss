@@ -1,8 +1,8 @@
 // modal dialog and slideouts
-.modal {
+.bs-modal {
   display: none;
 }
-.modal-overlay {
+.bs-modal-overlay {
   position:fixed;
   z-index:9999;
   top:0;
@@ -13,9 +13,9 @@
   opacity: 0.9;
 }
 
-.modal-dialog {
+.bs-modal-dialog {
   @extend .container;
-  
+
   z-index:10000;
   position: fixed;
 
@@ -30,12 +30,12 @@
   box-shadow: $shadow;
 }
 
-.modal-dialog-content {
+.bs-modal-dialog-content {
   padding: $spacing;
   text-align: left;
 }
 
-.modal-close {
+.bs-modal-close {
   position: absolute;
   top: $spacing;
   right: $spacing;
@@ -44,7 +44,7 @@
 
 // slideout
 
-.slideout {
+.bs-slideout {
   padding: $spacing;
   background-color: $background-color;
   border: $border;
@@ -53,17 +53,17 @@
   display: none;
 }
 
-.slideout-left {
+.bs-slideout-left {
   @extend .fixed-top-left;
   @extend .slideout;
-  
+
   top:0;
   left:0;
   width: $slideout-width;
   height:100%;
 }
 
-.slideout-right {
+.bs-slideout-right {
   @extend .fixed-top-right;
   @extend .slideout;
 
@@ -71,7 +71,7 @@
   height:100%;
 }
 
-.slideout-bottom {
+.bs-slideout-bottom {
   @extend .fixed-bottom-left;
   @extend .slideout;
 
@@ -79,7 +79,7 @@
   min-height: $slideout-height;
 }
 
-.slideout-top {
+.bs-slideout-top {
   @extend .fixed-top-left;
   @extend .slideout;
 

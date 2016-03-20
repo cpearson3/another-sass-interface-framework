@@ -1,7 +1,7 @@
-# Bootsmooth (version 1.0.6)
+# Bootsmooth (version 1.1.0)
 ## A smooth CSS framework
 
-Bootsmooth is a CSS framework for quickly building web apps. Built with Sass
+Bootsmooth is an extendable SCSS framework.
 
 ### Building
 
