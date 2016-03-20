@@ -70,6 +70,7 @@
       display: none;
 			color: $nav-foreground-color;
 			background-color: $nav-background-color;
+
       // submenu element
       li {
         display: block;
@@ -80,7 +81,8 @@
     // show sub on hover
     &:hover ul {
       display: block;
-    }
+			@include fadeIn($transition-time);
+  	}
   }
 }
 
