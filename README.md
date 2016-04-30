@@ -1,6 +1,6 @@
-# Bootsmooth SCSS UI (version 1.1.1)
+# Bootsmooth Sass UI (version 1.1.1)
 
-Bootsmooth is a simple and responsive UI framework built with SCSS.
+Bootsmooth is a simple and responsive UI framework built with Sass.
 
 ### Building
 
