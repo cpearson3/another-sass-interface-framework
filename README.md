@@ -1,7 +1,6 @@
-# Bootsmooth (version 1.1.0)
-## A smooth CSS framework
+# Bootsmooth SCSS UI (version 1.1.1)
 
-Bootsmooth is an extendable SCSS framework.
+Bootsmooth is a simple and responsive UI framework built with SCSS.
 
 ### Building
 
@@ -9,7 +8,7 @@ NPM, Gulp, Browserify, and Sass are used build Bootsmooth.
 
 To get started:
 
-    git clone https://github.com/cpearson3/bootsmooth.git
+    git clone https://github.com/cpearson3/bootsmooth-scss-ui.git
     npm install
     gulp build
 
