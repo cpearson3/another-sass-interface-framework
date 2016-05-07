@@ -2,15 +2,15 @@
 
 .bs-nav {
    z-index: 999;
-	 background-color: $nav-background-color;
-	 color: $nav-foreground-color;
+	background-color: $nav-background-color;
+	color: $nav-foreground-color;
   // nav title
   .bs-nav-title {
     z-index: 999;
     float: left;
     padding: $nav-element-padding;
-		color: $nav-title-color;
-		background-color: $nav-title-background-color;
+	color: $nav-title-color;
+	background-color: $nav-title-background-color;
   }
 
   // nav menu
@@ -35,41 +35,41 @@
       padding: $nav-element-padding;
       text-decoration: none;
       cursor: pointer;
-			color: $nav-foreground-color;
-			transition: $transition-time;
+	  color: $nav-foreground-color;
+	  transition: $transition-time;
 
       &:hover {
-				color: $nav-hover-foreground-color;
+		color: $nav-hover-foreground-color;
         background-color: $nav-hover-background-color;
       }
     }
 
     // inputs, buttons
     input  {
-			color: $foreground-color;
+	  color: $foreground-color;
       padding: $nav-element-padding !important;
     }
 
-		.bs-btn {
-			padding: $nav-element-padding !important;
-			color: $nav-foreground-color;
-			background-color: $nav-background-color;
-			margin-bottom: 0;
+	.bs-btn {
+		padding: $nav-element-padding !important;
+		color: $nav-foreground-color;
+		background-color: $nav-background-color;
+		margin-bottom: 0;
 
-      &:hover {
-				box-shadow: none;
-				color: $nav-hover-foreground-color;
-        background-color: $nav-hover-background-color;
-      }
+      	&:hover {
+			box-shadow: none;
+			color: $nav-hover-foreground-color;
+			background-color: $nav-hover-background-color;
 		}
+	}
 
-    // submenu
+    // dropdown sub menu
     ul {
       position: absolute;
       width: inherit;
       display: none;
-			color: $nav-foreground-color;
-			background-color: $nav-background-color;
+	  color: $nav-foreground-color;
+	  background-color: $nav-background-color;
 
       // submenu element
       li {
@@ -82,9 +82,30 @@
     // show sub on hover
     &:hover ul {
       display: block;
-			@include fadeIn($transition-time);
+	  @include fadeIn($transition-time);
   	}
+	&:hover .bs-wide-nav-menu {
+		display: block;
+	}
   }
+  
+  // full width dropdown sub menu
+  .bs-wide-nav-menu {
+        color: $nav-foreground-color;
+		background-color: $nav-background-color;
+		padding:0;
+		display:none;
+		width: 100%;
+		position: absolute;
+		left: 0px;
+		
+		// reset ul and li
+		ul {
+			display: block;
+			position: static;
+			width: 100%;
+		}
+	}
 }
 
 // small screen
@@ -92,12 +113,12 @@
   .bs-nav {
     width: 100%;
     padding: 0;
-		position: relative;
-		
-		// set container width to 100%
-		.bs-container {
-			width: 100%;
-		}
+	position: relative;
+	
+	// set container width to 100%
+	.bs-container {
+		width: 100%;
+	}
 
 		// nav title triggers menu
     .bs-nav-title {
@@ -116,8 +137,8 @@
       width: 100%;
       display: none;
       position: absolute;
-			background-color: $nav-background-color;
-	 	 color: $nav-foreground-color;
+	  background-color: $nav-background-color;
+	  color: $nav-foreground-color;
     }
 
     // nav element
@@ -138,6 +159,11 @@
         display: block;
         position: relative;
       }
+	  // full width
+	  .bs-wide-nav-menu {
+		  display: block;
+		  position: relative;
+	  }
     }
 
   }
