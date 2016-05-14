@@ -51,7 +51,7 @@ input[type="radio"] + span {
 }
 
 input[type="radio"]:checked + span {
-    @extend .shadowed;
+    @extend .bs-shadowed;
     color: $primary-color;
     background: $primary-color;
 }

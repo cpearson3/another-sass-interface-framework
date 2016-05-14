@@ -14,7 +14,7 @@
 }
 
 .bs-modal-dialog {
-  @extend .container;
+  @extend .bs-container;
 
   z-index:10000;
   position: fixed;
@@ -54,8 +54,8 @@
 }
 
 .bs-slideout-left {
-  @extend .fixed-top-left;
-  @extend .slideout;
+  @extend .bs-fixed-top-left;
+  @extend .bs-slideout;
 
   top:0;
   left:0;
@@ -64,24 +64,24 @@
 }
 
 .bs-slideout-right {
-  @extend .fixed-top-right;
-  @extend .slideout;
+  @extend .bs-fixed-top-right;
+  @extend .bs-slideout;
 
   width: $slideout-width;
   height:100%;
 }
 
 .bs-slideout-bottom {
-  @extend .fixed-bottom-left;
-  @extend .slideout;
+  @extend .bs-fixed-bottom-left;
+  @extend .bs-slideout;
 
   width:100%;
   min-height: $slideout-height;
 }
 
 .bs-slideout-top {
-  @extend .fixed-top-left;
-  @extend .slideout;
+  @extend .bs-fixed-top-left;
+  @extend .bs-slideout;
 
   width:100%;
   min-height: $slideout-height;
