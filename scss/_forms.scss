@@ -78,7 +78,7 @@ input[type="checkbox"] + span {
 }
 
 input[type="checkbox"]:checked + span {
-    @extend .shadowed;
+    @extend .bs-shadowed;
     background-color: $primary-color;
 }
 
