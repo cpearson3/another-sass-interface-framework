@@ -10,19 +10,19 @@
 </head>
 <body>
     
-<div class="bs-nav">
+<nav role="navigation">
     <div class="bs-container">
 		<div class="bs-nav-title" onclick="$bs.toggleNavMenu('#nav-menu')">NAV TITLE</div>
-        <ul id="nav-menu">
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Drop Down</a>
-                <ul>
-                    <li><a href="#">Link</a></li>
-					<li><a href="#">Link</a></li>
+        <ul role="menu">
+            <li role="menuitem"><a href="#">Link</a></li>
+            <li  role="menuitem" class="bs-nav-><a href="#">Drop Down</a>
+                <ul role="menu">
+                    <li role="menuitem"><a href="#">Link</a></li>
+					<li role="menuitem"><a href="#">Link</a></li>
                 </ul>
             </li>
-			<li><a href="#">Full Drop Down</a>
-				<div class="bs-wide-nav-menu">
+			<li role="menuitem"><a href="#">Full Drop Down</a>
+				<div role="menu" class="bs-wide-sub-menu">
 					<div class="bs-container">
 						<div class="bs-row">
 							<div class="bs-col-4">
@@ -55,11 +55,11 @@
 			</li>
         </ul>
     </div>
-</div>
+</nav>
 
 <div class="bs-container">
     <h1>Example page</h1>
-	<a href="#" class="bs-btn">I'm a Button</a>
+	<a href="#" class="bs-button">I'm a Button</a>
 	<br>
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duo Reges: constructio interrete. At certe gravius. Hos contra singulos dici est melius. <b>Sed ad bona praeterita redeamus.</b> Nescio quo modo praetervolavit oratio. Bonum integritas corporis: misera debilitas. </p>
 

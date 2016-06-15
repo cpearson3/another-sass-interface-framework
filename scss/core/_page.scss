@@ -1,7 +1,7 @@
 // page components
 
 // HEADERS
-.bs-header {
+[role="header"], .bs-header {
     // cover images
    -webkit-background-size: cover;
    -moz-background-size: cover;
@@ -10,7 +10,7 @@
 }
 
 // FOOTER
-.bs-footer {
+[role="footer"], .bs-footer {
     padding-top: $footer-padding;
     padding-bottom: $footer-padding;
 }

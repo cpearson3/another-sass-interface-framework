@@ -1,6 +1,5 @@
 // TABLES
 .bs-table {
-    @extend .bs-center;
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
@@ -10,8 +9,8 @@
     }
 }
 
-.bs-table-bordered {
+.bs-table-border {
     td, th {
-        @extend .bs-bordered;
+        @extend .bs-border;
     }
 }

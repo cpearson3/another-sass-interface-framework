@@ -1,0 +1,105 @@
+
+// spacing
+$padding: 10px  !default;
+$block-padding: $padding * 2  !default;
+$spacing: $padding  !default; // holdover from 1.x -- will remove
+
+// grid
+$container-width: 95%  !default;
+$container-max-width: 960px  !default;
+
+$breakpoint-small: 568px  !default;
+$breakpoint-medium: 768px  !default;
+$breakpoint-large: 1024px  !default;
+
+$grid-columns: 12  !default;
+
+// general color definitions
+$background-color: #FFF !default;
+$foreground-color: #333 !default;
+$primary-color: #75a3d1 !default;
+
+$color-variation: 10% !default;
+
+$background-color-dark: darken($background-color, $color-variation)  !default;
+$foreground-color-dark: darken($foreground-color, $color-variation)  !default;
+$primary-color-dark: darken($primary-color, $color-variation)  !default;
+
+$background-color-light: lighten($background-color, $color-variation)  !default;
+$foreground-color-light: lighten($foreground-color, $color-variation)  !default;
+$primary-color-light: lighten($primary-color, $color-variation)  !default;
+
+// links
+$link-color: $primary-color  !default;
+$link-visited-color: $primary-color-light  !default;
+$link-hover-color: $primary-color-dark  !default;
+$link-decoration: underline  !default;
+
+// buttons
+$button-background-color: $primary-color  !default;
+$button-foreground-color: #FFF  !default;
+$button-hover-background-color: $primary-color-dark  !default;
+$button-hover-foreground-color: $button-foreground-color  !default;
+$button-padding: 8px  !default;
+$button-border: none  !default;
+
+// nav
+$nav-background-color: $primary-color  !default;
+$nav-foreground-color: #FFF  !default;
+$nav-hover-background-color: $primary-color-dark  !default;
+$nav-hover-foreground-color: $nav-foreground-color  !default;
+$nav-title-color: $nav-foreground-color !default;
+$nav-title-background-color: $nav-background-color !default;
+$nav-pad: $spacing !default;
+$nav-element-padding: 16px !default;
+$nav-mobile-margin: 8px !default;
+// minimum sub menu item width
+$nav-sub-menu-width: 150px !default;
+
+// font
+$font-body: Helvectica, sans-serif !default;
+$font-size: 137.5% !default;
+$font-size-small: 1.6rem !default;
+$font-size-large: 2.2rem !default;
+$font-weight: 300;
+
+$heading-font: $font-body !default;
+$h1-size: 2.8rem !default;
+$h1-line-height: 3rem !default;
+$h2-size: 2.4rem !default;
+$h2-line-height: 2.6rem !default;
+$h3-size: 2.0rem !default;
+$h3-line-height: 2.2rem !default;
+$h4-size: 1.6rem !default;
+$h5-size: 1.4rem !default;
+$h6-size: 1.2rem !default;
+
+$typography-margin: 1.2rem;
+$line-height: 1.5  !default;
+$h-margin: $line-height !default;
+$block-margin: $padding !default;
+
+// $letter-spacing: 0.01em;
+
+// border vars
+$border-radius: 0px !default;
+$border-height: 1px !default;
+$border: $border-height solid $foreground-color !default;
+$border-inverse: $border-height solid $background-color !default;
+$list-item-border: $border !default;
+
+// footer
+$footer-padding: $block-padding !default;
+
+// animations
+$transition-time: 0.3s !default;
+
+// shadows
+$shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24) !default;
+
+// lists
+$list-item-padding: $padding !default;
+
+// slideouts
+$slideout-width: 240px !default;
+$slideout-height: 75px !default;

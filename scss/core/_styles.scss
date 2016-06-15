@@ -1,0 +1,150 @@
+// bootsmooth supporting styles
+
+// padded element
+.bs-padded { 
+	padding: $padding;
+}
+
+// block element
+.bs-block {
+	padding-top: $block-padding;
+	padding-bottom: $block-padding;
+}
+
+// center block elements
+.bs-block-center {
+    display: block;
+    margin: 0 auto;
+}
+
+// margins (same as typography margins)
+.bs-margin-top {
+	margin-top: $typography-margin;
+}
+
+.bs-margin-bottom {
+	margin-bottom: $typography-margin;
+}
+
+.bs-margin {
+	margin-top: $typography-margin;
+	margin-bottom: $typography-margin;
+}
+
+// scrollable elements
+.bs-scrollable {
+	overflow: auto;
+}
+.bs-scrollableX {
+    overflow-x:auto;
+}
+
+.bs-scrollableY {
+    overflow-y:auto;
+}
+
+// bordered support class
+.bs-border {
+    border: $border;
+    border-radius: $border-radius;
+}
+
+// shadow support class
+.bs-shadow {
+    box-shadow: $shadow;
+}
+
+// image
+.bs-img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+// video
+.bs-video {
+    max-width: 100%;
+    height: auto;
+}
+
+// responsive display classes
+// small
+@media (max-width: $breakpoint-small) {
+	.bs-hidden-small {
+		display: none;
+	}
+
+	.bs-show-small {
+		display: initial;
+	}
+
+	.bs-hidden-medium {
+		display: initial;
+	}
+
+	.bs-show-medium {
+		display: none;
+	}
+
+	.bs-hidden-large {
+		display: initial;
+	}
+
+	.bs-show-large {
+		display: none;
+	}
+}
+
+// medium
+@media (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
+	.bs-hidden-small {
+		display: initial;
+	}
+
+	.bs-show-small {
+		display: none;
+	}
+
+	.bs-hidden-medium {
+		display: none;
+	}
+
+	.bs-show-medium {
+		display: initial;
+	}
+
+	.bs-hidden-large {
+		display: initial;
+	}
+
+	.bs-show-large {
+		display: none;
+	}
+}
+
+// large
+@media (min-width: $breakpoint-large) and (max-width: $breakpoint-large) {
+	.bs-hidden-small {
+		display: initial;
+	}
+
+	.bs-show-small {
+		display: none;
+	}
+
+	.bs-hidden-medium {
+		display: initial;
+	}
+
+	.bs-show-medium {
+		display: none;
+	}
+
+	.bs-hidden-large {
+		display: none;
+	}
+
+	.bs-show-large {
+		display: initial;
+	}
+}

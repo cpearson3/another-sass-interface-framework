@@ -1,7 +1,6 @@
 // BUTTONS
-.bs-btn, a.bs-btn {
-
-    transition: background-color $transition-time ease;
+@mixin button {
+	 transition: background-color $transition-time ease;
 
     display: inline-block;
     text-align: center;
@@ -10,24 +9,32 @@
     white-space: nowrap;
     cursor: pointer;
     box-sizing: border-box;
-    margin-bottom: $spacing;
+    //margin-bottom: $spacing;
     -webkit-appearance:none;
-		border: $button-border;
 
-		padding: $button-padding;
+	border: $button-border;
+	padding: $button-padding;
+}
+
+[role="button"], input[type=submit], .bs-button, a.bs-button {
+	@include button;
+   
     background-color: $button-background-color;
     color: $button-foreground-color;
 
     &:hover {
-				box-shadow: $shadow;
+		box-shadow: $shadow;
         background-color: $button-hover-background-color;
-				color: $button-hover-foreground-color;
+		color: $button-hover-foreground-color;
     }
+
+	&:visited {
+		color: $button-foreground-color;
+	}
 }
 
-.bs-btn-flat {
-	@extend .bs-btn;
-
+[role="button"].bs-button-flat, a.bs-button-flat, .bs-button-flat {
+	@include button;
 	background-color: $background-color;
 	color: $primary-color;
 	border: 1px solid $primary-color;

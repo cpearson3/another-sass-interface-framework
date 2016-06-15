@@ -1,0 +1,26 @@
+// list groups, panels, etc
+
+$list-item-padding: $padding;
+
+// LIST
+.bs-list {
+    border-radius: $border-radius;
+    margin: 0;
+    padding: 0;
+    display: block;
+    list-style: none;
+
+    .bs-list-item {
+        padding: $list-item-padding;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+.bs-list-border {
+	li.bs-list-item {
+		border-bottom: $list-item-border;
+	}
+}

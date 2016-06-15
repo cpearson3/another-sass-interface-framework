@@ -1,12 +1,17 @@
 // typography
 // Inspired by Typebase v0.1.0
 
+// center text
+.bs-text-center {
+	text-align: center;
+}
+
 html {
 	font-size: 100%;
   -webkit-font-smoothing: antialiased;
 }
 
-@media #{$screen-small} {
+@media (max-width: $breakpoint-small) {
 	html {
 		font-size: 100%;
 	}
@@ -27,7 +32,7 @@ body {
 a {
     cursor: pointer;
     color: $link-color;
-		text-decoration: $link-decoration;
+	text-decoration: $link-decoration;
 
     &:visited {
 			color: $link-visited-color;
@@ -39,25 +44,31 @@ a {
 }
 
 // spacing
-pre, blockquote, dl, figure, table, p, ul, ol, form {
+pre, blockquote, dl, figure, table, form {
     margin-bottom: $block-margin;
 }
 
+p, ul, ol, blockquote {
+	margin-bottom: $typography-margin;
+}
+
 h1, h2, h3, h4, h5, h6 {
-    margin-top: $h-margin;
-		margin-bottom: $h-margin;
-		line-height: $line-height;
-    word-wrap: break-word;
+	//margin-top: $h-margin;
+	//margin-bottom: $h-margin;
+	font-family: $heading-font;
+	line-height: $line-height;
+	word-wrap: break-word;
+	margin-bottom: $typography-margin;
 }
 
 // headings
 h1 {
-  font-size: $h1-size;
-  line-height: $h1-line-height;
+	font-size: $h1-size;
+	line-height: $h1-line-height;
 }
 h2 {
-  font-size: $h2-size;
-  line-height: $h2-line-height;
+	font-size: $h2-size;
+	line-height: $h2-line-height;
 }
 
 h3 {
@@ -104,20 +115,21 @@ h6 {
 
 ul,
 ol {
-  margin-top: $block-margin;
-  margin-bottom: $block-margin;
+	//margin-top: $block-margin;
+	//margin-bottom: $block-margin;
 	list-style-position: inside;
+	//line-height: $line-height;
 }
 ul li,
 ol li {
-  line-height: $line-height;
+	line-height: $line-height;
 }
 ul ul,
 ol ul,
 ul ol,
 ol ol {
-  margin-top: 0;
-  margin-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 // CODE AND PRE
@@ -136,13 +148,13 @@ code {
 // Blockquotes
 
 blockquote {
-    border-left: $spacing solid $foreground-color;
-    margin-left: 0;
-    margin-right: 0;
-    padding: $spacing $spacing*2;
-		line-height: $line-height;
-	  margin-top: $block-margin;
-	  margin-bottom: $block-margin;
+	border-left: $padding solid $foreground-color;
+	margin-left: 0;
+	margin-right: 0;
+	padding: $padding $padding*2;
+	line-height: $line-height;
+	//margin-top: $block-margin;
+	//margin-bottom: $block-margin;
 }
 
 // Lead class

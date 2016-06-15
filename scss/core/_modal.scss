@@ -2,17 +2,31 @@
 .bs-modal {
   display: none;
 }
-.bs-modal-overlay {
-  position:fixed;
-  z-index:9999;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
+
+@mixin modal-overlay {
+	position:fixed;
+	z-index:9999;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+// Background Overlay
+.bs-modal-background {
+  @include modal-overlay;
   background-color: $foreground-color;
   opacity: 0.9;
 }
 
+// Full Screen Modal
+.bs-modal-full {
+	@include modal-overlay;
+	background-color: $background-color;
+	color: $foreground-color;
+}
+
+// Centered Dialog
 .bs-modal-dialog {
   @extend .bs-container;
 
@@ -30,11 +44,13 @@
   box-shadow: $shadow;
 }
 
+// Block with Left Aligned Text
 .bs-modal-dialog-content {
-  padding: $spacing;
+  @extend .bs-block;
   text-align: left;
 }
 
+// Close Button
 .bs-modal-close {
   position: absolute;
   top: $spacing;
@@ -42,8 +58,8 @@
   cursor: pointer;
 }
 
-// slideout
 
+// Slideout Component
 .bs-slideout {
   padding: $spacing;
   background-color: $background-color;

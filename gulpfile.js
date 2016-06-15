@@ -4,27 +4,41 @@
 
 var config = {
     sassPaths: [
-      'bower_components/normalize-scss/'
     ]
 }
 
 var gulp   = require('gulp'),
-    jshint = require('gulp-jshint'),
     sass   = require('gulp-sass'),
-    gutil  = require('gulp-util'),
-    sourcemaps = require('gulp-sourcemaps'),
+   // gutil  = require('gulp-util'),
+    //sourcemaps = require('gulp-sourcemaps'),
     rename = require('gulp-rename'),
     clean = require('gulp-clean'),
-    minifyCss = require('gulp-minify-css');
+    csso = require('gulp-csso'),
+	browserify = require('gulp-browserify');
 
-// sass task
+// stylesheet task
 gulp.task('stylesheets', function() {
   return gulp.src('./scss/**/*.scss')
     .pipe(sass({includePaths: config.sassPaths}))   // {includePaths: config.sassPaths}
-    .pipe(sourcemaps.init())
-    .pipe(minifyCss({compatibility: 'ie8'}))
+    //.pipe(sourcemaps.init())
+    .pipe(csso())
     .pipe(rename('bootsmooth.min.css'))
     .pipe(gulp.dest('./dist/'));
+});
+
+
+// javascript  task
+gulp.task('javascript', function() {
+  // Single point of entry (make sure not to src ALL your files, browserify will figure it out for you)
+  gulp.src(['./js/bootsmooth.js'])
+  .pipe(browserify({
+    insertGlobals: true,
+    debug: true
+  }))
+  // Bundle to a single file
+  .pipe(concat('bootsmooth.js'))
+  //.pipe(uglify())
+  .pipe(gulp.dest('./dist/'));
 });
 
 // build task

@@ -1,28 +1,26 @@
 /*
 
-    bootsmooth.css | MIT License | github.com/cpearson3/bootsmooth
+    Bootsmooth
+	Another UI Framework built with Sass
+
+	MIT License
+	github.com/cpearson3/bootsmooth
 
 */
 
-// @import "reset";
+@import "core/variables";
 
-// import normalize (included in the gulp Sass path)
-@import "_normalize";
+@import "core/styles";
+@import "core/colors";
+@import "core/positioning";
+@import "core/animation";
 
-@import "variables";
-@import "animation";
-@import "colors";
-@import "typography";
-@import "grid";
-@import "styles";
-@import "modal";
-@import "overlay";
-@import "navigation";
-@import "tables";
-@import "forms";
-@import "groups";
-@import "page";
-@import "buttons";
-@import "vcenter";
-
-@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import "core/typography";
+@import "core/grid";
+@import "core/modal";
+@import "core/navigation";
+@import "core/tables";
+@import "core/forms";
+@import "core/lists";
+@import "core/page";
+@import "core/buttons";
