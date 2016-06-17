@@ -19,7 +19,11 @@ Visit the [web page](http://www.bootsmooth.com) for more documentation and examp
 
 ## Changelog
 
-### 2.0.0
+### 2.0.1
+
+- Changed `.bs-padded` to `.bs-padding` for naming consistency
+
+### 2.0
 
 - Modified media query breakpoint variables to match UIkit's style
 - Added `.bs-margin-*` classes 
