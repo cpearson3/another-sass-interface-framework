@@ -50,12 +50,12 @@
 [role="button"].bs-button-secondary-1, a.bs-button-secondary-1, .bs-button-secondary-1 {
 	@include button;
 	background-color: $secondary-color-1;
-	color: $foreground-color;
+	color: $button-foreground-color-secondary-1;
 	border: none;
 
 	&:hover {
-		background-color: $secondary-color-1;
-		color: $foreground-color;
+		background-color: $secondary-color-1-dark;
+		color: $button-foreground-color-secondary-1;
 	}
 }
 
@@ -63,12 +63,12 @@
 [role="button"].bs-button-secondary-2, a.bs-button-secondary-2, .bs-button-secondary-2 {
 	@include button;
 	background-color: $secondary-color-2;
-	color: $foreground-color;
+	color: $button-foreground-color-secondary-2;
 	border: none;
 
 	&:hover {
-		background-color: $secondary-color-2;
-		color: $foreground-color;
+		background-color: $secondary-color-2-dark;
+		color:  $button-foreground-color-secondary-2;
 	}
 }
 
@@ -76,11 +76,11 @@
 [role="button"].bs-button-complement, a.bs-button-complement, .bs-button-complement {
 	@include button;
 	background-color: $complement-color;
-	color: $foreground-color;
+	color: $button-foreground-color-complement;
 	border: none;
 
 	&:hover {
-		background-color: $complement-color;
-		color: $foreground-color;
+		background-color: $complement-color-dark;
+		color:  $button-foreground-color-complement;
 	}
 }

@@ -44,7 +44,7 @@
     margin-top: 0;
 }
 
-[role="row"].bs-row-pad [class*="bs-col-"] {
+.bs-row-pad [class*="bs-col-"] {
 	padding: $padding;
 }
 
@@ -121,4 +121,8 @@
 	.bs-col-large-75 {
 		width: 75%;
 	}
+}
+
+.bs-col-100 {
+	width: 100%;
 }

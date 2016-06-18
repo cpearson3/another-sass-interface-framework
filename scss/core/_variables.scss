@@ -26,11 +26,20 @@ $color-variation: 10% !default;
 
 $background-color-dark: darken($background-color, $color-variation)  !default;
 $foreground-color-dark: darken($foreground-color, $color-variation)  !default;
-
 $primary-color-dark: darken($primary-color, $color-variation)  !default;
+
 $background-color-light: lighten($background-color, $color-variation)  !default;
 $foreground-color-light: lighten($foreground-color, $color-variation)  !default;
 $primary-color-light: lighten($primary-color, $color-variation)  !default;
+
+$secondary-color-1-light: lighten($secondary-color-1, $color-variation)  !default;
+$secondary-color-1-dark: darken($secondary-color-1, $color-variation)  !default;
+
+$secondary-color-2-light: lighten($secondary-color-2, $color-variation)  !default;
+$secondary-color-2-dark: darken($secondary-color-2, $color-variation)  !default;
+
+$complement-color-light: lighten($complement-color, $color-variation)  !default;
+$complement-color-dark: darken($complement-color, $color-variation)  !default;
 
 // links
 $link-color: $primary-color  !default;
@@ -41,6 +50,9 @@ $link-decoration: underline  !default;
 // buttons
 $button-background-color: $primary-color  !default;
 $button-foreground-color: #FFF  !default;
+$button-foreground-color-secondary-1: #FFF !default;
+$button-foreground-color-secondary-2: #FFF !default;
+$button-foreground-color-complement: #FFF !default;
 $button-hover-background-color: $primary-color-dark  !default;
 $button-hover-foreground-color: $button-foreground-color  !default;
 $button-padding: 8px  !default;
