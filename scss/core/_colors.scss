@@ -1,6 +1,5 @@
-// colors defined in _variables
-
 // color classes
+
 .bs-color-inverse {
     background-color: $foreground-color !important;
     color: $background-color !important;
@@ -12,3 +11,13 @@
 
 .bs-fg-primary { color: $primary-color !important; }
 .bs-fg-background { color: $background-color !important; }
+
+.bs-fg-secondary-1  { color: $secondary-color-1 !important; }
+.bs-bg-secondary-1 { background-color: $secondary-color-1 !important; }
+
+.bs-fg-secondary-2  { color: $secondary-color-2 !important; }
+.bs-bg-secondary-2 { background-color: $secondary-color-2 !important; }
+
+.bs-fg-complement  { color: $complement-color !important; }
+.bs-bg-complement { background-color: $complement-color !important; }
+

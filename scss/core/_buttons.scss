@@ -33,6 +33,7 @@
 	}
 }
 
+// flat button = same bg as global + no hover effect
 [role="button"].bs-button-flat, a.bs-button-flat, .bs-button-flat {
 	@include button;
 	background-color: $background-color;
@@ -42,5 +43,44 @@
 	&:hover {
 		background-color: $background-color;
 		color: $primary-color;
+	}
+}
+
+// secondary 1
+[role="button"].bs-button-secondary-1, a.bs-button-secondary-1, .bs-button-secondary-1 {
+	@include button;
+	background-color: $secondary-color-1;
+	color: $foreground-color;
+	border: none;
+
+	&:hover {
+		background-color: $secondary-color-1;
+		color: $foreground-color;
+	}
+}
+
+// secondary 2
+[role="button"].bs-button-secondary-2, a.bs-button-secondary-2, .bs-button-secondary-2 {
+	@include button;
+	background-color: $secondary-color-2;
+	color: $foreground-color;
+	border: none;
+
+	&:hover {
+		background-color: $secondary-color-2;
+		color: $foreground-color;
+	}
+}
+
+// complement
+[role="button"].bs-button-complement, a.bs-button-complement, .bs-button-complement {
+	@include button;
+	background-color: $complement-color;
+	color: $foreground-color;
+	border: none;
+
+	&:hover {
+		background-color: $complement-color;
+		color: $foreground-color;
 	}
 }

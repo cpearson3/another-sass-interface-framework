@@ -11,20 +11,23 @@ $container-max-width: 960px  !default;
 $breakpoint-small: 568px  !default;
 $breakpoint-medium: 768px  !default;
 $breakpoint-large: 1024px  !default;
-
 $grid-columns: 12  !default;
 
 // general color definitions
 $background-color: #FFF !default;
 $foreground-color: #333 !default;
-$primary-color: #75a3d1 !default;
+
+$primary-color: $color-primary-0 !default;
+$secondary-color-1: $color-secondary-1-0 !default;
+$secondary-color-2: $color-secondary-2-0 !default;
+$complement-color: $color-complement-0 !default;
 
 $color-variation: 10% !default;
 
 $background-color-dark: darken($background-color, $color-variation)  !default;
 $foreground-color-dark: darken($foreground-color, $color-variation)  !default;
-$primary-color-dark: darken($primary-color, $color-variation)  !default;
 
+$primary-color-dark: darken($primary-color, $color-variation)  !default;
 $background-color-light: lighten($background-color, $color-variation)  !default;
 $foreground-color-light: lighten($foreground-color, $color-variation)  !default;
 $primary-color-light: lighten($primary-color, $color-variation)  !default;

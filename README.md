@@ -21,6 +21,9 @@ Visit the [web page](http://www.bootsmooth.com) for more documentation and examp
 
 ### 2.0.1
 
+- Added secondary and complement button classes
+- Added variables and classes for secondary and complement colors
+- Added `_palette.scss` for color palette schemes 
 - Changed `.bs-padded` to `.bs-padding` for naming consistency
 
 ### 2.0
