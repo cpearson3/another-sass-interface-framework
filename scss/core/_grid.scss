@@ -44,6 +44,10 @@
     margin-top: 0;
 }
 
+[role="row"].bs-row-pad [class*="bs-col-"] {
+	padding: $padding;
+}
+
 // Columns
 
 // Global Mixin

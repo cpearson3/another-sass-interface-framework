@@ -21,6 +21,7 @@ Visit the [web page](http://www.bootsmooth.com) for more documentation and examp
 
 ### 2.0.1
 
+- Added `.bs-row-pad` to add default padding between columns in a row
 - Added secondary and complement button classes
 - Added variables and classes for secondary and complement colors
 - Added `_palette.scss` for color palette schemes 
