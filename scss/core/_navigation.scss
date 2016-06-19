@@ -60,6 +60,7 @@ nav[role="navigation"], .bs-nav {
 			min-width: 80px;
 			width: 0%;
 			transition: width 0.8s ease;
+			float: right;
 			&:focus {
 				width: 100% !important;
 			}

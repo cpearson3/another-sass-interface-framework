@@ -14,8 +14,15 @@ $breakpoint-large: 1024px  !default;
 $grid-columns: 12  !default;
 
 // general color definitions
-$background-color: #FFF !default;
-$foreground-color: #333 !default;
+
+// greys
+$darkgrey: #333 !default;
+$medgrey: #999 !default;
+$lightgrey: #ccc !default;
+$white: #fff !default;
+
+$background-color: $white !default;
+$foreground-color: $darkgrey !default;
 
 $primary-color: $color-primary-0 !default;
 $secondary-color-1: $color-secondary-1-0 !default;
