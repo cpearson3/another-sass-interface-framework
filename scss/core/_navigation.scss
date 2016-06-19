@@ -9,7 +9,7 @@ nav[role="navigation"], .bs-nav {
 	z-index: 999;
 	background-color: $nav-background-color;
 	color: $nav-foreground-color;
-
+	font-size: $nav-font-size;
   	// nav title
 	.bs-nav-title {
 		z-index: 999;
@@ -52,17 +52,27 @@ nav[role="navigation"], .bs-nav {
 		}
 
 		// inputs, buttons
-		input  {
+		input[type="text"]  {
 			color: $foreground-color;
 			padding: $nav-element-padding !important;
+			font-size: $nav-font-size;
+			//line-height: $nav-line-height;
+			min-width: 80px;
+			width: 0%;
+			transition: width 0.8s ease;
+			&:focus {
+				width: 100% !important;
+			}
 		}
 
 		.bs-button {
 			padding: $nav-element-padding !important;
+			font-size: $nav-font-size;
 			color: $nav-foreground-color;
 			background-color: $nav-background-color;
 			margin-bottom: 0;
-
+			line-height: $nav-line-height;
+			
 			&:hover {
 				box-shadow: none;
 				color: $nav-hover-foreground-color;
