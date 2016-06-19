@@ -4,6 +4,9 @@
     margin: 0 auto;
     position:relative;
     width: 100%;
+	input, textarea {
+		font-size: $font-size;
+	}
 }
 
 fieldset {
@@ -42,7 +45,9 @@ input[type="radio"].bs-radio + span.bs-radio-label {
     border: $border;
     border-radius: 100%;
     display: inline-block;
-    padding: $spacing;
+    //padding: $spacing;
+	width: 16px;
+	height: 16px;
     position: relative;
     -webkit-appearance: none;
 
@@ -51,7 +56,7 @@ input[type="radio"].bs-radio + span.bs-radio-label {
     }
 }
 
-input[type="radio"].bs-radio:checked.b + span.bs-radio-label {
+input[type="radio"].bs-radio:checked + span.bs-radio-label {
     @extend .bs-shadow;
     color: $primary-color;
     background: $primary-color;
@@ -69,7 +74,9 @@ input[type="checkbox"].bs-checkbox + span.bs-checkbox-label {
     border: $border;
     border-radius: $border-radius;
     display: inline-block;
-    padding: $spacing;
+    //padding: $spacing;
+	width: 16px;
+	height: 16px;
     position: relative;
     -webkit-appearance: none;
 
