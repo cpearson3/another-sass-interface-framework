@@ -1,7 +1,8 @@
 // BUTTONS
 @mixin button {
 	 transition: background-color $transition-time ease;
-
+	 font-family: $font-button;
+	 font-size: $font-size;
     display: inline-block;
     text-align: center;
     font-weight: 600;
@@ -16,7 +17,7 @@
 	padding: $button-padding;
 }
 
-[role="button"], input[type=submit], .bs-button, a.bs-button {
+[role="button"], button.bs-button, input[type=submit].bs-button, .bs-button, a.bs-button {
 	@include button;
    
     background-color: $button-background-color;
@@ -34,7 +35,7 @@
 }
 
 // flat button = same bg as global + no hover effect
-[role="button"].bs-button-flat, a.bs-button-flat, .bs-button-flat {
+[role="button"].bs-button-flat, a.bs-button-flat, button.bs-button-flat, input[type="submit"].bs-button-flat {
 	@include button;
 	background-color: $background-color;
 	color: $primary-color;
@@ -47,7 +48,7 @@
 }
 
 // secondary 1
-[role="button"].bs-button-secondary-1, a.bs-button-secondary-1, .bs-button-secondary-1 {
+[role="button"].bs-button-secondary-1, a.bs-button-secondary-1, button.bs-button-secondary-1, input[type="submit"].bs-button-secondary-1 {
 	@include button;
 	background-color: $secondary-color-1;
 	color: $button-foreground-color-secondary-1;
@@ -60,7 +61,7 @@
 }
 
 // secondary 2
-[role="button"].bs-button-secondary-2, a.bs-button-secondary-2, .bs-button-secondary-2 {
+[role="button"].bs-button-secondary-2, a.bs-button-secondary-2, button.bs-button-secondary-2, input[type="submit"] .bs-button-secondary-2{
 	@include button;
 	background-color: $secondary-color-2;
 	color: $button-foreground-color-secondary-2;
@@ -73,7 +74,7 @@
 }
 
 // complement
-[role="button"].bs-button-complement, a.bs-button-complement, .bs-button-complement {
+[role="button"].bs-button-complement, a.bs-button-complement, button.bs-button-complement, input[type="submit"].bs-button-complement {
 	@include button;
 	background-color: $complement-color;
 	color: $button-foreground-color-complement;

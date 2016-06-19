@@ -1,7 +1,10 @@
 // color classes
 
-.bs-color-inverse {
+.bs-bg-inverse {
     background-color: $foreground-color !important;
+}
+
+.bs-fg-inverse {
     color: $background-color !important;
 }
 
