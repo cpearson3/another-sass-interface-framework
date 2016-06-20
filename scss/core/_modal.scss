@@ -25,6 +25,7 @@
 	@include modal-overlay;
 	background-color: $background-color;
 	color: $foreground-color;
+	display: none;
 }
 
 // Centered Dialog
