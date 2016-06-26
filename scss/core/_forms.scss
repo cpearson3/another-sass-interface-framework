@@ -21,8 +21,10 @@ fieldset {
     color: $foreground-color;
     background-color: $background-color;
     background-image: none;
-    border: $border;
+    //border: $border;
     border-radius: $border-radius;
+	border: none;
+	@extend .bs-shadow;
 //    vertical-align: middle;
     line-height: $line-height;
 

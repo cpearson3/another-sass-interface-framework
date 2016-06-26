@@ -1,5 +1,6 @@
 // BUTTONS
 @mixin button {
+	@extend .bs-shadow;
 	 transition: background-color $transition-time ease;
 	 font-family: $font-button;
 	 font-size: $font-size;
@@ -37,9 +38,11 @@
 // flat button = same bg as global + no hover effect
 [role="button"].bs-button-flat, a.bs-button-flat, button.bs-button-flat, input[type="submit"].bs-button-flat {
 	@include button;
+	@extend .bs-shadow;
 	background-color: $background-color;
 	color: $primary-color;
-	border: 1px solid $primary-color;
+	//border: 1px solid $primary-color;
+	border: none;
 
 	&:hover {
 		background-color: $background-color;

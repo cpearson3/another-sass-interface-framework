@@ -1,5 +1,5 @@
 # Bootsmooth
-## Version 2.0.1
+## Version 2.0.2
 
 Bootsmooth is another UI Framework built with Sass / SCSS.
 
@@ -18,6 +18,11 @@ Include bootsmooth.min.css in your HTML.Include
 Visit the [web page](http://www.bootsmooth.com) for more documentation and examples.
 
 ## Changelog
+
+### 2.0.2
+- Added foreground color variable to default shadow config for `.bs-shadow`
+- Removed the border from `.bs-form-input` and replaced it with `.bs-shadow`
+- Removed the border from `.bs-button-flat` and replaced it with `.bs-shadow`
 
 ### 2.0.1
 
