@@ -43,10 +43,25 @@
     overflow-y:auto;
 }
 
-// bordered support class
+// Border classes
 .bs-border {
-    border: $border;
-    border-radius: $border-radius;
+    @include border($foreground-color);
+}
+
+.bs-border-primary {
+	@include border($primary-color);
+}
+
+.bs-border-secondary-1 {
+	@include border($secondary-color-1);
+}
+
+.bs-border-secondary-2 {
+	@include border($secondary-color-2);
+}
+
+.bs-border-complement {
+	@include border($complement-color);
 }
 
 // shadow support class

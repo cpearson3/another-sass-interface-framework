@@ -101,17 +101,25 @@ $nav-pad: $spacing !default;
 $nav-font-size: 1.0rem !default;
 $nav-element-padding: 16px !default;
 $nav-mobile-margin: 8px !default;
+
 // minimum sub menu item width
 $nav-sub-menu-width: 150px !default;
 $nav-line-height: $line-height;
 
-// $letter-spacing: 0.01em;
+$letter-spacing: 0.0rem;
 
-// border vars
+// border vars and mixins
+$border-color: $foreground-color !default;
 $border-radius: 0px !default;
-$border-height: 1px !default;
-$border: $border-height solid $foreground-color !default;
-$border-inverse: $border-height solid $background-color !default;
+$border-width: 1px !default;
+$border-style: solid !default;
+$border: $border-width $border-style $border-color !default;
+
+@mixin border($color) {
+	border: $border-width $border-style $color;
+	border-radius: $border-radius;
+}
+
 $list-item-border: $border !default;
 
 // footer
@@ -121,7 +129,7 @@ $footer-padding: $block-padding !default;
 $transition-time: 0.3s !default;
 
 // shadows
-$shadow: 0px 1px 3px transparentize($foreground-color,0.5) !default;
+$shadow: 0px 1px 2px $foreground-color !default;
 
 // lists
 $list-item-padding: $padding !default;

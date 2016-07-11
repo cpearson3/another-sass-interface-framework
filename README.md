@@ -1,5 +1,5 @@
 # Bootsmooth
-## Version 2.0.2
+## Version 2.0.3
 
 Bootsmooth is another UI Framework built with Sass / SCSS.
 
@@ -13,11 +13,15 @@ To get started:
     npm install
     gulp build
 
-Include bootsmooth.min.css in your HTML.Include
+Include `dist/bootsmooth.min.css` in your HTML or `scss/bootsmooth.scss` in your SCSS file to get started.
 
 Visit the [web page](http://www.bootsmooth.com) for more documentation and examples.
 
 ## Changelog
+
+### 2.0.3
+- Added color border and shadow classes
+- Added more variables for common styles to allow for more customization
 
 ### 2.0.2
 - Added foreground color variable to default shadow config for `.bs-shadow`
