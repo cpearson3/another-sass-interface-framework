@@ -45,7 +45,7 @@
 
 // Border classes
 .bs-border {
-    @include border($foreground-color);
+    @include border($border-color);
 }
 
 .bs-border-primary {
@@ -66,7 +66,23 @@
 
 // shadow support class
 .bs-shadow {
-    box-shadow: $shadow;
+    @include shadow($shadow-color);
+}
+
+.bs-shadow-primary {
+	@include shadow($primary-color);
+}
+
+.bs-shadow-secondary-1 {
+	@include shadow($secondary-color-1);
+}
+
+.bs-shadow-secondary-2 {
+	@include shadow($secondary-color-2);
+}
+
+.bs-shadow-complement {
+	@include shadow($complement-color);
 }
 
 // image

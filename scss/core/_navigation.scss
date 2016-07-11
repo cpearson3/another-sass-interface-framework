@@ -1,9 +1,9 @@
 // include variable first
-$sub-menu-animation: bs-flipInX;
-$sub-menu-animation-duration: 0.8s;;
+$sub-menu-animation: bs-fadeIn;
+$sub-menu-animation-duration: 0.3s;
 
-$wide-sub-menu-animation: bs-fadeInRight;
-$wide-sub-menu-animation-duration: 0.8s;
+$wide-sub-menu-animation: bs-fadeIn;
+$wide-sub-menu-animation-duration: 0.3s;
 
 nav[role="navigation"], .bs-nav {
 	z-index: 999;
