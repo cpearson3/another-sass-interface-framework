@@ -50,7 +50,7 @@ $complement-color-dark: darken($complement-color, $color-variation)  !default;
 
 // font
 $font-body: Helvectica, sans-serif !default;
-$font-size: 137.5% !default;
+$font-size: 1.0rem !default;
 $font-size-small: 1.6rem !default;
 $font-size-large: 2.2rem !default;
 $font-weight: 300;
@@ -129,7 +129,17 @@ $footer-padding: $block-padding !default;
 $transition-time: 0.3s !default;
 
 // shadows
-$shadow: 0px 1px 2px $foreground-color !default;
+$shadow-color: $foreground-color !default;
+$shadow-radius: 0px !default;
+$shadow-x-offset: 0px !default;
+$shadow-y-offset: 1px !default;
+$shadow: $shadow-x-offset $shadow-y-offset $shadow-color !default;
+
+@mixin shadow($color) {
+	box-shadow: $shadow-x-offset $shadow-y-offset $color;
+	-web-kit-box-shadow: $shadow-x-offset $shadow-y-offset $color; 
+}
+
 
 // lists
 $list-item-padding: $padding !default;
