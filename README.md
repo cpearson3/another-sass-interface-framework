@@ -22,6 +22,7 @@ Visit the [web page](http://www.bootsmooth.com) for more documentation and examp
 ### 2.0.3
 - Added color border and shadow classes
 - Added more variables for common styles to allow for more customization
+- Added flat button color classes
 
 ### 2.0.2
 - Added foreground color variable to default shadow config for `.bs-shadow`

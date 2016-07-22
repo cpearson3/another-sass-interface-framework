@@ -130,14 +130,14 @@ $transition-time: 0.3s !default;
 
 // shadows
 $shadow-color: $foreground-color !default;
-$shadow-radius: 0px !default;
+$shadow-radius: 4px !default;
 $shadow-x-offset: 0px !default;
 $shadow-y-offset: 1px !default;
-$shadow: $shadow-x-offset $shadow-y-offset $shadow-color !default;
+$shadow: $shadow-x-offset $shadow-y-offset $shadow-radius $shadow-color !default;
 
 @mixin shadow($color) {
-	box-shadow: $shadow-x-offset $shadow-y-offset $color;
-	-web-kit-box-shadow: $shadow-x-offset $shadow-y-offset $color; 
+	box-shadow: $shadow-x-offset $shadow-y-offset $shadow-radius $color;
+	-web-kit-box-shadow: $shadow-x-offset $shadow-y-offset $shadow-radius $color; 
 }
 
 
