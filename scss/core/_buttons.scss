@@ -51,7 +51,7 @@
 // flat button = same bg as global + shadow hover effect
 [role="button"].bs-button-flat, a.bs-button-flat, button.bs-button-flat, input[type="submit"].bs-button-flat {
 	@include button;
-	@include button-flat;
+	@include button-flat($primary-color);
 }
 
 [role="button"].bs-button-flat-primary, a.bs-button-flat-primary, button.bs-button-flat-primary, input[type="submit"].bs-button-flat-primary {
