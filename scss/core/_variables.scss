@@ -133,7 +133,8 @@ $shadow-color: $foreground-color !default;
 $shadow-radius: 4px !default;
 $shadow-x-offset: 0px !default;
 $shadow-y-offset: 1px !default;
-$shadow: $shadow-x-offset $shadow-y-offset $shadow-radius $shadow-color !default;
+// $shadow: $shadow-x-offset $shadow-y-offset $shadow-radius $shadow-color !default;
+$shadow: none;
 
 @mixin shadow($color) {
 	box-shadow: $shadow-x-offset $shadow-y-offset $shadow-radius $color;
