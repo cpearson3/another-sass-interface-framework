@@ -1,5 +1,5 @@
 # Bootsmooth
-## Version 2.0.3
+## Version 2.0.4
 
 Bootsmooth is another UI Framework built with Sass / SCSS.
 
