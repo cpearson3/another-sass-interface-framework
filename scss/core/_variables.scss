@@ -18,7 +18,7 @@ $grid-columns: 12  !default;
 // greys
 $darkgrey: #333 !default;
 $medgrey: #999 !default;
-$lightgrey: #ccc !default;
+$lightgrey: #efefef !default;
 $white: #fff !default;
 
 $background-color: $white !default;
@@ -109,7 +109,7 @@ $nav-line-height: $line-height;
 $letter-spacing: 0.0rem;
 
 // border vars and mixins
-$border-color: $foreground-color !default;
+$border-color: $lightgrey !default;
 $border-radius: 0px !default;
 $border-width: 1px !default;
 $border-style: solid !default;

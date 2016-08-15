@@ -23,8 +23,9 @@ fieldset {
     background-image: none;
     //border: $border;
     border-radius: $border-radius;
-	border: none;
-	@extend .bs-shadow;
+	border: $border;
+// todo: add $form-shadow and $form-border
+//	box-shadow: $shadow;
 //    vertical-align: middle;
     line-height: $line-height;
 
