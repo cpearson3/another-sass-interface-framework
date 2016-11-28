@@ -44,7 +44,7 @@
     margin-top: 0;
 }
 
-// bs-gutter (bs-row-pad < 2.0.4)
+// bs-gutter added 2.0.5 (was bs-row-pad < 2.0.4)
 @media (min-width: $breakpoint-medium) {
 	.bs-gutter [class*="bs-col-"], .bs-row-pad [class*="bs-col-"] {
 		padding: 0px $padding;
@@ -66,6 +66,8 @@
 	float: left;
     width: 100%;
     min-height: 1px;
+    padding-top: $padding;
+    padding-bottom: $padding;
 }
 
 // All Column Classes
@@ -79,6 +81,8 @@
 	@for $i from 1 through $grid-columns {
 		.bs-col-#{$i} {
 			width: 100% / $grid-columns * $i;
+			padding-top: 0px;
+			padding-bottom: 0px;
 		}
 	}
 }
@@ -90,6 +94,8 @@
 	@for $i from 1 through $grid-columns {
 		.bs-col-large-#{$i} {
 			width: 100% / $grid-columns * $i;
+			padding-top: 0px;
+			padding-bottom: 0px;
 		}
 	}
 }
@@ -109,6 +115,10 @@
 	.bs-col-50 {
 		width: 50%;
 	}
+	
+	.bs-col-66 {
+		width: 66.66%;
+	}
 
 	.bs-col-75 {
 		width: 75%;
@@ -127,6 +137,10 @@
 
 	.bs-col-large-50 {
 		width: 50%;
+	}
+	
+	.bs-col-large-66 {
+		width: 66.66%;
 	}
 
 	.bs-col-large-75 {
