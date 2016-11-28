@@ -47,11 +47,12 @@
 // bs-gutter (bs-row-pad < 2.0.4)
 .bs-gutter [class*="bs-col-"], .bs-row-pad [class*="bs-col-"] {
 	padding: 0px $padding;
-	&:first {
+	
+	&:first-child {
 		padding-left: 0px;
 	}
 	
-	&:last {
+	&:last-child {
 		padding-right: 0px;
 	}
 }
