@@ -40,6 +40,7 @@ fieldset {
 
 input[type=checkbox].bs-checkbox, input[type=radio].bs-radio {
 	visibility: hidden;
+	width: 0px;
 }
 
 // Radio

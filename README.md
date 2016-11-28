@@ -19,6 +19,9 @@ Visit the [web page](http://www.bootsmooth.com) for more documentation and examp
 
 ## Changelog
 
+### 2.0.4, 2.0.5
+- Fixed width of radio and checkbox inputs
+
 ### 2.0.3
 - Added color border and shadow classes
 - Added more variables for common styles to allow for more customization
