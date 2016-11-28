@@ -46,14 +46,16 @@
 
 // bs-gutter (bs-row-pad < 2.0.4)
 .bs-gutter [class*="bs-col-"], .bs-row-pad [class*="bs-col-"] {
-	padding: 0px $padding;
-	
-	&:first-child {
-		padding-left: 0px;
-	}
-	
-	&:last-child {
-		padding-right: 0px;
+	@media (min-with: $breakpoint-medium) {
+		padding: 0px $padding;
+		
+		&:first-child {
+			padding-left: 0px;
+		}
+		
+		&:last-child {
+			padding-right: 0px;
+		}
 	}
 }
 
