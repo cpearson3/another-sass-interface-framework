@@ -21,6 +21,7 @@ Visit the [web page](http://www.bootsmooth.com) for more documentation and examp
 
 ### 2.0.4, 2.0.5
 - Fixed width of radio and checkbox inputs
+- Changed gutter of first and last columns in `.bs-gutter` (formerly `.bs-row-pad`)
 
 ### 2.0.3
 - Added color border and shadow classes
