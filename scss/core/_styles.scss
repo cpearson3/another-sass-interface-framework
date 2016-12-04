@@ -154,7 +154,7 @@
 }
 
 // large
-@media (min-width: $breakpoint-large) and (max-width: $breakpoint-large) {
+@media (min-width: #{$breakpoint-medium + 1}) {
 	.bs-hidden-small {
 		display: initial;
 	}

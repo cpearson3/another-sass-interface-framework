@@ -24,6 +24,7 @@ Visit the [web page](http://www.bootsmooth.com) for more documentation and examp
 - Updated gulpfile for build process of bootsmooth.js
 - Fixed text alignment of sub menu elements 
 - Added Static Width Classes `.bs-25, .bs-75. .bs-33, .bs-66`
+- Fixed media query for `.bs-show* .bs-hide*` for large displays
 - Added Small and Medium Breakpoint Width Columns Classes `.bs-container-small, .bs-container-medium` 
 
 ### 2.0.4, 2.0.5
