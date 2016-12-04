@@ -30,10 +30,22 @@
 }
 
 // Container and Rows
-.bs-container {
+
+// 2.1.0
+// container mixin
+@mixin bs-container($p_max) {
 	margin: 0 auto;
 	width: $container-width;
-	max-width: $container-max-width;
+	max-width: $p_max;
+}
+.bs-container {
+	@include bs-container($container-max-width);
+}
+.bs-container-medium {
+	@include bs-container($breakpoint-medium);
+}
+.bs-container-small {
+	@include bs-container($breakpoint-small);
 }
 
 [role="grid"], [role="row"], .bs-container, .bs-row {
@@ -86,7 +98,6 @@
 		}
 	}
 }
-
 
 // Large Device Column Breakpoint
 @media (min-width: $breakpoint-large) {
@@ -148,6 +159,35 @@
 	}
 }
 
-.bs-col-100 {
+// 2.1.0
+// Static Width Classes
+
+@mixin static_width($p_w) {
+	width: $p_w;
+	display: inline;
+	float: left;
+}
+
+.bs-100 {
 	width: 100%;
+}
+
+.bs-25 {
+    @include static_width(25%);
+}
+
+.bs-75 {
+    @include static_width(75%);
+}
+
+.bs-33 {
+    @include static_width(33.33%);
+}
+
+.bs-66 {
+    @include static_width(66.66%);
+}
+
+.bs-50 {
+    @include static_width(50%);
 }

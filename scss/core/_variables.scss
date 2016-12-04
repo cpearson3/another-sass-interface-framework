@@ -87,7 +87,7 @@ $button-foreground-color-secondary-2: #FFF !default;
 $button-foreground-color-complement: #FFF !default;
 $button-hover-background-color: $primary-color-dark  !default;
 $button-hover-foreground-color: $button-foreground-color  !default;
-$button-padding: 8px  !default;
+$button-padding: $padding $padding*2  !default;
 $button-border: none  !default;
 
 // nav

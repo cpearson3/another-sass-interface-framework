@@ -11,10 +11,11 @@ var gulp   = require('gulp'),
     sass   = require('gulp-sass'),
    // gutil  = require('gulp-util'),
     //sourcemaps = require('gulp-sourcemaps'),
+    concat = require('gulp-concat'),
     rename = require('gulp-rename'),
     clean = require('gulp-clean'),
     csso = require('gulp-csso'),
-	browserify = require('gulp-browserify');
+	  browserify = require('gulp-browserify');
 
 // stylesheet task
 gulp.task('stylesheets', function() {
@@ -42,13 +43,18 @@ gulp.task('javascript', function() {
 });
 
 // build task
-gulp.task('build', ['stylesheets']);
+gulp.task('build', ['stylesheets', 'javascript']);
 
 // Watch tasks
 gulp.task('watch', ['build'], function() {
     // Sass
-    gulp.watch(['./scss/*.scss'], [
+    gulp.watch(['./scss/**/*.scss'], [
         'stylesheets'
+    ]);
+    
+    // Javascript
+    gulp.watch(['./js/**/*.js'], [
+      'javascript'      
     ]);
 });
 

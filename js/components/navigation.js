@@ -3,12 +3,12 @@
 module.exports = function () {
 	var $bs = window.$bs || {};
 
-	// nav toggle callback
-	$bs.toggleNavMenu = function(selector) {
-		if (window.innerWidth < this.opts.mobileWidth) {
-			$(selector).slideToggle();
-		}
-	};
+    // initialize nav toggles
+	$('[data-nav-toggle]').click(function() {
+		var target = $(this).attr('data-nav-toggle');
+		//console.log(target);
+		$(target).slideToggle();
+	});
 
 	// handle resize event 
 	$(window).resize(function() {
@@ -17,5 +17,4 @@ module.exports = function () {
 			$('.bs-nav ul:nth-child(1)').show();
 		}
 	});
-
-}
+};

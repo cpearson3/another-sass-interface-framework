@@ -1,9 +1,14 @@
 // bootsmooth.js
+
 // depends on jQuery
+if (!$ && jQuery) {
+	$ = jQuery;
+}
 
-var $navigation = require('components/navigation');
+// import components
+var $navigation = require('./components/navigation.js');
 
-(function() {
+window.onload = function() {
 
 	// declare global bootsmooth object, $bs
 	var $bs = window.$bs || {};
@@ -18,7 +23,11 @@ var $navigation = require('components/navigation');
 		// export our global object
 		window.$bs = this;
 	};
-
+	
 	// initialize default options, can be overridden
 	$bs.init();
-})();
+	
+	// init components
+	$navigation();
+
+};

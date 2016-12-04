@@ -94,6 +94,14 @@ nav[role="navigation"], .bs-nav {
 				display: block;
 				float: none !important;
 				min-width: $nav-sub-menu-width;
+				
+				a {
+						text-align: left;
+						@media (max-width: $breakpoint-small) {
+							text-align: center !important;
+						}
+				}
+				
 			}
 		}
 

@@ -1,5 +1,5 @@
 # Bootsmooth
-## Version 2.0.4
+## Version 2.1.0
 
 Bootsmooth is another UI Framework built with Sass / SCSS.
 
@@ -18,6 +18,13 @@ Include `dist/bootsmooth.min.css` in your HTML or `scss/bootsmooth.scss` in your
 Visit the [web page](http://www.bootsmooth.com) for more documentation and examples.
 
 ## Changelog
+
+### 2.1.0
+- Navigation toggle elements can be set by data-nav-toggle attribute
+- Updated gulpfile for build process of bootsmooth.js
+- Fixed text alignment of sub menu elements 
+- Added Static Width Classes `.bs-25, .bs-75. .bs-33, .bs-66`
+- Added Small and Medium Breakpoint Width Columns Classes `.bs-container-small, .bs-container-medium` 
 
 ### 2.0.4, 2.0.5
 - Fixed width of radio and checkbox inputs
