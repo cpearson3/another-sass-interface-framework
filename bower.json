@@ -1,11 +1,11 @@
 {
   "name": "bootsmooth",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "homepage": "bootsmooth.com",
   "authors": [
     "Clarence Pearson <clarence.pearson3@gmail.com>"
   ],
-  "description": "Another UI Framework built with Sass",
+  "description": "A simple responsive front-end framework for creating WordPress themes",
   "keywords": [
     "scss",
     "responsive",
