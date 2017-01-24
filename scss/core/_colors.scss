@@ -1,26 +1,21 @@
 // color classes
 
-.bs-bg-inverse {
+.bg-inverse {
     background-color: $foreground-color !important;
 }
 
-.bs-fg-inverse {
+.fg-inverse {
     color: $background-color !important;
 }
 
-.bs-bg-primary { background-color: $primary-color !important; }
-.bs-bg-foreground { background-color: $foreground-color !important; }
-.bs-bg-default { background-color: $background-color !important; }
+.bg-primary { background-color: $primary-color !important; }
+.bg-foreground { background-color: $foreground-color !important; }
+.bg-default { background-color: $background-color !important; }
 
-.bs-fg-primary { color: $primary-color !important; }
-.bs-fg-background { color: $background-color !important; }
+.fg-primary { color: $primary-color !important; }
+.fg-background { color: $background-color !important; }
 
-.bs-fg-secondary-1  { color: $secondary-color-1 !important; }
-.bs-bg-secondary-1 { background-color: $secondary-color-1 !important; }
+.fg-secondary { color: $secondary-color-1 !important; }
+.bg-secondary { background-color: $secondary-color-1 !important; }
 
-.bs-fg-secondary-2  { color: $secondary-color-2 !important; }
-.bs-bg-secondary-2 { background-color: $secondary-color-2 !important; }
-
-.bs-fg-complement  { color: $complement-color !important; }
-.bs-bg-complement { background-color: $complement-color !important; }
 

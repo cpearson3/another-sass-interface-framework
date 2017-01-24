@@ -1,7 +1,7 @@
 # Bootsmooth
-## Version 2.1.0
+## Version 3.0.0
 
-Bootsmooth is another UI Framework built with Sass / SCSS.
+A simple responsive front-end framework for creating WordPress themes
 
 ## Building
 
@@ -11,13 +11,18 @@ To get started:
 
     git clone https://github.com/cpearson3/bootsmooth.git
     npm install
-    gulp build
+    gulp
 
 Include `dist/bootsmooth.min.css` in your HTML or `scss/bootsmooth.scss` in your SCSS file to get started.
 
 Visit the [web page](http://www.bootsmooth.com) for more documentation and examples.
 
 ## Changelog
+
+### 3.0.0
+- Removed '.bs-' from all classes
+- Renamed button classes
+- Grid is now based on [Materialize CSS](http://materializecss.com/grid.html)
 
 ### 2.1.0
 - Navigation toggle elements can be set by data-nav-toggle attribute

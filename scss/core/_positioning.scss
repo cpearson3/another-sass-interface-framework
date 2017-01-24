@@ -1,10 +1,10 @@
 // center things vertically
 
-.bs-vcenter-rel {
+.vcenter-rel {
     position: relative
 }
 
-.bs-vcenter-abs {
+.vcenter-abs {
     margin: 0;
     position: absolute;
     top: 50%;
@@ -16,30 +16,30 @@
 
 
 // fixed position
-.bs-fixed {
+.fixed {
     position: fixed;
 }
 
 // fixed elements
-.bs-fixed-bottom-left {
+.fixed-bottom-left {
     position: fixed;
     bottom: 0;
     left: 0;
 }
 
-.bs-fixed-bottom-right {
+.fixed-bottom-right {
     position: fixed;
     bottom: 0;
     right: 0;
 }
 
-.bs-fixed-top-right {
+.fixed-top-right {
     position: fixed;
     top: 0;
     right: 0;
 }
 
-.bs-fixed-top-left {
+.fixed-top-left {
     position: fixed;
     top: 0;
     left: 0;

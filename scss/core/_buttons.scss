@@ -1,6 +1,6 @@
 // BUTTONS
 @mixin button {
-	// @extend .bs-shadow;
+	// @extend .shadow;
 	transition: background-color $transition-time ease;
 	font-family: $font-button;
 	font-size: $font-size;
@@ -29,14 +29,14 @@
 	}
 }
 
-[role="button"], button.bs-button, input[type=submit].bs-button, .bs-button, a.bs-button {
+button.btn, input[type=submit].btn, .btn, a.btn {
 	@include button;
    
     background-color: $button-background-color;
     color: $button-foreground-color;
 
     &:hover {
-		@extend .bs-shadow;
+		@extend .shadow;
         background-color: $button-hover-background-color;
 		color: $button-hover-foreground-color;
     }
@@ -46,19 +46,8 @@
 	}
 }
 
-// flat button = same bg as global + shadow hover effect
-[role="button"].bs-button-flat, a.bs-button-flat, button.bs-button-flat, input[type="submit"].bs-button-flat {
-	@include button;
-	@include button-flat($primary-color);
-}
-
-[role="button"].bs-button-flat-primary, a.bs-button-flat-primary, button.bs-button-flat-primary, input[type="submit"].bs-button-flat-primary {
-	@include button;
-	@include button-flat($primary-color);
-}
-
-// secondary 1
-[role="button"].bs-button-secondary-1, a.bs-button-secondary-1, button.bs-button-secondary-1, input[type="submit"].bs-button-secondary-1 {
+// secondary
+a.btn-secondary, button.btn-secondary, input[type="submit"].btn-secondary {
 	@include button;
 	background-color: $secondary-color-1;
 	color: $button-foreground-color-secondary-1;
@@ -67,31 +56,5 @@
 	&:hover {
 		background-color: $secondary-color-1-dark;
 		color: $button-foreground-color-secondary-1;
-	}
-}
-
-// secondary 2
-[role="button"].bs-button-secondary-2, a.bs-button-secondary-2, button.bs-button-secondary-2, input[type="submit"] .bs-button-secondary-2{
-	@include button;
-	background-color: $secondary-color-2;
-	color: $button-foreground-color-secondary-2;
-	border: none;
-
-	&:hover {
-		background-color: $secondary-color-2-dark;
-		color:  $button-foreground-color-secondary-2;
-	}
-}
-
-// complement
-[role="button"].bs-button-complement, a.bs-button-complement, button.bs-button-complement, input[type="submit"].bs-button-complement {
-	@include button;
-	background-color: $complement-color;
-	color: $button-foreground-color-complement;
-	border: none;
-
-	&:hover {
-		background-color: $complement-color-dark;
-		color:  $button-foreground-color-complement;
 	}
 }

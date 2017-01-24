@@ -2,19 +2,13 @@
 // Inspired by Typebase v0.1.0
 
 // center text
-.bs-text-center {
+.text-center {
 	text-align: center;
 }
 
 html {
 	font-size: 100%;
   -webkit-font-smoothing: antialiased;
-}
-
-@media (max-width: $breakpoint-small) {
-	html {
-		font-size: 100%;
-	}
 }
 
 // set body
@@ -86,27 +80,27 @@ h6 {
 
 // matching classes
 @for $i from 1 through 6 {
-    .bs-h#{$i} {
+    .h#{$i} {
         @extend h#{$i};
     }
 }
 
 // text alignment
-.bs-text-center {
+.text-center {
     text-align: center;
 }
-.bs-text-left {
+.text-left {
     text-align: left;
 }
-.bs-text-right {
+.text-right {
     text-align: right;
 }
 
-.bs-pull-right {
+.pull-right {
     float: right;
 }
 
-.bs-pull-left {
+.pull-left {
     float: left;
 }
 
@@ -157,6 +151,6 @@ blockquote {
 }
 
 // Lead class
-.bs-lead {
+.lead {
 	font-size: $h3-size;
 }

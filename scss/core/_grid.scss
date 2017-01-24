@@ -1,193 +1,147 @@
-// Bootsmooth Grid
-
-// Global Border Box Mixins
-@mixin border-box {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+.container {
+  margin: 0 auto;
+  max-width: $container-max-width;
+  width: 90%;
+}
+@media #{$medium-and-up} {
+  .container {
+    width: 85%;
+  }
+}
+@media #{$large-and-up} {
+  .container {
+    width: 70%;
+  }
+}
+.container .row {
+  margin-left: (-1 * $gutter-width / 2);
+  margin-right: (-1 * $gutter-width / 2);
 }
 
-*,
-*:after,
-*:before {
-    margin: 0;
+.section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  &.no-pad {
     padding: 0;
-
-    @include border-box;
+  }
+  &.no-pad-bot {
+    padding-bottom: 0;
+  }
+  &.no-pad-top {
+    padding-top: 0;
+  }
 }
 
-// Global Clearfix Rule
-%clearfix {
-    *zoom: 1;
-    &:before,
-    &:after {
-        content: " ";
-        display: table;
-    }
-    &:after {
-        clear: both;
-    }
-}
 
-// Container and Rows
+.row {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
 
-// 2.1.0
-// container mixin
-@mixin bs-container($p_max) {
-	margin: 0 auto;
-	width: $container-width;
-	max-width: $p_max;
-}
-.bs-container {
-	@include bs-container($container-max-width);
-}
-.bs-container-medium {
-	@include bs-container($breakpoint-medium);
-}
-.bs-container-small {
-	@include bs-container($breakpoint-small);
-}
+  // Clear floating children
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
-[role="grid"], [role="row"], .bs-container, .bs-row {
-    @extend %clearfix;
-}
-
-[role="row"].bs-row, .bs-row {
-    margin-top: 0;
-}
-
-// bs-gutter added 2.0.5 (was bs-row-pad < 2.0.4)
-@media (min-width: $breakpoint-medium) {
-	.bs-gutter [class*="bs-col-"], .bs-row-pad [class*="bs-col-"] {
-		padding: 0px $padding;
-		
-		&:first-child {
-			padding-left: 0px;
-		}
-		
-		&:last-child {
-			padding-right: 0px;
-		}
-	}
-}
-
-// Columns
-
-// Global Mixin
-@mixin grid-column {
-	float: left;
-    width: 100%;
+  .col {
+    float: left;
+    box-sizing: border-box;
+    padding: 0 $gutter-width / 2;
     min-height: 1px;
-    padding-top: $padding;
-    padding-bottom: $padding;
-}
 
-// All Column Classes
-[role="gridcell"], [class*='bs-col-'] {
-    @include grid-column;
-}
+    &[class*="push-"],
+    &[class*="pull-"] {
+      position: relative;
+    }
 
-// Medium Device Column Breakpoint
-@media (min-width: $breakpoint-medium) {
-	 // use for loop to set col widths
-	@for $i from 1 through $grid-columns {
-		.bs-col-#{$i} {
-			width: 100% / $grid-columns * $i;
-			padding-top: 0px;
-			padding-bottom: 0px;
-		}
-	}
-}
+    $i: 1;
+    @while $i <= $num-cols {
+      $perc: unquote((100 / ($num-cols / $i)) + "%");
+      &.s#{$i} {
+        width: $perc;
+        margin-left: auto;
+        left: auto;
+        right: auto;
+      }
+      $i: $i + 1;
+    }
 
-// Large Device Column Breakpoint
-@media (min-width: $breakpoint-large) {
-	// use for loop to set col widths
-	@for $i from 1 through $grid-columns {
-		.bs-col-large-#{$i} {
-			width: 100% / $grid-columns * $i;
-			padding-top: 0px;
-			padding-bottom: 0px;
-		}
-	}
-}
+    $i: 1;
+    @while $i <= $num-cols {
+      $perc: unquote((100 / ($num-cols / $i)) + "%");
+      &.offset-s#{$i} {
+        margin-left: $perc;
+      }
+      &.pull-s#{$i} {
+        right: $perc;
+      }
+      &.push-s#{$i} {
+        left: $perc;
+      }
+      $i: $i + 1;
+    }
 
-/* Column by Percentage */
+    @media #{$medium-and-up} {
 
-// Medium
-@media (min-width: $breakpoint-medium) {
-	.bs-col-25 {
-		width: 25%;
-	}
+      $i: 1;
+      @while $i <= $num-cols {
+        $perc: unquote((100 / ($num-cols / $i)) + "%");
+        &.m#{$i} {
+          width: $perc;
+          margin-left: auto;
+          left: auto;
+          right: auto;
+        }
+        $i: $i + 1
+      }
 
-	.bs-col-33 {
-		width: 33.33%;
-	}
+      $i: 1;
+      @while $i <= $num-cols {
+        $perc: unquote((100 / ($num-cols / $i)) + "%");
+        &.offset-m#{$i} {
+          margin-left: $perc;
+        }
+        &.pull-m#{$i} {
+          right: $perc;
+        }
+        &.push-m#{$i} {
+          left: $perc;
+        }
+        $i: $i + 1;
+      }
+    }
 
-	.bs-col-50 {
-		width: 50%;
-	}
-	
-	.bs-col-66 {
-		width: 66.66%;
-	}
+    @media #{$large-and-up} {
 
-	.bs-col-75 {
-		width: 75%;
-	}
-}
+      $i: 1;
+      @while $i <= $num-cols {
+        $perc: unquote((100 / ($num-cols / $i)) + "%");
+        &.l#{$i} {
+          width: $perc;
+          margin-left: auto;
+          left: auto;
+          right: auto;
+        }
+        $i: $i + 1;
+      }
 
-// Large
-@media (min-width: $breakpoint-large) {
-	.bs-col-large-25 {
-		width: 25%;
-	}
-
-	.bs-col-large-33 {
-		width: 33.33%;
-	}
-
-	.bs-col-large-50 {
-		width: 50%;
-	}
-	
-	.bs-col-large-66 {
-		width: 66.66%;
-	}
-
-	.bs-col-large-75 {
-		width: 75%;
-	}
-}
-
-// 2.1.0
-// Static Width Classes
-
-@mixin static_width($p_w) {
-	width: $p_w;
-	display: inline;
-	float: left;
-}
-
-.bs-100 {
-	width: 100%;
-}
-
-.bs-25 {
-    @include static_width(25%);
-}
-
-.bs-75 {
-    @include static_width(75%);
-}
-
-.bs-33 {
-    @include static_width(33.33%);
-}
-
-.bs-66 {
-    @include static_width(66.66%);
-}
-
-.bs-50 {
-    @include static_width(50%);
+      $i: 1;
+      @while $i <= $num-cols {
+        $perc: unquote((100 / ($num-cols / $i)) + "%");
+        &.offset-l#{$i} {
+          margin-left: $perc;
+        }
+        &.pull-l#{$i} {
+          right: $perc;
+        }
+        &.push-l#{$i} {
+          left: $perc;
+        }
+        $i: $i + 1;
+      }
+    }
+  }
 }

@@ -1,6 +1,6 @@
 
 // FORMS
-.bs-form {
+.form {
     margin: 0 auto;
     position:relative;
     width: 100%;
@@ -14,7 +14,7 @@ fieldset {
     border-radius: $border-radius;
 }
 
-.bs-form-input {
+.form-input {
     display: block;
     width: 100%;
     padding: $spacing/2 $spacing;
@@ -38,13 +38,13 @@ fieldset {
 
 // CHECK & RADIO BOXES
 
-input[type=checkbox].bs-checkbox, input[type=radio].bs-radio {
+input[type=checkbox].checkbox, input[type=radio].radio {
 	visibility: hidden;
 	width: 0px;
 }
 
 // Radio
-input[type="radio"].bs-radio + span.bs-radio-label {
+input[type="radio"].radio + span.radio-label {
     background-color: $background-color;
     border: $border;
     border-radius: 100%;
@@ -60,12 +60,12 @@ input[type="radio"].bs-radio + span.bs-radio-label {
     }
 }
 
-input[type="radio"].bs-radio:checked + span.bs-radio-label {
-    @extend .bs-shadow;
+input[type="radio"].radio:checked + span.radio-label {
+    @extend .shadow;
     color: $primary-color;
     background: $primary-color;
 }
-input[type="radio"].bs-radio:checked + span.bs-radio-label:after {
+input[type="radio"].radio:checked + span.radio-label:after {
     background: $primary-color;
     height: 100%;
     width: 100%;
@@ -73,7 +73,7 @@ input[type="radio"].bs-radio:checked + span.bs-radio-label:after {
 
 // Checkbox
 
-input[type="checkbox"].bs-checkbox + span.bs-checkbox-label {
+input[type="checkbox"].checkbox + span.checkbox-label {
     background-color: $background-color;
     border: $border;
     border-radius: $border-radius;
@@ -89,12 +89,12 @@ input[type="checkbox"].bs-checkbox + span.bs-checkbox-label {
     }
 }
 
-input[type="checkbox"].bs-checkbox:checked + span.bs-checkbox-label {
-    @extend .bs-shadow;
+input[type="checkbox"].checkbox:checked + span.checkbox-label {
+    @extend .shadow;
     background-color: $primary-color;
 }
 
-input[type="checkbox"].bs-checkbox:checked + span.bs-checkbox-label:after {
+input[type="checkbox"].checkbox:checked + span.checkbox-label:after {
     background: $primary-color;
     height: 100%;
     width: 100%;

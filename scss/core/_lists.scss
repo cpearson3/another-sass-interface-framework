@@ -3,14 +3,14 @@
 $list-item-padding: $padding;
 
 // LIST
-.bs-list {
+.list {
     border-radius: $border-radius;
     margin: 0;
     padding: 0;
     display: block;
     list-style: none;
 
-    .bs-list-item {
+    .list-item {
         padding: $list-item-padding;
 
         &:last-child {
@@ -19,8 +19,8 @@ $list-item-padding: $padding;
     }
 }
 
-.bs-list-border {
-	li.bs-list-item {
+.list-border {
+	li.list-item {
 		border-bottom: $list-item-border;
 	}
 }

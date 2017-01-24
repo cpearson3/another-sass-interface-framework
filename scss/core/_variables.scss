@@ -4,49 +4,51 @@ $padding: 10px  !default;
 $block-padding: $padding * 2  !default;
 $spacing: $padding  !default; // holdover from 1.x -- will remove
 
-// grid
+// Grid
 $container-width: 95%  !default;
-$container-max-width: 960px  !default;
+$container-max-width: 1024px  !default;
+$num-cols: 12 !default;
+$gutter-width: 1.5rem !default;
 
-$breakpoint-small: 568px  !default;
-$breakpoint-medium: 768px  !default;
-$breakpoint-large: 1024px  !default;
-$grid-columns: 12  !default;
+// media queries (Materialize)
+$small-screen-up: 601px !default;
+$medium-screen-up: 993px !default;
+$large-screen-up: 1201px !default;
+$small-screen: 600px !default;
+$medium-screen: 992px !default;
+$large-screen: 1200px !default;
+
+$medium-and-up: "only screen and (min-width : #{$small-screen-up})" !default;
+$large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;
+$small-and-down: "only screen and (max-width : #{$small-screen})" !default;
+$medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
+$medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
 
 // general color definitions
 
 // greys
-$darkgrey: #333 !default;
-$medgrey: #999 !default;
-$lightgrey: #ccc !default;
+$grey-dark: #5c5e5d !default;
+$grey: #d8d8d4 !default;
+$grey-light: #b3afa8 !default;
 $white: #fff !default;
 
 $background-color: $white !default;
-$foreground-color: $darkgrey !default;
+$foreground-color: $grey-dark !default;
 
-$primary-color: $color-primary-0 !default;
-$secondary-color-1: $color-secondary-1-0 !default;
-$secondary-color-2: $color-secondary-2-0 !default;
-$complement-color: $color-complement-0 !default;
+$primary-color: #66a093 !default;
+$secondary-color-1: #d37838 !default;
 
 $color-variation: 10% !default;
 
 $background-color-dark: darken($background-color, $color-variation)  !default;
 $foreground-color-dark: darken($foreground-color, $color-variation)  !default;
 $primary-color-dark: darken($primary-color, $color-variation)  !default;
+$secondary-color-1-dark: darken($secondary-color-1, $color-variation)  !default;
 
 $background-color-light: lighten($background-color, $color-variation)  !default;
 $foreground-color-light: lighten($foreground-color, $color-variation)  !default;
 $primary-color-light: lighten($primary-color, $color-variation)  !default;
-
 $secondary-color-1-light: lighten($secondary-color-1, $color-variation)  !default;
-$secondary-color-1-dark: darken($secondary-color-1, $color-variation)  !default;
-
-$secondary-color-2-light: lighten($secondary-color-2, $color-variation)  !default;
-$secondary-color-2-dark: darken($secondary-color-2, $color-variation)  !default;
-
-$complement-color-light: lighten($complement-color, $color-variation)  !default;
-$complement-color-dark: darken($complement-color, $color-variation)  !default;
 
 // font
 $font-body: Helvectica, sans-serif !default;
@@ -109,7 +111,7 @@ $nav-line-height: $line-height;
 $letter-spacing: 0.0rem;
 
 // border vars and mixins
-$border-color: $lightgrey !default;
+$border-color: $grey-light !default;
 $border-radius: 0px !default;
 $border-width: 1px !default;
 $border-style: solid !default;

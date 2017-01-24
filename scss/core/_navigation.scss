@@ -70,7 +70,7 @@ $wide-sub-menu-animation-duration: 0.3s;
 				
 				a {
 						text-align: left;
-						@media (max-width: $breakpoint-small) {
+						@media #{$small-and-down} {
 							text-align: center !important;
 						}
 				}
@@ -110,7 +110,7 @@ $wide-sub-menu-animation-duration: 0.3s;
 }
 
 // small screen
-@media (max-width: $breakpoint-small) {
+@media #{$small-and-down} {
   .nav {
     width: 100%;
     padding: 0;

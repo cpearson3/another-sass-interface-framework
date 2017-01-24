@@ -1,5 +1,5 @@
 // modal dialog and slideouts
-.bs-modal {
+.modal {
   display: none;
 }
 
@@ -14,14 +14,14 @@
 }
 
 // Background Overlay
-.bs-modal-overlay {
+.modal-overlay {
   @include modal-overlay;
-  background-color: transparentize($darkgrey, 0.7);
+  background-color: transparentize($grey-dark, 0.7);
   //opacity: 0.9;
 }
 
 // Full Screen Modal
-.bs-modal-full {
+.modal-full {
 	@include modal-overlay;
 	background-color: $background-color;
 	color: $foreground-color;
@@ -29,8 +29,8 @@
 }
 
 // Centered Dialog
-.bs-modal-dialog {
-  @extend .bs-container;
+.modal-dialog {
+  @extend .container;
 
   z-index:10000;
   position: fixed;
@@ -47,13 +47,12 @@
 }
 
 // Block with Left Aligned Text
-.bs-modal-dialog-content {
-  @extend .bs-block;
+.modal-dialog-content {
   text-align: left;
 }
 
 // Close Button
-.bs-modal-close {
+.modal-close {
   position: absolute;
   top: $spacing;
   right: $spacing;
@@ -62,7 +61,7 @@
 
 
 // Slideout Component
-.bs-slideout {
+.slideout {
   padding: $spacing;
   background-color: $background-color;
   border: $border;
@@ -71,9 +70,9 @@
   display: none;
 }
 
-.bs-slideout-left {
-  @extend .bs-fixed-top-left;
-  @extend .bs-slideout;
+.slideout-left {
+  @extend .fixed-top-left;
+  @extend .slideout;
 
   top:0;
   left:0;
@@ -81,25 +80,25 @@
   height:100%;
 }
 
-.bs-slideout-right {
-  @extend .bs-fixed-top-right;
-  @extend .bs-slideout;
+.slideout-right {
+  @extend .fixed-top-right;
+  @extend .slideout;
 
   width: $slideout-width;
   height:100%;
 }
 
-.bs-slideout-bottom {
-  @extend .bs-fixed-bottom-left;
-  @extend .bs-slideout;
+.slideout-bottom {
+  @extend .fixed-bottom-left;
+  @extend .slideout;
 
   width:100%;
   min-height: $slideout-height;
 }
 
-.bs-slideout-top {
-  @extend .bs-fixed-top-left;
-  @extend .bs-slideout;
+.slideout-top {
+  @extend .fixed-top-left;
+  @extend .slideout;
 
   width:100%;
   min-height: $slideout-height;

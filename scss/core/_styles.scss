@@ -1,181 +1,149 @@
 // bootsmooth supporting styles
 
 // padding element
-.bs-padding { 
+.padding { 
 	padding: $padding;
 }
 
 // block element
-.bs-block {
+.block {
 	padding-top: $block-padding;
 	padding-bottom: $block-padding;
 }
 
 // center block elements
-.bs-block-center {
+.block-center {
     display: block;
     margin: 0 auto;
 }
 
 // margins (same as typography margins)
-.bs-margin-top {
+.margin-top {
 	margin-top: $typography-margin;
 }
 
-.bs-margin-bottom {
+.margin-bottom {
 	margin-bottom: $typography-margin;
 }
 
-.bs-margin {
+.margin {
 	margin-top: $typography-margin;
 	margin-bottom: $typography-margin;
 }
 
 // scrollable elements
-.bs-scrollable {
+.scrollable {
 	overflow: auto;
 }
-.bs-scrollableX {
+.scrollableX {
     overflow-x:auto;
 }
 
-.bs-scrollableY {
+.scrollableY {
     overflow-y:auto;
 }
 
 // Border classes
-.bs-border {
+.border {
     @include border($border-color);
 }
 
-.bs-border-primary {
-	@include border($primary-color);
-}
-
-.bs-border-secondary-1 {
-	@include border($secondary-color-1);
-}
-
-.bs-border-secondary-2 {
-	@include border($secondary-color-2);
-}
-
-.bs-border-complement {
-	@include border($complement-color);
-}
-
 // shadow support class
-.bs-shadow {
+.shadow {
     @include shadow($shadow-color);
 }
 
-.bs-shadow-primary {
-	@include shadow($primary-color);
-}
-
-.bs-shadow-secondary-1 {
-	@include shadow($secondary-color-1);
-}
-
-.bs-shadow-secondary-2 {
-	@include shadow($secondary-color-2);
-}
-
-.bs-shadow-complement {
-	@include shadow($complement-color);
-}
-
 // image
-.bs-img {
+.img {
     max-width: 100%;
     max-height: 100%;
     height: auto;
 }
 
 // video
-.bs-video {
+.video {
     max-width: 100%;
     height: auto;
 }
 
 // responsive display classes
 // small
-@media (max-width: $breakpoint-small) {
-	.bs-hidden-small {
+@media #{$small-and-down} {
+	.hidden-small {
 		display: none;
 	}
 
-	.bs-show-small {
+	.show-small {
+		display: initial !important;
+	}
+
+	.hidden-medium {
 		display: initial;
 	}
 
-	.bs-hidden-medium {
-		display: initial;
-	}
-
-	.bs-show-medium {
+	.show-medium {
 		display: none;
 	}
 
-	.bs-hidden-large {
+	.hidden-large {
 		display: initial;
 	}
 
-	.bs-show-large {
+	.show-large {
 		display: none;
 	}
 }
 
 // medium
-@media (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
-	.bs-hidden-small {
+@media #{$medium-and-up} {
+	.hidden-small {
 		display: initial;
 	}
 
-	.bs-show-small {
+	.show-small {
 		display: none;
 	}
 
-	.bs-hidden-medium {
+	.hidden-medium {
 		display: none;
 	}
 
-	.bs-show-medium {
+	.show-medium {
+		display: initial !important;
+	}
+
+	.hidden-large {
 		display: initial;
 	}
 
-	.bs-hidden-large {
-		display: initial;
-	}
-
-	.bs-show-large {
+	.show-large {
 		display: none;
 	}
 }
 
 // large
-@media (min-width: #{$breakpoint-medium + 1}) {
-	.bs-hidden-small {
+@media #{$large-and-up} {
+	.hidden-small {
 		display: initial;
 	}
 
-	.bs-show-small {
+	.show-small {
 		display: none;
 	}
 
-	.bs-hidden-medium {
+	.hidden-medium {
 		display: initial;
 	}
 
-	.bs-show-medium {
+	.show-medium {
 		display: none;
 	}
 
-	.bs-hidden-large {
+	.hidden-large {
 		display: none;
 	}
 
-	.bs-show-large {
-		display: initial;
+	.show-large {
+		display: initial !important;
 	}
 }
