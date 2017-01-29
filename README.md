@@ -19,6 +19,9 @@ Visit the [web page](http://www.bootsmooth.com) for more documentation and examp
 
 ## Changelog
 
+### 3.0.1
+- Updated bower.json and created 3.0.1 and dev branchs
+
 ### 3.0.0
 - Removed '.bs-' from all classes
 - Renamed button classes
