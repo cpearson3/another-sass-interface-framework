@@ -23,7 +23,7 @@
 	border: none;
 
 	&:hover {
-		@include shadow($foreground-color);
+		//@include shadow($foreground-color);
 		background-color: $background-color;
 		color: $primary-color;
 	}
@@ -36,7 +36,7 @@ button.btn, input[type=submit].btn, .btn, a.btn {
     color: $button-foreground-color;
 
     &:hover {
-		@extend .shadow;
+		//@extend .shadow;
         background-color: $button-hover-background-color;
 		color: $button-hover-foreground-color;
     }
@@ -57,4 +57,11 @@ a.btn-secondary, button.btn-secondary, input[type="submit"].btn-secondary {
 		background-color: $secondary-color-1-dark;
 		color: $button-foreground-color-secondary-1;
 	}
+}
+
+// circle buttons
+.circle {
+	border-radius: 50%;
+	line-height: 1;
+	padding: $padding !important;
 }

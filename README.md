@@ -1,5 +1,5 @@
 # Bootsmooth
-## Version 3.0.0
+## Version 3.0.1
 
 A simple responsive front-end framework for creating WordPress themes
 
