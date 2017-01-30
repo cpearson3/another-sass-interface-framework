@@ -1,5 +1,5 @@
 # Bootsmooth
-## Version 3.0.1
+## Version 3.0.2
 
 A simple responsive front-end framework for creating WordPress themes
 
@@ -18,6 +18,9 @@ Include `dist/bootsmooth.min.css` in your HTML or `scss/bootsmooth.scss` in your
 Visit the [web page](http://www.bootsmooth.com) for more documentation and examples.
 
 ## Changelog
+
+### 3.0.2
+- Updated bootsmooth.js navigation component
 
 ### 3.0.1
 - Updated bower.json and created 3.0.1 and dev branchs

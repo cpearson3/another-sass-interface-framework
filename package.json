@@ -1,6 +1,6 @@
 {
   "name": "bootsmooth",
-  "version": "3.0.0",
+  "version": "3.0.2",
   "description": "A simple responsive front-end framework for creating WordPress themes",
   "main": "gulpfile.js",
   "dependencies": {

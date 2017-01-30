@@ -17,7 +17,7 @@ window.onload = function() {
 	$bs.init = function(opts) {
 		// set options
 		this.opts = opts ? opts : {
-			mobileWidth: 568
+			mobileWidth: 600
 		};
 
 		// export our global object
