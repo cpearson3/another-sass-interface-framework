@@ -19,6 +19,20 @@ $wide-sub-menu-animation-duration: 0.3s;
 		color: $nav-title-color;
 		background-color: $nav-title-background-color;
 	}
+	
+	// optional nav logo
+	.nav-logo {
+        float: left;
+        padding: 8px;
+
+	    img{
+	       
+    		@extend .img;
+    		@extend .shadow;
+    		max-height: 40px; 
+    		border-radius: 25%;
+	    }
+	}
 
   	// nav menu
 	ul.nav-menu {

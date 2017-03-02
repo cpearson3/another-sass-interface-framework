@@ -1,33 +1,29 @@
 // bootsmooth.js
-
 // depends on jQuery
-if (!$ && jQuery) {
-	$ = jQuery;
-}
 
 // import components
-var $navigation = require('./components/navigation.js');
 
-window.onload = function() {
+import { Navigation } from './modules/navigation';
 
-	// declare global bootsmooth object, $bs
-	var $bs = window.$bs || {};
-
-	// global options
-	$bs.init = function(opts) {
+// Bootsmooth class
+class BootsmoothApp {
+	
+	constructor(opts = {}) {
+		
 		// set options
 		this.opts = opts ? opts : {
 			mobileWidth: 600
 		};
 
-		// export our global object
-		window.$bs = this;
-	};
+		// initialize navs
+		this.navigation = new Navigation();
+	}
 	
-	// initialize default options, can be overridden
-	$bs.init();
-	
-	// init components
-	$navigation();
-
 };
+
+window.onload = function() {
+	// create new Bootsmooth app 
+	let $bs = new BootsmoothApp();
+	
+	window.$bs = $bs;
+}
