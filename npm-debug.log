@@ -1,0 +1,123 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/ubuntu/.nvm/versions/node/v4.6.1/bin/node',
+1 verbose cli   '/home/ubuntu/.nvm/versions/node/v4.6.1/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'modularscale/modularscale-sass',
+1 verbose cli   '--save-dev' ]
+2 info using npm@2.15.9
+3 info using node@v4.6.1
+4 verbose install initial load of /home/ubuntu/workspace/bs-dev/bootsmooth/package.json
+5 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/bs-dev/bootsmooth/node_modules/babel-preset-es2015/package.json
+6 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/bs-dev/bootsmooth/node_modules/babelify/package.json
+7 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/bs-dev/bootsmooth/node_modules/browserify/package.json
+8 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/bs-dev/bootsmooth/node_modules/gulp/package.json
+9 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/bs-dev/bootsmooth/node_modules/gulp-babel/package.json
+10 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/bs-dev/bootsmooth/node_modules/gulp-connect/package.json
+11 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/bs-dev/bootsmooth/node_modules/gulp-csso/package.json
+12 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/bs-dev/bootsmooth/node_modules/gulp-rename/package.json
+13 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/bs-dev/bootsmooth/node_modules/gulp-sass/package.json
+14 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/bs-dev/bootsmooth/node_modules/vinyl-source-stream/package.json
+15 info package.json gulp-rename@1.2.2 No license field.
+16 verbose readDependencies loading dependencies from /home/ubuntu/workspace/bs-dev/bootsmooth/package.json
+17 silly cache add args [ 'modularscale/modularscale-sass', null ]
+18 verbose cache add spec modularscale/modularscale-sass
+19 silly cache add parsed spec Result {
+19 silly cache add   raw: 'modularscale/modularscale-sass',
+19 silly cache add   scope: null,
+19 silly cache add   name: null,
+19 silly cache add   rawSpec: 'modularscale/modularscale-sass',
+19 silly cache add   spec: 'github:modularscale/modularscale-sass',
+19 silly cache add   type: 'hosted',
+19 silly cache add   hosted:
+19 silly cache add    { type: 'github',
+19 silly cache add      ssh: 'git@github.com:modularscale/modularscale-sass.git',
+19 silly cache add      sshUrl: 'git+ssh://git@github.com/modularscale/modularscale-sass.git',
+19 silly cache add      httpsUrl: 'git+https://github.com/modularscale/modularscale-sass.git',
+19 silly cache add      gitUrl: 'git://github.com/modularscale/modularscale-sass.git',
+19 silly cache add      shortcut: 'github:modularscale/modularscale-sass',
+19 silly cache add      directUrl: 'https://raw.githubusercontent.com/modularscale/modularscale-sass/master/package.json' } }
+20 verbose addRemoteGit caching modularscale/modularscale-sass
+21 verbose addRemoteGit modularscale/modularscale-sass is a repository hosted by github
+22 silly tryGitProto attempting to clone git://github.com/modularscale/modularscale-sass.git
+23 silly tryClone cloning modularscale/modularscale-sass via git://github.com/modularscale/modularscale-sass.git
+24 verbose tryClone git-github-com-modularscale-modularscale-sass-git-967c4088 not in flight; caching
+25 verbose correctMkdir /home/ubuntu/.npm/_git-remotes correctMkdir not in flight; initializing
+26 verbose makeDirectory /home/ubuntu/.npm/_git-remotes creation not in flight; initializing
+27 silly makeDirectory /home/ubuntu/.npm/_git-remotes uid: 1000 gid: 1000
+28 info git [ 'clone',
+28 info git   '--template=/home/ubuntu/.npm/_git-remotes/_templates',
+28 info git   '--mirror',
+28 info git   'git://github.com/modularscale/modularscale-sass.git',
+28 info git   '/home/ubuntu/.npm/_git-remotes/git-github-com-modularscale-modularscale-sass-git-967c4088' ]
+29 verbose mirrorRemote modularscale/modularscale-sass git clone git://github.com/modularscale/modularscale-sass.git
+30 verbose correctMkdir /home/ubuntu/.npm/_git-remotes correctMkdir not in flight; initializing
+31 verbose setPermissions modularscale/modularscale-sass set permissions on /home/ubuntu/.npm/_git-remotes/git-github-com-modularscale-modularscale-sass-git-967c4088
+32 verbose resolveHead modularscale/modularscale-sass original treeish: master
+33 info git [ 'rev-list', '-n1', 'master' ]
+34 error git rev-list -n1 master: fatal: ambiguous argument 'master': unknown revision or path not in the working tree.
+34 error git rev-list -n1 master: Use '--' to separate paths from revisions, like this:
+34 error git rev-list -n1 master: 'git <command> [<revision>...] -- [<file>...]'
+35 silly tryHTTPS attempting to clone git+https://github.com/modularscale/modularscale-sass.git
+36 silly tryClone cloning modularscale/modularscale-sass via git+https://github.com/modularscale/modularscale-sass.git
+37 verbose tryClone https-github-com-modularscale-modularscale-sass-git-25dee610 not in flight; caching
+38 verbose correctMkdir /home/ubuntu/.npm/_git-remotes correctMkdir not in flight; initializing
+39 info git [ 'clone',
+39 info git   '--template=/home/ubuntu/.npm/_git-remotes/_templates',
+39 info git   '--mirror',
+39 info git   'https://github.com/modularscale/modularscale-sass.git',
+39 info git   '/home/ubuntu/.npm/_git-remotes/https-github-com-modularscale-modularscale-sass-git-25dee610' ]
+40 verbose mirrorRemote modularscale/modularscale-sass git clone https://github.com/modularscale/modularscale-sass.git
+41 verbose correctMkdir /home/ubuntu/.npm/_git-remotes correctMkdir not in flight; initializing
+42 verbose setPermissions modularscale/modularscale-sass set permissions on /home/ubuntu/.npm/_git-remotes/https-github-com-modularscale-modularscale-sass-git-25dee610
+43 verbose resolveHead modularscale/modularscale-sass original treeish: master
+44 info git [ 'rev-list', '-n1', 'master' ]
+45 error git rev-list -n1 master: fatal: ambiguous argument 'master': unknown revision or path not in the working tree.
+45 error git rev-list -n1 master: Use '--' to separate paths from revisions, like this:
+45 error git rev-list -n1 master: 'git <command> [<revision>...] -- [<file>...]'
+46 silly trySSH attempting to clone git@github.com:modularscale/modularscale-sass.git
+47 silly tryClone cloning modularscale/modularscale-sass via git@github.com:modularscale/modularscale-sass.git
+48 verbose tryClone git-github-com-modularscale-modularscale-sass-git-8958bc53 not in flight; caching
+49 verbose correctMkdir /home/ubuntu/.npm/_git-remotes correctMkdir not in flight; initializing
+50 info git [ 'clone',
+50 info git   '--template=/home/ubuntu/.npm/_git-remotes/_templates',
+50 info git   '--mirror',
+50 info git   'git@github.com:modularscale/modularscale-sass.git',
+50 info git   '/home/ubuntu/.npm/_git-remotes/git-github-com-modularscale-modularscale-sass-git-8958bc53' ]
+51 error git clone --template=/home/ubuntu/.npm/_git-remotes/_templates --mirror git@github.com:modularscale/modularscale-sass.git /home/ubuntu/.npm/_git-remotes/git-github-com-modularscale-modularscale-sass-git-8958bc53: Cloning into bare repository '/home/ubuntu/.npm/_git-remotes/git-github-com-modularscale-modularscale-sass-git-8958bc53'...
+51 error git clone --template=/home/ubuntu/.npm/_git-remotes/_templates --mirror git@github.com:modularscale/modularscale-sass.git /home/ubuntu/.npm/_git-remotes/git-github-com-modularscale-modularscale-sass-git-8958bc53: Warning: Permanently added 'github.com,192.30.253.112' (RSA) to the list of known hosts.
+51 error git clone --template=/home/ubuntu/.npm/_git-remotes/_templates --mirror git@github.com:modularscale/modularscale-sass.git /home/ubuntu/.npm/_git-remotes/git-github-com-modularscale-modularscale-sass-git-8958bc53: Permission denied (publickey).
+51 error git clone --template=/home/ubuntu/.npm/_git-remotes/_templates --mirror git@github.com:modularscale/modularscale-sass.git /home/ubuntu/.npm/_git-remotes/git-github-com-modularscale-modularscale-sass-git-8958bc53: fatal: Could not read from remote repository.
+51 error git clone --template=/home/ubuntu/.npm/_git-remotes/_templates --mirror git@github.com:modularscale/modularscale-sass.git /home/ubuntu/.npm/_git-remotes/git-github-com-modularscale-modularscale-sass-git-8958bc53:
+51 error git clone --template=/home/ubuntu/.npm/_git-remotes/_templates --mirror git@github.com:modularscale/modularscale-sass.git /home/ubuntu/.npm/_git-remotes/git-github-com-modularscale-modularscale-sass-git-8958bc53: Please make sure you have the correct access rights
+51 error git clone --template=/home/ubuntu/.npm/_git-remotes/_templates --mirror git@github.com:modularscale/modularscale-sass.git /home/ubuntu/.npm/_git-remotes/git-github-com-modularscale-modularscale-sass-git-8958bc53: and the repository exists.
+52 verbose stack Error: Command failed: git clone --template=/home/ubuntu/.npm/_git-remotes/_templates --mirror git@github.com:modularscale/modularscale-sass.git /home/ubuntu/.npm/_git-remotes/git-github-com-modularscale-modularscale-sass-git-8958bc53
+52 verbose stack Cloning into bare repository '/home/ubuntu/.npm/_git-remotes/git-github-com-modularscale-modularscale-sass-git-8958bc53'...
+52 verbose stack Warning: Permanently added 'github.com,192.30.253.112' (RSA) to the list of known hosts.
+52 verbose stack Permission denied (publickey).
+52 verbose stack fatal: Could not read from remote repository.
+52 verbose stack
+52 verbose stack Please make sure you have the correct access rights
+52 verbose stack and the repository exists.
+52 verbose stack
+52 verbose stack     at ChildProcess.exithandler (child_process.js:213:12)
+52 verbose stack     at emitTwo (events.js:87:13)
+52 verbose stack     at ChildProcess.emit (events.js:172:7)
+52 verbose stack     at maybeClose (internal/child_process.js:829:16)
+52 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+53 verbose cwd /home/ubuntu/workspace/bs-dev/bootsmooth
+54 error Linux 4.8.8-c9
+55 error argv "/home/ubuntu/.nvm/versions/node/v4.6.1/bin/node" "/home/ubuntu/.nvm/versions/node/v4.6.1/bin/npm" "install" "modularscale/modularscale-sass" "--save-dev"
+56 error node v4.6.1
+57 error npm  v2.15.9
+58 error code 128
+59 error Command failed: git clone --template=/home/ubuntu/.npm/_git-remotes/_templates --mirror git@github.com:modularscale/modularscale-sass.git /home/ubuntu/.npm/_git-remotes/git-github-com-modularscale-modularscale-sass-git-8958bc53
+59 error Cloning into bare repository '/home/ubuntu/.npm/_git-remotes/git-github-com-modularscale-modularscale-sass-git-8958bc53'...
+59 error Warning: Permanently added 'github.com,192.30.253.112' (RSA) to the list of known hosts.
+59 error Permission denied (publickey).
+59 error fatal: Could not read from remote repository.
+59 error
+59 error Please make sure you have the correct access rights
+59 error and the repository exists.
+60 error If you need help, you may report this error at:
+60 error     <https://github.com/npm/npm/issues>
+61 verbose exit [ 1, true ]

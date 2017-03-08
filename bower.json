@@ -1,6 +1,6 @@
 {
   "name": "bootsmooth",
-  "version": "3.0.2",
+  "version": "3.1.0",
   "homepage": "bootsmooth.com",
   "authors": [
     "Clarence Pearson <clarence.pearson3@gmail.com>"
@@ -18,5 +18,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "modular-scale": "^2.1.3"
+  }
 }

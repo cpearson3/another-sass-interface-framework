@@ -1,10 +1,6 @@
 // typography
 // Inspired by Typebase v0.1.0
 
-// center text
-.text-center {
-	text-align: center;
-}
 
 html {
 	font-size: 100%;
@@ -78,6 +74,7 @@ h6 {
 	font-size: $h6-size;
 }
 
+
 // matching classes
 @for $i from 1 through 6 {
     .h#{$i} {
@@ -96,22 +93,22 @@ h6 {
     text-align: right;
 }
 
-.pull-right {
-    float: right;
+// text size
+.text-large {
+	font-size: $font-size-large;
 }
 
-.pull-left {
-    float: left;
+.text-small {
+	font-size: $font-size-small;
 }
 
 // lists
 
 ul,
 ol {
-	//margin-top: $block-margin;
-	//margin-bottom: $block-margin;
-	list-style-position: inside;
-	//line-height: $line-height;
+    padding-left: $padding * 2;
+    list-style-position: outside;
+	line-height: $line-height;
 }
 ul li,
 ol li {
