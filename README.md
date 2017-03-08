@@ -1,5 +1,5 @@
 # Bootsmooth
-## Version 3.0.2
+## Version 3.1.0
 
 A simple responsive front-end framework for creating WordPress themes
 
@@ -18,6 +18,10 @@ Include `dist/bootsmooth.min.css` in your HTML or `scss/bootsmooth.scss` in your
 Visit the [web page](http://www.bootsmooth.com) for more documentation and examples.
 
 ## Changelog
+
+### 3.1.0
+- New typography management with [modular scale](http://modularscale.com)
+- Javascript components rewritten in ES2015
 
 ### 3.0.2
 - Updated bootsmooth.js navigation component
@@ -78,3 +82,27 @@ Visit the [web page](http://www.bootsmooth.com) for more documentation and examp
 ### 1.2.1
 
 - Added `.bs-wide-nav-menu` class to `_navigation.scss` for full width navigation dropdowns
+
+## License
+
+MIT License
+
+Copyright (c) 2017 Clarence B Pearson III
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
