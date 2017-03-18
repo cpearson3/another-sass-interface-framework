@@ -5,15 +5,18 @@ A simple responsive front-end framework for creating WordPress themes
 
 ## Building
 
-NPM, Gulp, Browserify, and Sass are used build Bootsmooth.
+NPM, Bower, Gulp, Browserify, and Sass are used build Bootsmooth.
 
 To get started:
 
     git clone https://github.com/cpearson3/bootsmooth.git
     npm install
+    bower install
     gulp
 
 Include `dist/bootsmooth.min.css` in your HTML or `scss/bootsmooth.scss` in your SCSS file to get started.
+
+Include `dist/bootsmooth.build.js` to use Bootsmooth javascript components.
 
 Visit the [web page](http://www.bootsmooth.com) for more documentation and examples.
 
@@ -22,6 +25,7 @@ Visit the [web page](http://www.bootsmooth.com) for more documentation and examp
 ### 3.1.1
 - Modified widths for the '.container' class in the grid module
 - Added '.fullscreen' class to the positioning module for full view height elements
+- jQuery is now bundled into the build process and is not required to be loaded separately
 
 ### 3.1.0
 - New typography management with [modular scale](http://modularscale.com)
