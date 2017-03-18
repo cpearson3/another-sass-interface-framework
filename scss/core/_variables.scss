@@ -65,19 +65,20 @@ $ms-base: 1rem;
 $ms-ratio: 1.33;
 
 $line-height: 1.48 !default;
+$heading-line-height: 1.33 !default;
 
 $h1-size: ms(5) !default;
-$h1-line-height: $line-height !default;
+$h1-line-height: $heading-line-height !default;
 $h2-size: ms(4) !default;
-$h2-line-height: $line-height !default;
+$h2-line-height: $heading-line-height !default;
 $h3-size: ms(3) !default;
-$h3-line-height: $line-height !default;
+$h3-line-height: $heading-line-height !default;
 $h4-size: ms(2) !default;
-$h4-line-height: $line-height !default;
+$h4-line-height: $heading-line-height !default;
 $h5-size: ms(1) !default;
-$h5-line-height: $line-height !default;
+$h5-line-height: $heading-line-height !default;
 $h6-size: ms(0) !default;
-$h6-line-height: $line-height !default;
+$h6-line-height: $heading-line-height !default;
 
 $typography-margin: initial !default;
 $h-margin: initial !default;
