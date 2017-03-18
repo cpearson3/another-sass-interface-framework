@@ -1,6 +1,11 @@
 // bootsmooth.js
 // depends on jQuery
 
+import $ from '../bower_components/jquery/dist/jquery.min';
+
+window.$ = $;
+window.jQuery = $;
+
 // import components
 
 import { Navigation } from './modules/navigation';
@@ -21,9 +26,9 @@ class BootsmoothApp {
 	
 };
 
-window.onload = function() {
+$(document).ready(function () {
 	// create new Bootsmooth app 
 	let $bs = new BootsmoothApp();
 	
 	window.$bs = $bs;
-}
+});

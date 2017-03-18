@@ -19,6 +19,10 @@ Visit the [web page](http://www.bootsmooth.com) for more documentation and examp
 
 ## Changelog
 
+### 3.1.1
+- Modified widths for the '.container' class in the grid module
+- Added '.fullscreen' class to the positioning module for full view height elements
+
 ### 3.1.0
 - New typography management with [modular scale](http://modularscale.com)
 - Javascript components rewritten in ES2015

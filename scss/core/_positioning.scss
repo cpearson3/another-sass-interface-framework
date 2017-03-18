@@ -11,7 +11,8 @@
     clear: both;
 }
 
-// center things vertically
+// vertically center elements absolutely
+// TODO: replace with flexbox
 .vcenter-rel {
     position: relative
 }
@@ -23,6 +24,27 @@
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
+}
+
+.vcenter-no-small {
+    @extend .vcenter-abs;
+    @media #{$small-and-down} {
+        position: initial;
+        transform: none;
+        margin: initial;
+    }
+}
+
+// fullscreen class
+.fullscreen {
+    height: 100vh;
+    position: relative;
+    
+    // return to default size on mobile
+    @media #{$small-and-down} {
+        height: auto !important;
+        position: initial;
+    }
 }
 
 // fixed position
