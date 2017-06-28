@@ -7,11 +7,11 @@ export class Navigation {
 		
 		let mobileWidth = p_width;
 		
-		// cache nav elemenets
-		this.elements = $('[data-nav-toggle]');
+		// cache nav toggle elemenets
+		this.navToggles = $('[data-nav-toggle]');
 
 		 // initialize nav toggles
-		this.elements.click( function(e) {
+		this.navToggles.click( function(e) {
 			
 			var target = $(this).attr('data-nav-toggle');
 			
@@ -19,7 +19,15 @@ export class Navigation {
 			if (window.innerWidth <= mobileWidth) {
 				$(target).slideToggle();
 			}
-		} );
+		});
+		
+		// cache links
+		this.menuLinks = $('nav.nav li.menu-item a');
+		this.menuLinks.click(function(e) {
+			if (window.innerWidth <= mobileWidth) {
+				$('#mainMenu').slideUp();	
+			}
+		});
 	
 		// handle resize event 
 		$(window).resize(function() {

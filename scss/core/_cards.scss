@@ -1,0 +1,90 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-feature {
+  max-width: 100% !important;
+  flex-basis: 100% !important;
+}
+
+.card {
+
+  background-color: $card-background-color;
+  color: $card-foreground-color;
+  border: $card-border;
+  border-radius: $border-radius;
+  box-shadow: $card-shadow;
+  
+  flex-basis: 18em;
+  flex-grow: 1;
+  margin: $margin;
+  position: relative;
+  transition: all $transition-time ease-in-out;
+
+  @media #{$small-and-down} {
+      max-width: 100%;
+  }
+  
+  .card-image {
+    height: $card-image-height;
+    max-height: $card-image-height;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    img {
+      opacity: 1;
+      transition: all $transition-time ease-in-out;
+      max-width: 100%;
+      height: auto;
+      max-height: 150px;
+    }
+  }
+  
+  img.img {
+    max-height: $card-image-height;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .card-bg {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: $card-image-height;
+      width: 100%;
+  }
+
+  .card-header {
+    background-color: $card-background-color;
+    font-weight: bold;
+    line-height: $line-height;
+    font-size: $card-header-font-size;
+    margin: $block-margin;
+    transition: all $transition-time ease-in-out;
+  }
+
+  .card-copy {
+    font-size: ms(-1);
+    line-height: $line-height;
+    margin: $block-margin;
+  }
+
+  &:focus,
+  &:hover {
+    img {
+      opacity: 0.8;
+    }
+  }
+
+  &:active {
+    background-color: $card-background-color;
+
+    .card-header {
+      background-color: $card-background-color;
+    }
+  }
+}

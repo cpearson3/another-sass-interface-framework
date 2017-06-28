@@ -20,20 +20,20 @@ gulp.task('stylesheets', function() {
   return gulp.src('./scss/**/*.scss')
     .pipe(sass({includePaths: config.sassPaths}))
     .pipe(csso())
-    .pipe(rename('bootsmooth.min.css'))
+    .pipe(rename('asif.min.css'))
     .pipe(gulp.dest('./dist/'));
 });
 
 // javascript task
 gulp.task('javascript', function() {
    return browserify({
-        entries: ["./js/bootsmooth.js"]
+        entries: ["./js/main.js"]
     })
     .transform(babelify.configure({
         presets : ["es2015"]
     }))
     .bundle()
-    .pipe(source("bootsmooth.build.js"))
+    .pipe(source("asif.build.js"))
     .pipe(gulp.dest("./dist"))
   ;
 });

@@ -1,29 +1,38 @@
 // include variable first
-$sub-menu-animation: bs-fadeIn;
+$sub-menu-animation: fadeIn;
 $sub-menu-animation-duration: 0.3s;
 
 $wide-sub-menu-animation: fadeIn;
 $wide-sub-menu-animation-duration: 0.3s;
 
 .nav {
-	z-index: 999;
+	z-index: $z-index-100;
 	background-color: $nav-background-color;
 	color: $nav-foreground-color;
 	font-size: $nav-font-size;
+	width: 100%;
+	
+	.container {
+		@include flex-items-center;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
 	
   	// nav title
 	.nav-title {
-		z-index: 999;
-		float: left;
 		padding: $nav-element-padding;
 		color: $nav-title-color;
 		background-color: $nav-title-background-color;
+		
+		a {
+			color: $white;
+		}
 	}
 	
 	// optional nav logo
 	.nav-logo {
         float: left;
-        padding: 8px;
+        padding:  $nav-element-padding;
 
 	    img{
 	       
@@ -65,6 +74,10 @@ $wide-sub-menu-animation-duration: 0.3s;
 				background-color: $nav-hover-background-color;
 			}
 		}
+	}
+	
+	i.fa {
+		cursor: pointer;
 	}
 	
 	// dropdown sub menu
@@ -121,6 +134,22 @@ $wide-sub-menu-animation-duration: 0.3s;
 			@extend .#{$wide-sub-menu-animation} !optional;
 		}
 	}
+	
+	// nav menu toggle
+	.nav-menu-toggle, .nav-menu-toggle-small {
+		padding:  $nav-element-padding;
+	}
+	
+	.nav-menu-toggle-small {
+		display: none;
+		text-align: center;
+		margin: 0px $nav-element-padding;
+		
+		@media #{$small-and-down} {
+			display: inline !important;
+			padding: $nav-element-padding 0;
+		}
+	}
 }
 
 // small screen
@@ -129,13 +158,14 @@ $wide-sub-menu-animation-duration: 0.3s;
     width: 100%;
     padding: 0;
 	position: relative;
-	
+
 	// set container width to 100%
 	.container {
 		width: 100%;
+		display: flex;
 	}
 
-		// nav title triggers menu
+	// nav title
     .nav-title {
       display: block;
       padding: $nav-element-padding;
@@ -146,35 +176,38 @@ $wide-sub-menu-animation-duration: 0.3s;
       color: $nav-foreground-color;
       position: relative;
     }
+    
 
-    // hide menu
+    // nav menu
    	ul.nav-menu {
-			width: 100%;
-			display: none;
-			position: absolute;
-			background-color: $nav-background-color;
-			color: $nav-foreground-color;
+		width: 100%;
+		display: none;
+		position: relative;
+		top: 0;
+		background-color: $nav-background-color;
+		color: $nav-foreground-color;
     }
 
-    // nav element
-		li.menu-item {
-      float: none;
-      clear: both;
-      display: table;
-      margin: 0 auto;
-      width: 100%;
-
-      // submenu
-	    ul.nav-menu {
-        display: block;
-        position: relative;
-      }
-			// full width
-			.wide-menu {
-			  display: block;
-			  position: relative;
-			}
+    // nav menu item
+	li.menu-item {
+		float: none;
+		clear: both;
+		display: table;
+		margin: 0 auto;
+		width: 100%;
+		
+		// submenu
+		ul.nav-menu {
+			display: block;
+			position: relative;
+		}
+		// full width
+		.wide-menu {
+		  display: block;
+		  position: relative;
+		}
     }
 
   }
 }
+

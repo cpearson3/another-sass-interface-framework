@@ -1,7 +1,6 @@
 // bootsmooth.js
-// depends on jQuery
 
-import $ from '../bower_components/jquery/dist/jquery.min';
+import $ from '../node_modules/jquery/dist/jquery.min';
 
 window.$ = $;
 window.jQuery = $;
@@ -9,6 +8,8 @@ window.jQuery = $;
 // import components
 
 import { Navigation } from './modules/navigation';
+import { SideNavigation } from './modules/side-navigation';
+import { Modal } from './modules/modal';
 
 // Bootsmooth class
 class BootsmoothApp {
@@ -22,6 +23,8 @@ class BootsmoothApp {
 
 		// initialize navs
 		this.navigation = new Navigation();
+		this.sideNavigation = new SideNavigation();
+		this.modal = new Modal();
 	}
 	
 };

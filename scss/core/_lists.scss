@@ -24,3 +24,20 @@ $list-item-padding: $padding;
 		border-bottom: $list-item-border;
 	}
 }
+
+.list-links {
+    @extend .list;
+    
+    li {
+        text-align: center;
+        
+        a {
+            padding: $padding;
+            display: block;
+            &:hover {
+                background-color: $primary-color;
+                color: $white;
+            }
+        }
+    }
+}

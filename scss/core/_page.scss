@@ -1,6 +1,4 @@
-// page components
-
-// HEADERS
+// header
 .header {
     // cover images
    -webkit-background-size: cover;
@@ -9,10 +7,21 @@
    background-size: cover;
 }
 
-// FOOTER
+// footer
 .footer {
-    background-color: $grey-dark;
-    color: $white;
+    background-color: $footer-background-color;
+    color: $footer-foreground-color;
     padding-top: $footer-padding;
     padding-bottom: $footer-padding;
+    border-top: $footer-border;
+    
+    .footer-links {
+        a {
+            padding-right: $padding;
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+
 }

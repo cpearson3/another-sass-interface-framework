@@ -1,0 +1,20 @@
+.container {
+  margin: 0 auto;
+  max-width: $container-max-width;
+  width: $container-width;
+}
+
+.container-small-screen {
+    @extend .container;
+    max-width: $small-screen;
+}
+
+.container-medium-screen {
+    @extend .container;
+    max-width: $medium-screen;
+}
+
+.container-large-screen {
+    @extend .container;
+    max-width: $large-screen;
+}

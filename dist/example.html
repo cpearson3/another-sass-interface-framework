@@ -6,83 +6,77 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Description Goes Here">
-<link rel="stylesheet" href="bootsmooth.min.css">
+<link rel="stylesheet" href="asif.min.css">
 </head>
 <body>
-    
-<nav role="navigation">
-    <div class="bs-container">
-		<div class="bs-nav-title" onclick="$bs.toggleNavMenu('#nav-menu')">NAV TITLE</div>
-        <ul role="menu">
-            <li role="menuitem"><a href="#">Link</a></li>
-            <li  role="menuitem" class="bs-nav-><a href="#">Drop Down</a>
-                <ul role="menu">
-                    <li role="menuitem"><a href="#">Link</a></li>
-					<li role="menuitem"><a href="#">Link</a></li>
+<nav class="nav">
+    <div class="container">
+	  <div class="nav-title" data-nav-toggle="#nav-menu">NAV TITLE</div>
+        <ul class="nav-menu" id="nav-menu">
+        	<li class="menu-item menu-item-has-children"><a href="#">Drop Down</a>
+                <ul role="menu" class="nav-menu">
+                	<li class="menu-item"><a href="#">Link</a></li>
+		          	<li class="menu-item"><a href="#">Link</a></li>
                 </ul>
             </li>
-			<li role="menuitem"><a href="#">Full Drop Down</a>
-				<div role="menu" class="bs-wide-sub-menu">
-					<div class="bs-container">
-						<div class="bs-row">
-							<div class="bs-col-4">
-								<h3>Links</h3>
-								<ul>
-									<li><a href="#">Link</a></li>		
-									<li><a href="#">Link</a></li>
-									<li><a href="#">Link</a></li>
-								</ul>
-							</div>
-							<div class="bs-col-4">
-								<h3>Links</h3>
-								<ul>
-									<li><a href="#">Link</a></li>		
-									<li><a href="#">Link</a></li>
-									<li><a href="#">Link</a></li>
-								</ul>
-							</div>
-							<div class="bs-col-4">
-								<h3>Links</h3>
-								<ul>
-									<li><a href="#">Link</a></li>		
-									<li><a href="#">Link</a></li>
-									<li><a href="#">Link</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>	
-			</li>
+            <li class="menu-item"><a href="#">Link</a></li>
         </ul>
     </div>
 </nav>
 
-<div class="bs-container">
-    <h1>Example page</h1>
-	<a href="#" class="bs-button">I'm a Button</a>
-	<br>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duo Reges: constructio interrete. At certe gravius. Hos contra singulos dici est melius. <b>Sed ad bona praeterita redeamus.</b> Nescio quo modo praetervolavit oratio. Bonum integritas corporis: misera debilitas. </p>
+<main class="container block">
+  <h1>My blog</h1>
+  <h3>An example template for a  blog.</h3>
+  
+  <div class="row">
+    <div class="col s12 m8">
+      <h2>Blog post title</h2>
+      <p><span class="blog-date">February 15th, 2017 -</span> <a>Clarence</a></p>
+      
+       <p> Lorem ipsum dolor sit amet, graece meliore adolescens usu at. Brute partem facete ut mei. Ut sed autem deserunt. Mel ex illud eloquentiam, eam ne summo animal constituam. No has tantas impetus, stet dolore an cum, civibus fastidii accumsan ea cum.</p>
+      
+      <blockquote>
+        <p> Lorem ipsum dolor sit amet, graece meliore adolescens usu at. Brute partem facete ut mei. Ut sed autem deserunt. Mel ex illud eloquentiam, eam ne summo animal constituam. No has tantas impetus, stet dolore an cum, civibus fastidii accumsan ea cum.</p>
+      </blockquote>
+      
+       <p> Lorem ipsum dolor sit amet, graece meliore adolescens usu at. Brute partem facete ut mei. Ut sed autem deserunt. Mel ex illud eloquentiam, eam ne summo animal constituam. No has tantas impetus, stet dolore an cum, civibus fastidii accumsan ea cum.</p>
+      
+      <h2>Another post</h2>
+      <p><span class="blog-date">February 14th, 2017 -</span> <a>Clarence</a></p>
+      <img class="img bs-center" src="https://static.pexels.com/photos/25753/pexels-photo-25753.jpg">
+        <p class="text-center"><small>Via <a href="http://www.pexels.com">Pexels</a></small></p>
+       <p> Lorem ipsum dolor sit amet, graece meliore adolescens usu at. Brute partem facete ut mei. Ut sed autem deserunt. Mel ex illud eloquentiam, eam ne summo animal constituam. No has tantas impetus, stet dolore an cum, civibus fastidii accumsan ea cum.</p>
 
-	<ol>
-		<li>Virtutibus igitur rectissime mihi videris et ad consuetudinem nostrae orationis vitia posuisse contraria.</li>
-		<li>Sin laboramus, quis est, qui alienae modum statuat industriae?</li>
-		<li>At hoc in eo M.</li>
-		<li>Nihil est enim, de quo aliter tu sentias atque ego, modo commutatis verbis ipsas res conferamus.</li>
-	</ol>
+    </div>
+    <div class="col s12 m3">
+      <div class="shadow border bg-inverse fg-inverse padding">
+        <h5 style="margin:0">About</h5>
+        <p>Lorem ipsum dolor sit amet, graece meliore adolescens usu at. Brute partem facete ut mei. Ut sed autem deserunt</p>
+      </div>
+      <br>
+      <p>Archives</p>
+        <a>January 2017</a><br>
+        <a>December 2015</a><br>
+        <a>November 2015</a><br>
+        <br>
+        <p>Links</p>
+        <a>Github</a><br>
+        <a>Twitter</a><br>
+        <a>Facebook</a><br>
+    </div>      
+  </div>
+</main>
+  
 
-
-	<blockquote cite='http://loripsum.net'>
-		Hominum non spinas vellentium, ut Stoici, nec ossa nudantium, sed eorum, qui grandia ornate vellent, enucleate minora dicere.
-	</blockquote>
-
-</div>
-<footer class="bs-footer">
-	<hr>
-    <div class="bs-container">
+<hr>
+<footer role="footer">
+    <div class="container">
         <p>Footer Content Goes Here</p>
     </div>
 </footer>
+    
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
-<script src="bootsmooth.build.js"></script>
+<script src="asif.build.js"></script>
 </body>
 </html>

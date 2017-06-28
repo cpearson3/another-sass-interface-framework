@@ -1,26 +1,33 @@
-# Bootsmooth
-## Version 3.1.2
+# Another Sass Interface Framework (ASIF)
+## Version 3.2
 
-A simple responsive front-end framework for creating WordPress themes
+A starter project for building a simple responsive user interface framework
 
 ## Building
 
-NPM, Bower, Gulp, Browserify, and Sass are used build Bootsmooth.
+NPM, Gulp, Browserify, and Sass are required to build ASIF.
 
-To get started:
+To get started, open a terminal:
 
-    git clone https://github.com/cpearson3/bootsmooth.git
-    npm install
-    bower install
-    gulp
+    git clone https://github.com/cpearson3/another-sass-interface-framework.git NEW_PROJECT
+    cd NEW_PROJECT
+    npm install -g gulp
+    npm insall
+    gulp build
 
-Include `dist/bootsmooth.min.css` in your HTML or `scss/bootsmooth.scss` in your SCSS file to get started.
+Include `dist/asif.min.css` in your HTML or `scss/ASIF.scss` in your SCSS file to get started.
 
-Include `dist/bootsmooth.build.js` to use Bootsmooth javascript components.
-
-Visit the [web page](http://www.bootsmooth.com) for more documentation and examples.
+Include `dist/asif.build.js` to use ASIF javascript components.
 
 ## Changelog
+
+### 3.2
+
+- Project renamed to ASIF from Bootsmooth (now the Bootsmooth WordPress theme)
+- Added flexbox classes
+- Side navigation component
+- More variables for more consistent styles for typography elements
+-
 
 ### 3.1.2
 - Changed default modular scale ratio to 1.25
@@ -93,6 +100,30 @@ Visit the [web page](http://www.bootsmooth.com) for more documentation and examp
 ### 1.2.1
 
 - Added `.bs-wide-nav-menu` class to `_navigation.scss` for full width navigation dropdowns
+
+## License
+
+MIT License
+
+Copyright (c) 2017 Clarence B Pearson III
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 ## License
 

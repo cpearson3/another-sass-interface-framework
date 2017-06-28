@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Title Goes Here</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Description Goes Here">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="asif.min.css">
+</head>
+<body>
+<nav class="nav fixed">
+  <div class="container">
+    <div class="nav-title" data-nav-toggle="#nav-menu">NAV TITLE</div>
+    <div class="nav-menu-toggle" data-side-nav-toggle="#mainNav">
+      <i class="fa fa-bars"></i>
+    </div>
+  </div>
+</nav>
+<div class="slideout-right" id="mainNav">
+  <div class="slideout-close-right">
+    <i class="fa fa-close btn-icon" data-side-nav-toggle="#mainNav"></i>
+  </div>
+  <div class="block text-center">
+    <span class="menu-info">MENU TITLE</span>
+  </div>
+  <ul class="list-links">
+    <li>
+    	<a class="menu-link" href="#">Hello</a>
+    </li>
+    <li>
+    	<a class="menu-link" href="#">World</a>
+    </li>
+  </ul>
+</div>
+<div class="modal-dialog modal"  id="modal-menu">
+    <div class="modal-dialog-content">
+      <h1>Hello World.</h1>
+    </div>
+  </div>
+</div>
+<div class="modal-overlay" data-side-nav-close="#mainNav" onclick="$('#modal-menu').fadeOut();"></div>
+
+<main class="container nav-padding">
+  <h1>Side Navigation and Modal Demo</h1></h1>
+
+  <div class="row">
+    <div class="col s12 m8">
+      <blockquote>
+        <img class="img block-center" src="https://static.pexels.com/photos/25753/pexels-photo-25753.jpg">
+        <p class="text-tiny text-center"><small>Via <a href="http://www.pexels.com">Pexels</a></small></p> 
+        <p> Lorem ipsum dolor sit amet, graece meliore adolescens usu at. Brute partem facete ut mei. Ut sed autem deserunt. Mel ex illud eloquentiam, eam ne summo animal constituam. No has tantas impetus, stet dolore an cum, civibus fastidii accumsan ea cum.</p>
+      </blockquote>
+      
+       <p>
+         <a class="btn" data-modal-toggle="#modal-menu">Click here</a>
+       </p>
+
+    </div>
+    <div class="col s12 m3">
+      <div class="shadow border bg-inverse fg-inverse padding">
+        <h5 style="margin:0">About</h5>
+        <p>Lorem ipsum dolor sit amet, graece meliore adolescens usu at. Brute partem facete ut mei. Ut sed autem deserunt</p>
+      </div>
+      <br>
+      <p>Archives</p>
+        <a>January 2017</a><br>
+        <a>December 2015</a><br>
+        <a>November 2015</a><br>
+        <br>
+        <p>Links</p>
+        <a>Github</a><br>
+        <a>Twitter</a><br>
+        <a>Facebook</a><br>
+    </div>      
+  </div>
+</main>
+  
+
+<hr>
+<footer role="footer">
+    <div class="container">
+        <p>Footer Content Goes Here</p>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+<script src="asif.build.js"></script>
+</body>
+</html>

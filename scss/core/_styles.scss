@@ -5,8 +5,14 @@
 	padding: $padding;
 }
 
+// nav padding
+.nav-padding {
+	padding-top: $fixed-nav-padding;
+}
+
 // block element
 .block {
+	display: block;
 	padding-top: $block-padding;
 	padding-bottom: $block-padding;
 }
@@ -14,21 +20,22 @@
 // center block elements
 .block-center {
     display: block;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-// margins (same as typography margins)
+// margin spacing
 .margin-top {
-	margin-top: $typography-margin;
+	margin-top: $spacing;
 }
 
 .margin-bottom {
-	margin-bottom: $typography-margin;
+	margin-bottom: $spacing;
 }
 
 .margin {
-	margin-top: $typography-margin;
-	margin-bottom: $typography-margin;
+	margin-top: $spacing;
+	margin-bottom: $spacing;
 }
 
 // scrollable elements
@@ -74,7 +81,7 @@
 	}
 
 	.show-small {
-		display: initial !important;
+		display: initial;
 	}
 
 	.hidden-medium {
@@ -109,7 +116,7 @@
 	}
 
 	.show-medium {
-		display: initial !important;
+		display: initial;
 	}
 
 	.hidden-large {
@@ -144,6 +151,6 @@
 	}
 
 	.show-large {
-		display: initial !important;
+		display: initial;
 	}
 }

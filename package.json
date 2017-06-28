@@ -1,7 +1,7 @@
 {
-  "name": "bootsmooth",
-  "version": "3.1.2",
-  "description": "A simple responsive front-end framework for creating WordPress themes",
+  "name": "another-sass-interface-framework",
+  "version": "3.2.0",
+  "description": "A simple responsive framework for building user interfaces",
   "main": "gulpfile.js",
   "devDependencies": {
     "babel-preset-es2015": "^6.22.0",
@@ -13,6 +13,8 @@
     "gulp-csso": "^2.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
+    "jquery": "^3.2.1",
+    "modularscale-sass": "^3.0.3",
     "vinyl-source-stream": "^1.1.0"
   },
   "scripts": {
@@ -20,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cpearson3/bootsmooth.git"
+    "url": "https://github.com/cpearson3/another-sass-interface-framework.git"
   },
   "keywords": [
     "css",
@@ -32,7 +34,7 @@
   "author": "cpearson3",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cpearson3/bootsmooth/issues"
+    "url": "https://github.com/cpearson3/another-sass-interface-framework/issues"
   },
-  "homepage": "https://github.com/cpearson3/bootsmooth"
+  "homepage": "https://github.com/cpearson3/another-sass-interface-framework"
 }

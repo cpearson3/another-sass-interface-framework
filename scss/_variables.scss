@@ -1,16 +1,17 @@
 
 // spacing
-$padding: 10px  !default;
-$block-padding: $padding * 2  !default;
-$spacing: $padding  !default; // holdover from 1.x -- will remove
+$spacing: 10px  !default; // holdover from 1.x -- will remove
+$margin: $spacing !default;
+$padding: $spacing  !default;
+$block-padding: $spacing * 2  !default;
 
-// Grid
+// CONTAINER AND GRID
 $container-width: 95%  !default;
 $container-max-width: 1024px  !default;
 $num-cols: 12 !default;
 $gutter-width: 1.5rem !default;
 
-// media queries (Materialize)
+// MEDIA QUERIES
 $small-screen-up: 601px !default;
 $medium-screen-up: 993px !default;
 $large-screen-up: 1201px !default;
@@ -24,9 +25,8 @@ $small-and-down: "only screen and (max-width : #{$small-screen})" !default;
 $medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
 $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
 
-// general color definitions
+// COLORS
 
-// greys
 $grey-dark: #5c5e5d !default;
 $grey: #d8d8d4 !default;
 $grey-light: #b3afa8 !default;
@@ -35,8 +35,10 @@ $white: #fff !default;
 $background-color: $white !default;
 $foreground-color: $grey-dark !default;
 
-$primary-color: #66a093 !default;
-$secondary-color-1: #d37838 !default;
+$primary-color: #2A4C99;	// Main Primary color */
+$secondary-color-1: #20A74E;	// Main Secondary color (1) */
+$secondary-color-2: #E4482C;	// Main Secondary color (2) */
+$complement-color: #E4A72C;	// Main Complement color */
 
 $color-variation: 10% !default;
 
@@ -44,28 +46,37 @@ $background-color-dark: darken($background-color, $color-variation)  !default;
 $foreground-color-dark: darken($foreground-color, $color-variation)  !default;
 $primary-color-dark: darken($primary-color, $color-variation)  !default;
 $secondary-color-1-dark: darken($secondary-color-1, $color-variation)  !default;
+$secondary-color-2-dark: darken($secondary-color-2, $color-variation)  !default;
+$complement-color-dark: darken($complement-color, $color-variation)  !default;
 
 $background-color-light: lighten($background-color, $color-variation)  !default;
 $foreground-color-light: lighten($foreground-color, $color-variation)  !default;
 $primary-color-light: lighten($primary-color, $color-variation)  !default;
 $secondary-color-1-light: lighten($secondary-color-1, $color-variation)  !default;
+$secondary-color-2-light: darken($secondary-color-2, $color-variation)  !default;
+$complement-color-light: darken($complement-color, $color-variation)  !default;
 
-// font
+// TYPOGRAPHY
+
+// set modular scale variables
+$ms-base: 1rem;
+$ms-ratio: 1.2;
 $font-body: Helvectica, sans-serif !default;
 $font-size: 1.0rem !default;
 $font-size-small: ms(-1) !default;
 $font-size-large: ms(1) !default;
 $font-weight: 300;
-
 $font-button: $font-body;
+
+$typography-margin: 1rem !default;
+$h-margin: 1rem !default;
+$letter-spacing: 0px;
+
 $heading-font: $font-body !default;
-
-// set modular scale variables
-$ms-base: 1rem;
-$ms-ratio: 1.25;
-
+$heading-color: $secondary-color-2 !default;
 $line-height: 1.48 !default;
 $heading-line-height: 1.33 !default;
+$heading-letter-spacing: $letter-spacing;
 
 $h1-size: ms(5) !default;
 $h1-line-height: $heading-line-height !default;
@@ -79,10 +90,42 @@ $h5-size: ms(1) !default;
 $h5-line-height: $heading-line-height !default;
 $h6-size: ms(0) !default;
 $h6-line-height: $heading-line-height !default;
+$block-margin: $margin !default;
 
-$typography-margin: initial !default;
-$h-margin: initial !default;
-$block-margin: $padding !default;
+// STYLES
+
+// border vars and mixins
+$border-color: $foreground-color-light !default;
+$border-radius: 4px !default;
+$border-width: 1px !default;
+$border-style: solid !default;
+$border: $border-width $border-style $border-color !default;
+
+@mixin border($color) {
+	border: $border-width $border-style $color;
+	border-radius: $border-radius;
+}
+
+$list-item-border: $border !default;
+
+// shadows
+
+$shadow-color: transparentize($foreground-color, 0.5) !default;
+$shadow-radius: 8px !default;
+$shadow-x-offset: 0px !default;
+$shadow-y-offset: 0px !default;
+$shadow: $shadow-x-offset $shadow-y-offset $shadow-radius $shadow-color !default;
+
+@mixin shadow($color) {
+	box-shadow: $shadow-x-offset $shadow-y-offset $shadow-radius $color !important;
+	-web-kit-box-shadow: $shadow-x-offset $shadow-y-offset $shadow-radius $color !important; 
+}
+
+// animations
+$transition-time: 0.35s !default;
+$animation-duration: 0.4s !default;
+
+// COMPONENTS
 
 // links
 $link-color: $primary-color  !default;
@@ -100,6 +143,8 @@ $button-hover-background-color: $primary-color-dark  !default;
 $button-hover-foreground-color: $button-foreground-color  !default;
 $button-padding: $padding $padding*2  !default;
 $button-border: none  !default;
+$button-border-radius: $border-radius;
+$button-shadow: $shadow;
 
 // nav
 $nav-background-color: $primary-color  !default;
@@ -108,50 +153,14 @@ $nav-hover-background-color: $primary-color-dark  !default;
 $nav-hover-foreground-color: $nav-foreground-color  !default;
 $nav-title-color: $nav-foreground-color !default;
 $nav-title-background-color: $nav-background-color !default;
-$nav-pad: $spacing !default;
 $nav-font-size: 1.0rem !default;
 $nav-element-padding: 16px !default;
-$nav-mobile-margin: 8px !default;
+$nav-mobile-margin: $margin !default;
+$fixed-nav-padding: 55px !default;
 
 // minimum sub menu item width
 $nav-sub-menu-width: 150px !default;
 $nav-line-height: $line-height;
-
-$letter-spacing: 0.0rem;
-
-// border vars and mixins
-$border-color: $grey-light !default;
-$border-radius: 0px !default;
-$border-width: 1px !default;
-$border-style: solid !default;
-$border: $border-width $border-style $border-color !default;
-
-@mixin border($color) {
-	border: $border-width $border-style $color;
-	border-radius: $border-radius;
-}
-
-$list-item-border: $border !default;
-
-// footer
-$footer-padding: $block-padding !default;
-
-// animations
-$transition-time: 0s !default;
-
-// shadows
-$shadow-color: $foreground-color !default;
-$shadow-radius: 4px !default;
-$shadow-x-offset: 0px !default;
-$shadow-y-offset: 1px !default;
-// $shadow: $shadow-x-offset $shadow-y-offset $shadow-radius $shadow-color !default;
-$shadow: none;
-
-@mixin shadow($color) {
-	box-shadow: $shadow-x-offset $shadow-y-offset $shadow-radius $color;
-	-web-kit-box-shadow: $shadow-x-offset $shadow-y-offset $shadow-radius $color; 
-}
-
 
 // lists
 $list-item-padding: $padding !default;
@@ -159,3 +168,30 @@ $list-item-padding: $padding !default;
 // slideouts
 $slideout-width: 240px !default;
 $slideout-height: 75px !default;
+
+$slideout-open-animation: fadeInRight;
+$slideout-close-animation: fadeOutRight;
+
+// cards
+$card-image-height: 200px !default;
+$card-background-color: $background-color !default;
+$card-foreground-color: $foreground-color !default;
+$card-shadow: none !default;
+$card-border: $border !default;
+$card-header-font-size: ms(2) !default;
+
+// LAYOUT
+
+// footer
+$footer-padding: $block-padding !default;
+$footer-foreground-color: $foreground-color !default;
+$footer-background-color: $background-color !default;
+$footer-border: 1px solid $primary-color;
+
+// z-index layers
+$z-index-negtive: -1;
+$z-index-0: 0;
+$z-index-10: 10;
+$z-index-100: 100;
+$z-index-500: 500;
+$z-index-1000: 1000;

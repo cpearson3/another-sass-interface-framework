@@ -1,7 +1,6 @@
 // BUTTONS
 @mixin button {
-	// @extend .shadow;
-	transition: background-color $transition-time ease;
+	transition: all $transition-time ease;
 	font-family: $font-button;
 	font-size: $font-size;
     display: inline-block;
@@ -11,22 +10,11 @@
     white-space: nowrap;
     cursor: pointer;
     box-sizing: border-box;
-    //margin-bottom: $spacing;
     -webkit-appearance:none;
 	border: $button-border;
 	padding: $button-padding;
-}
-
-@mixin button-flat($color) {
-	background-color: $background-color;
-	color: $foreground-color;
-	border: none;
-
-	&:hover {
-		//@include shadow($foreground-color);
-		background-color: $background-color;
-		color: $primary-color;
-	}
+	border-radius: $button-border-radius;
+	box-shadow: $button-shadow;
 }
 
 button.btn, input[type=submit].btn, .btn, a.btn {
@@ -36,7 +24,6 @@ button.btn, input[type=submit].btn, .btn, a.btn {
     color: $button-foreground-color;
 
     &:hover {
-		//@extend .shadow;
         background-color: $button-hover-background-color;
 		color: $button-hover-foreground-color;
     }
@@ -51,7 +38,6 @@ a.btn-secondary, button.btn-secondary, input[type="submit"].btn-secondary {
 	@include button;
 	background-color: $secondary-color-1;
 	color: $button-foreground-color-secondary-1;
-	border: none;
 
 	&:hover {
 		background-color: $secondary-color-1-dark;
@@ -59,9 +45,77 @@ a.btn-secondary, button.btn-secondary, input[type="submit"].btn-secondary {
 	}
 }
 
+// secondary-2
+a.btn-secondary-2, button.btn-secondary-2, input[type="submit"].btn-secondary-2 {
+	@include button;
+	background-color: $secondary-color-2;
+	color: $button-foreground-color-secondary-2;
+
+	&:hover {
+		background-color: $secondary-color-2-dark;
+		color: $button-foreground-color-secondary-2;
+	}
+}
+
+// complement
+a.btn-complement, button.btn-complement, input[type="submit"].btn-complement {
+	@include button;
+	background-color: $complement-color;
+	color: $button-foreground-color-complement;
+
+	&:hover {
+		background-color: $complement-color-dark;
+		color: $button-foreground-color-complement;
+	}
+}
+
+// inverse
+a.btn-inverse, button.btn-inverse, input[type="submit"].btn-inverse {
+	@include button;
+	background-color: $foreground-color;
+	color: $background-color;
+
+	&:hover {
+		background-color: $foreground-color-dark;
+		color: $background-color;
+	}
+}
+
+// flat
+a.btn-flat, button.btn-flat, input[type="submit"].btn-flat {
+	@include button;
+	
+	background: transparent !important;
+	color: $foreground-color !important;
+	border: $border;
+	&:hover {
+		background-color: $foreground-color-dark;
+		color: $background-color;
+	}
+}
+
+
+
 // circle buttons
 .circle {
 	border-radius: 50%;
 	line-height: 1;
 	padding: $padding !important;
+}
+
+// button groups
+.btn-group {
+	margin: $spacing 0;
+	
+	[class*='btn'] {
+		// add right margin
+		margin-right: $spacing;
+		margin-bottom: $spacing;
+		
+		&:last-child {
+			margin-right: 0;
+			margin-bottom: 0;
+		}
+	}
+
 }

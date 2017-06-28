@@ -1,13 +1,10 @@
 // typography
-// Inspired by Typebase v0.1.0
-
 
 html {
 	font-size: 100%;
   -webkit-font-smoothing: antialiased;
 }
 
-// set body
 body {
     font-weight: $font-weight;
     line-height: $line-height;
@@ -24,11 +21,11 @@ a {
 	text-decoration: $link-decoration;
 
     &:visited {
-			color: $link-visited-color;
+		color: $link-visited-color;
     }
 
     &:hover {
-			color: $link-hover-color;
+		color: $link-hover-color;
     }
 }
 
@@ -42,12 +39,13 @@ p, ul, ol, blockquote {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	//margin-top: $h-margin;
-	//margin-bottom: $h-margin;
+	color: $heading-color;
 	font-family: $heading-font;
 	line-height: $line-height;
 	word-wrap: break-word;
-	margin-bottom: $typography-margin;
+	margin-top: $h-margin;
+	margin-bottom: $h-margin;
+	letter-spacing: $heading-letter-spacing;
 }
 
 // headings
@@ -94,6 +92,9 @@ h6 {
 }
 
 // text size
+.text-huge {
+	font-size: ms(6);
+}
 .text-large {
 	font-size: $font-size-large;
 }
@@ -102,11 +103,14 @@ h6 {
 	font-size: $font-size-small;
 }
 
+.text-tiny {
+	font-size: ms(-2);
+}
 // lists
 
 ul,
 ol {
-    padding-left: $padding * 2;
+    padding-left: $padding;
     list-style-position: outside;
 	line-height: $line-height;
 }
@@ -141,13 +145,6 @@ blockquote {
 	border-left: $padding solid $foreground-color;
 	margin-left: 0;
 	margin-right: 0;
-	padding: $padding $padding*2;
+	padding: $padding $block-padding;
 	line-height: $line-height;
-	//margin-top: $block-margin;
-	//margin-bottom: $block-margin;
-}
-
-// Lead class
-.lead {
-	font-size: $h3-size;
 }
