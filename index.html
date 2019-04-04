@@ -1,0 +1,425 @@
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>The HTML5 Herald</title>
+	<meta name="description" content="The HTML5 Herald">
+	<meta name="author" content="SitePoint">
+
+	<link rel="stylesheet" href="https://raw.githubusercontent.com/cpearson3/another-sass-interface-framework/master/dist/asif.min.css">
+	<script src="https://raw.githubusercontent.com/cpearson3/another-sass-interface-framework/master/dist/asif.build.js"></script>
+</head>
+
+<body>
+<h1>Another Sass Interface Framework</h1>
+<div class="row">
+	<div class="col s12 m3">
+		<div id="toc" class="padding">
+			<p class="h4">Table of Contents</p>
+
+			<ul>
+				<li><a href="#getting-started">Getting Started</a></li>
+				<li><a href="#project-structure">Project Structure</a></li>
+				<li><a href="#customizing">Customizing the Stylesheet</a>
+					<ul>
+						<li><a href="#grid">Grid</a></li>
+						<li><a href="#colors">Colors</a></li>
+						<li><a href="#typography">Typography</a></li>
+						<li><a href="#buttons">Buttons</a></li>
+						<li><a href="#navigation">Navigation</a></li>
+						<li><a href="#cards">Cards</a></li>
+						<li><a href="#spacing">Padding and Spacing</a></li>
+						<li><a href="#borders">Borders and Shadows</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="col s9 m9">
+		<div style="max-width: 768px;">
+			<p id="getting-started" class="h4"><strong>Another Sass Interface Framework (AS-IF)</strong> is a simple, responsive CSS User Interface built with SCSS meant for bootstrapping a custom stylesheets for mobile web apps. The project initially started as a way to learn and practice common CSS design patterns and grew into a full framework.</p>
+
+			<div class="block"><a class="btn-secondary" href="https://github.com/cpearson3/another-sass-interface-framework" target="_blank" rel="noopener">View Project on <i class="fa fa-github"></i> Github</a></div>
+			To start a new <strong>AS-IF</strong> project:
+			<ol>
+				<li>Install <a href="https://nodejs.org/en/" target="_blank" rel="noopener nopener noreferrer">Node</a>, <a href="https://www.npmjs.com/" target="_blank" rel="noopener nopener noreferrer">NPM</a>, and <a href="http://gulpjs.com//" target="_blank" rel="noopener nopener noreferrer">Gulp</a> in your development environment.</li>
+				<li><a href="https://github.com/cpearson3/another-sass-interface-framework/archive/master.zip">Download</a> or Clone the repository:
+					<code>git clone http://github.com/cpearson3/another-sass-interface-framework.git</code></li>
+				<li>Install project dependencies:
+					<code>npm install</code></li>
+				<li>Customize styling variables to fit your liking</li>
+				<li>Run <code>gulp</code> to initiate the <strong>build</strong> and <strong>watch</strong> tasks for Sass and Javascript files</li>
+			</ol>
+		</div>
+		<h2 id="project-structure">Project Structure</h2>
+		Once you download a copy of the project, you will see a directory which has the following structure:
+		<div class="row border padding">
+			<div class="col m5 s12"><code>js/</code></div>
+			<div class="col m7 s12">Javascript source code directory. All source is written in ES6. The main build file is <code>scripts.js</code></div>
+		</div>
+		<div class="row border padding">
+			<div class="col m5 s12"><code>scss/</code></div>
+			<div class="col m7 s12">Sass source code directory. The main build file is <code>style.scss</code>.</div>
+		</div>
+		<div class="row border padding">
+			<div class="col m5 s12"><code>scss/_variables.scss</code></div>
+			<div class="col m7 s12">The variables file which defines element styles.</div>
+		</div>
+		<div class="row border padding">
+			<div class="col m5 s12"><code>dist/</code></div>
+			<div class="col m7 s12">Location of compiled Javascript sources</div>
+		</div>
+		<h2 id="customizing">Customizing the Theme Stylesheet</h2>
+		<h3 id="grid">Grid</h3>
+		<div class="row">
+			<div class="col s12 m5">
+
+				The grid system is uses the same markup as <a href="http://materializecss.com/grid.html" target="_blank" rel="noopener">Materialize</a> with a few modifications to the default configuration.
+
+				The grid is based on a 12 column layout broken into rows, sections, and containers.
+
+				Containers are set to <strong>95%</strong> width by default with a max width of <strong>1024px</strong>.
+
+				Responsive column widths can be set with the <i>.s</i> (small), <i>.m</i> (medium), and <i>.l</i> (large) classes.
+
+				For example, a column that is 75% wide on medium screens would use the <i>.m8</i> class (8/12= 75%).
+
+				Columns within each row are separated by a "gutter" of <strong>1.5rem</strong>.
+
+			</div>
+			<div class="col s12 m7">
+				<pre><code class="language-scss">$container-width: 95% !default;
+$container-max-width: 1024px  !default;
+$num-cols: 12 !default;
+$gutter-width: 1.5rem !default;
+// media queries
+$small-screen-up: 601px !default;
+$medium-screen-up: 993px !default;
+$large-screen-up: 1201px !default;
+$small-screen: 600px !default;
+$medium-screen: 992px !default;
+$large-screen: 1200px !default;
+</code></pre>
+				<pre><code class="language-markup">&lt;div class="row"&gt;
+&lt;div class="col m8 s12"&gt;
+	8 column wide area
+&lt;/div&gt;
+&lt;div class="col m4 s12"&gt;
+	4 column wide area
+&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+			</div>
+		</div>
+		<h3 id="colors">Color Definitions</h3>
+		<div class="row">
+			<div class="col s12 m5">
+
+				A palette consisting of primary, secondary, and greyscale colors is provided.
+
+				Foreground and backgorund variables change text and body background.
+
+				The color variation variable is used to calculate the light and dark variations of the color palette.
+
+				Examples:
+				<div class="padding fg-inverse bg-inverse">Inverse</div>
+				<div class="padding bg-primary fg-inverse">Primary</div>
+				<div class="padding fg-inverse bg-secondary">Secondary 1</div>
+				<div class="padding fg-inverse bg-secondary-2">Secondary 2</div>
+				<div class="padding fg-inverse bg-complement">Complement</div>
+			</div>
+			<div class="col s12 m7">
+				<pre><code class="language-scss">$darkgrey: #333 !default;
+$grey-dark: #5c5e5d !default;
+$grey: #d8d8d4 !default;
+$grey-light: #b3afa8 !default;
+$white: #fff !default;
+$background-color: $white !default;
+$foreground-color: $grey-dark !default;
+$primary-color: #2A4C99;	// Main Primary color */
+$secondary-color-1: #20A74E;	// Main Secondary color (1) */
+$secondary-color-2: #E4482C;	// Main Secondary color (2) */
+$complement-color: #E4A72C;	// Main Complement color */
+$color-variation: 10% !default;
+		</code></pre>
+				<pre><code class="language-markup">
+&lt;div class="padding fg-inverse bg-inverse"&gt;Inverse&lt;/div&gt;
+&lt;div class="padding bg-primary fg-inverse"&gt;Primary&lt;/div&gt;
+&lt;div class="padding fg-inverse bg-secondary"&gt;Secondary 1&lt;/div&gt;
+&lt;div class="padding fg-inverse bg-secondary-2"&gt;Secondary 2&lt;/div&gt;
+&lt;div class="padding fg-inverse bg-complement"&gt;Complement&lt;/div&gt;
+</code></pre>
+			</div>
+		</div>
+		<h3 id="typography">Typography</h3>
+		<div class="row">
+			<div class="col s12 m5">
+
+				Bootsmooth uses <a href="http://modularscale.com" target="_blank" rel="noopener">Modular Scale</a> to provide scaling for font sizes.
+
+				View the <a href="https://github.com/modularscale/modularscale-sass" target="_blank" rel="noopener">Github project</a> for more information.
+
+				The default font size is set to <strong>1 rem</strong> and headings are scaled on a <strong>1.25</strong> ratio.
+
+				Line height is set to <strong>1.33</strong> for headings and <strong>1.48</strong> for paragraphs, lists, etc.
+
+				Variables can be set to change link color, hover color, text decoration, and visited color.
+
+				Examples:
+				<p class="h1">h1</p>
+				<p class="h2">h2</p>
+				<p class="h3">h3</p>
+				<p class="h4">h4</p>
+				<p class="h5">h5</p>
+
+			</div>
+			<div class="col s12 m7">
+				<pre><code class="language-scss">$font-body: Helvectica, sans-serif !default;
+$ms-base: 1rem;
+$ms-ratio: 1.2;
+$font-body: Helvectica, sans-serif !default;
+$font-size: 1.0rem !default;
+$font-size-small: ms(-1) !default;
+$font-size-large: ms(1) !default;
+$font-weight: 300;
+$font-button: $font-body;
+$heading-font: $font-body !default;
+$heading-color: $secondary-color-2 !default;
+$line-height: 1.48 !default;
+$heading-line-height: 1.33 !default;
+$h1-size: ms(5) !default;
+$h1-line-height: $heading-line-height !default;
+$h2-size: ms(4) !default;
+$h2-line-height: $heading-line-height !default;
+$h3-size: ms(3) !default;
+$h3-line-height: $heading-line-height !default;
+$h4-size: ms(2) !default;
+$h4-line-height: $heading-line-height !default;
+$h5-size: ms(1) !default;
+$h5-line-height: $heading-line-height !default;
+$h6-size: ms(0) !default;
+$h6-line-height: $heading-line-height !default;
+$typography-margin: initial !default;
+$h-margin: initial !default;
+$block-margin: $padding !default;
+$letter-spacing: 0.0rem;
+</code></pre>
+			</div>
+		</div>
+		<h3 id="buttons">Buttons</h3>
+		<div class="row">
+			<div class="col s12 m5">
+
+				Bootsmooth button styles can be applied to <code>&lt;button&gt;</code> and <code>&lt;a&gt;</code> elements with the <i>.btn</i> class.
+
+				Modifier styles for secondary (<i>.btn-secondary</i>) and inverse (<i>.btn-inverse</i>) color styles are available.
+
+				Examples:
+
+				<a class="btn" href="#">primary</a>
+
+				<a class="btn-secondary" href="#">secondary</a>
+
+				<a class="btn-secondary-2" href="#">secondary 2</a>
+
+				<a class="btn-complement" href="#">complement</a>
+
+				<a class="btn-flat" href="#">flat</a>
+
+				<a class="btn-inverse" href="#">inverse</a>
+
+			</div>
+			<div class="col s12 m7">
+				<pre><code class="language-scss">// buttons
+$button-background-color: $primary-color !default;
+$button-foreground-color: #FFF !default;
+$button-foreground-color-secondary-1: #FFF !default;
+$button-foreground-color-secondary-2: #FFF !default;
+$button-foreground-color-complement: #FFF !default;
+$button-hover-background-color: $primary-color-dark !default;
+$button-hover-foreground-color: $button-foreground-color !default;
+$button-padding: $padding $padding*2 !default;
+$button-border: none !default;
+</code></pre>
+				<pre><code class="language-markup">&lt;button class="btn"&gt;Primary&lt;/button&gt;
+&lt;a class="btn-secondary"&gt;Secondary button&lt;/a&gt;
+&lt;a class="btn-secondary-2"&gt;Secondary 2 button&lt;/a&gt;
+&lt;a class="btn-complement"&gt;Complement button&lt;/a&gt;
+&lt;a class="btn-inverse"&gt;Inverse button&lt;/a&gt;
+		</code></pre>
+			</div>
+		</div>
+		<h3 id="navigation">Navigation</h3>
+		<nav class="nav">
+			<div class="container">
+				<div class="nav-title" data-nav-toggle="#mainNav">NAV TITLE</div>
+				<ul class="nav-menu">
+					<li class="menu-item"><a href="#">Link</a></li>
+					<li class="menu-item menu-item-has-children"><a href="#">Drop Dn</a>
+						<ul class="nav-menu">
+							<li class="menu-item"><a href="#">Link</a></li>
+							<li class="menu-item"><a href="#">Link</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="row">
+			<div class="col s12 m4">
+
+				Bootsmooth offers a customizable and easy to use navigation bar component.
+
+				Developers have the option of using a top or side menu that is integrated into the WordPress menu system.
+
+				The mobile triggers depend on the Javascript library that is included. Any element can trigger a menu by adding the <i>[data-nav-toggle="#MENUID"]</i> attribute.
+
+			</div>
+			<div class="col s12 m8">
+				<pre><code class="language-scss">
+// nav
+$nav-background-color: $primary-color !default;
+$nav-foreground-color: #FFF !default;
+$nav-hover-background-color: $primary-color-dark !default;
+$nav-hover-foreground-color: $nav-foreground-color !default;
+$nav-title-color: $nav-foreground-color !default;
+$nav-title-background-color: $nav-background-color !default;
+$nav-pad: $spacing !default;
+$nav-font-size: 1.0rem !default;
+$nav-element-padding: 16px !default;
+$nav-mobile-margin: 8px !default;
+// minimum sub menu item width
+$nav-sub-menu-width: 150px !default;
+$nav-line-height: $line-height;
+</code></pre>
+				<pre><code class="language-markup">
+&lt;nav class="nav"&gt;
+	&lt;div class="container"&gt;
+		  &lt;div class="nav-title" data-nav-toggle="#mainNav"&gt;NAV TITLE&lt;/div&gt;
+		&lt;ul class="nav-menu"&gt;
+			&lt;li class="menu-item"&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+			&lt;li class="menu-item menu-item-has-children"&gt;&lt;a href="#"&gt;Drop Dn&lt;/a&gt;
+						&lt;ul role="menu" class="nav-menu"&gt;
+					&lt;li class="menu-item"&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+					&lt;li class="menu-item"&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/nav&gt;
+</code></pre>
+			</div>
+		</div>
+		<h3 id="cards">Cards</h3>
+		<div class="row">
+			<div class="col s12 m5">
+
+				Card-style elements are useful for creating grids of blog posts, photo galleries, and more.
+
+				Card components that can be styled include a cover image, header, and copy section.
+
+				Example:
+				<div class="card">
+					<div class="card-bg" style="background-image: url('https://placehold.it/600x300/888/fff');"></div>
+					<div class="card-header">Card Header</div>
+					<div class="card-copy">Lorem ipsum. lorem ipsum.</div>
+				</div>
+			</div>
+			<div class="col s12 m7">
+				<pre><code class="language-scss">
+$card-image-height: 200px !default;
+$card-background-color: $background-color !default;
+$card-foreground-color: $foreground-color !default;
+$card-shadow: none !default;
+$card-border: $border !default;
+$card-header-font-size: ms(2) !default;
+</code></pre>
+				<pre><code class="language-markup">
+&lt;div class="card"&gt;
+	&lt;div class="card-bg" style="background-image: url(https://placehold.it/600x200/888/fff)"&gt;&lt;/div&gt;
+	&lt;div class="card-header"&gt;
+		Card Header
+	&lt;/div&gt;
+	&lt;div class="card-copy"&gt;
+		Lorem ipsum. lorem ipsum.
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+			</div>
+		</div>
+		<h3 id="spacing">Padding and Spacing</h3>
+		<div class="row">
+			<div class="col s12 m5">
+
+				Padding classes are available to provide consistent styling across components.
+
+				The <strong>$padding</strong> variable sets the padding for buttons and the <i>.padding</i> class.
+
+				The <i>.block</i> class is useful for providing consistent white space across a page layout. It's padding is set with the <strong>$block-padding</strong> variable.
+
+				Example:
+				<div class="padding">This element has padding</div>
+				<div class="block">This element has "block padding"</div>
+			</div>
+			<div class="col s12 m7">
+				<pre><code class="language-scss">$padding: 10px !default;
+$block-padding: $padding * 2 !default;
+		</code></pre>
+				<pre><code class="language-markup">&lt;div class="padding"&gt;
+  This element has padding
+&lt;/div&gt;
+&lt;div class="block"&gt;
+  This element has "block padding"
+&lt;/div&gt;
+		</code></pre>
+			</div>
+		</div>
+		<h3 id="borders">Borders and Shadows</h3>
+		<div class="row">
+			<div class="col s12 m5">
+
+				Borders can be added to elements with the <i>.border</i> class.
+
+				Global settings for border radius, color, width, and style can be defined with variables.
+
+				Shadows can be added with the <i>.shadow</i> class.
+
+				Example:
+				<div class="margin padding shadow border">Bordered and Shadow Div</div>
+			</div>
+			<div class="col s12 m7">
+				<pre><code class="language-scss">// border vars and mixins
+$border-color: $lightgrey !default;
+$border-radius: 0px !default;
+$border-width: 1px !default;
+$border-style: solid !default;
+$border: $border-width $border-style $border-color !default;
+
+@mixin border($color) {
+border: $border-width $border-style $color;
+border-radius: $border-radius;
+}
+
+$list-item-border: $border !default;
+$list-item-padding: $padding !default;
+		</code></pre>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-scss.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-markup.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zenscroll/4.0.0/zenscroll-min.js"></script>
+<script>
+	jQuery(document).ready(function() {
+		var offset = 70;
+		var scrollSpeed = 750;
+		if (window.innerWidth > 600) {
+			jQuery("#toc").sticky({topSpacing:offset});
+		}
+		zenscroll.setup(scrollSpeed, offset);
+	});
+</script>
+</body>
+</html>
